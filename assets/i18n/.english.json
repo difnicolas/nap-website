@@ -133,7 +133,6 @@
  "nav.transfer": "Transfer",
  "notices.1": "For R5s and R4s &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
  "notices.2": "In-Game Notices",
- "notices.210": "<strong>The tag list and the blacklist fill themselves in.</strong> They are pulled from the <a href=\"alliances.html\">directory</a> and the <a href=\"blacklist.html\">blacklist</a> every time this page loads, so a notice copied today is current today. The counter above each box is live &mdash; edit the text before copying if you go over the limit.",
  "notices.3": "Messages ready to paste into the game. Most come in two sizes: a short version that fits the <strong>300-character alliance notice</strong>, and a longer one for the <strong>500-character group message</strong>. The copy button is at the top of each box.",
  "notices.4": "Posting them",
  "notices.5": "The alliance notice is the one people actually read, so keep it current: repost the tag notice after any alliance joins or leaves, the All Out notice at the start of every All Out window, and the blacklist notice whenever a name is added or a listing ends.",

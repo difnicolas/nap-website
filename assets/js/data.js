@@ -285,21 +285,18 @@ const RESOURCES = [
     name: "Kingshot Optimizer",
     url: "https://kingshotoptimizer.com",
     what: "Upgrade & KvK planning",
-    desc: "Work out the most efficient order to push your upgrades in, and plan which upgrades to run during a KvK window so they score points when it counts.",
   },
   {
     icon: "🧮",
     name: "Kingshot Calculator",
     url: "https://kingshotcalculator.com",
     what: "Costs & requirements",
-    desc: "Calculate the exact resource and time cost of building and upgrading, so you know what to stockpile before you start.",
   },
   {
     icon: "🐻",
     name: "APX Tools",
     url: "https://apxtools.org",
     what: "Bear trap formations",
-    desc: "Plan troop formations and ratios for bear trap, so your rally slots are filled with the right composition instead of guesswork.",
   },
 ];
 
@@ -326,7 +323,6 @@ const RESOURCES = [
 const NOTICES = [
   {
     title: "NAP alliance tags",
-    desc: "Who is covered by the pact. Post this so nobody can claim they did not know which tags to leave alone.",
     short:
       "K{KINGDOM} NAP — do NOT attack these tags:\n" +
       "{ALL_TAGS}\n" +
@@ -343,7 +339,6 @@ const NOTICES = [
   },
   {
     title: "All Out rules",
-    desc: "What changes and what does not when All Out opens. Post this at the start of every All Out.",
     short:
       "ALL OUT — what is allowed:\n" +
       "• NAP resource tiles: OPEN, this window only.\n" +
@@ -359,7 +354,6 @@ const NOTICES = [
   },
   {
     title: "Blacklist",
-    desc: "Who may not be accepted into a NAP alliance. Post this after any change to the list, and before a recruitment push.",
     short:
       "NAP BLACKLIST ({BL_COUNT}) — may NOT join any NAP alliance, farm or academy:\n" +
       "{BLACKLIST}",
@@ -368,7 +362,6 @@ const NOTICES = [
   },
   {
     title: "KvK prep guide",
-    desc: "Which resources to spend on which day of the KvK week. Too long for the in-game notice — post it where people can keep it, such as a pinned message or an alliance mail.",
     short: "",
     long:
       "👑 KvK Prep Guide 👑\n１｜２｜３｜４｜５\n✅｜🆗｜🚫｜🚫｜🆗｜ TG\n🆗｜✅｜🚫｜🚫｜🆗｜ Gold Dust\n🚫｜✅｜✅｜🚫｜🚫｜ Shards\n✅｜🆗｜🚫｜🚫｜🆗｜ Building\n🚫｜🚫｜🚫｜✅｜🆗｜ Troop\n🆗｜✅｜🚫｜🚫｜🆗｜ Research\n🚫｜✅｜✅｜🚫｜🚫｜ Roulette\n👍｜✅｜👍｜✅｜✅｜ Gather\n✅｜🚫｜✅｜🚫｜✅｜ Intel mission\n🚫｜🚫｜✅｜🚫｜✅｜ Pets Up\n✅｜🚫｜✅｜✅｜🚫｜ Gov Charm\n🚫｜🚫｜🚫｜🚫｜✅｜ 👔 Gov Gear\n🚫｜🚫｜🚫｜✅｜✅｜ Hero Widget\n🚫｜🚫｜🚫｜✅｜✅｜ Mithril\n🚫｜🚫｜🚫｜✅｜✅｜ Hammers\n🚫｜✅｜✅｜🚫｜🚫｜ Emblems\n🚫｜✅｜✅｜🚫｜🚫｜ Manuscripts\n✅｜✅｜🚫｜🚫｜✅｜ Learning\n\n✅ Best day　🆗 Okay　🚫 Do not use　👍 Daily",

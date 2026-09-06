@@ -794,7 +794,6 @@ var NAP = (function () {
       return '<article class="notice-card">' +
         '<div class="notice-head">' +
           "<h3>" + esc(n.title) + "</h3>" +
-          (n.desc ? "<p>" + esc(n.desc) + "</p>" : "") +
         "</div>" +
         '<div class="notice-blocks">' +
           (n.short ? blockHtml(i, "short", n.shortLabel || t("ui.notice.alliance", "Alliance notice"),

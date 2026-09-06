@@ -165,9 +165,14 @@ the FAQ are written into the HTML.
 
 ### In-game notices — the `NOTICES` array in `data.js`
 
-Each entry has a `title`, a `desc`, a `short` version for the 300-character alliance notice and
+Each entry has a `title`, a `short` version for the 300-character alliance notice and
 a `long` version for the 500-character group message. Leave either as `""` and that box is not
-rendered at all — the blacklist notice uses only the alliance-notice size. These tokens are substituted when the
+rendered at all — the blacklist notice uses only the alliance-notice size.
+
+A notice can override its limits with `shortLimit` / `longLimit`, relabel a box with
+`shortLabel` / `longLabel`, and set the textarea height with `rows`. A limit of `0` means no
+cap: the counter reports the length instead of policing it, which is what the KvK prep guide
+uses since it is meant for a pinned post rather than the notice box. These tokens are substituted when the
 page loads, so the tag list and the blacklist are always current:
 
 | Token | Becomes |
