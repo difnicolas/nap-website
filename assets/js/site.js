@@ -233,7 +233,7 @@ var NAP = (function () {
 
   function slot(labelKey, labelEn) {
     return function (a) {
-      var label = t(labelKey, labelEn);
+      var label = labelKey ? t(labelKey, labelEn) : labelEn;
       if (!a) {
         return '<div class="slot"><div class="label">' + label + "</div>" +
                '<div class="value"><span class="muted">&mdash; ' +
@@ -266,6 +266,7 @@ var NAP = (function () {
         "</div>" +
         farmSlot(a.farm) +
         acadSlot(a.academy) +
+        (a.extra ? slot(null, (a.extra.label || "Also"))(a.extra) : "") +
         bearSlot(a.bear) +
       "</div>" +
     "</article>";
@@ -715,6 +716,7 @@ var NAP = (function () {
       if (a.tag) family.push(a.tag);
       if (a.farm && a.farm.tag) family.push(a.farm.tag);
       if (a.academy && a.academy.tag) family.push(a.academy.tag);
+      if (a.extra && a.extra.tag) family.push(a.extra.tag);
       return family.join("-");
     }).filter(Boolean).join(", ");
   }

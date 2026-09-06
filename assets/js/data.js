@@ -27,8 +27,13 @@ const SITE = {
      bear:     ["12:00", "20:00"], // bear trap times, 24h UTC. [] if none yet.
      farm:     { tag: "ABF", name: "...", r5: "..." },   // or null
      academy:  { tag: "ABA", name: "...", r5: "..." },   // or null
+     extra:    { tag: "ABK", name: "...", r5: "...",     // or null — any further
+                 label: "KvK alliance" },                //   alliance in the family
      note:     "",                 // optional short line shown under the name
    }
+
+   Every tag listed in an entry — main, farm, academy and extra — counts as
+   part of that alliance family and is covered by the pact.
 
    >>> REPLACE THE EXAMPLE ROWS BELOW WITH YOUR REAL KINGDOM 1886 DATA. <<<
    -------------------------------------------------------------------------- */
@@ -41,7 +46,8 @@ const ALLIANCES = [
     bear: ["00:10", "15:00"],
     farm:    { tag: "86a", name: "", r5: "" },
     academy: null,
-    note: "KvK alliance: KVK",
+    extra:   { tag: "KVK", name: "", r5: "", label: "KvK alliance" },
+    note: "",
   },
   {
     tag: "D86",
@@ -324,16 +330,16 @@ const NOTICES = [
     short:
       "K{KINGDOM} NAP — do NOT attack these tags:\n" +
       "{ALL_TAGS}\n" +
-      "Farms and academies included. Never hit a NAP Town Centre. NAP tiles only during All Out. Non-NAP: 2 TC hits max. Unsure? Ask your R5.",
+      "Every tag above is covered. Never hit a NAP Town Centre. NAP tiles only during All Out. Non-NAP: 2 TC hits max. Unsure? Ask your R5.",
     long:
       "K{KINGDOM} NAP alliances — these tags are off limits:\n" +
       "{ALL_TAGS}\n" +
-      "Mains, farms and academies, all covered.\n" +
+      "Farms, academies and KvK alliances included.\n" +
       "• NAP Town Centres: never attack.\n" +
       "• NAP resource tiles: only during All Out.\n" +
       "• Non-NAP players: 2 TC hits each, max.\n" +
       "• Never hit a march going to bear, a beast or a rally.\n" +
-      "Hit someone by mistake? Repay it and tell your R5. Hit yourself? Screenshot it and report it — never retaliate.",
+      "Hit someone by mistake? Repay it and tell your R5. Hit yourself? Report it — never retaliate before reporting and getting approval.",
   },
   {
     title: "All Out rules",
@@ -343,13 +349,13 @@ const NOTICES = [
       "• NAP resource tiles: OPEN, this window only.\n" +
       "• NAP Town Centres: STILL OFF LIMITS. All Out changes nothing here.\n" +
       "• Non-NAP: 2 TC hits max, as always.\n" +
-      "Report violations to your R5 with a screenshot. Never retaliate.",
+      "Report violations to your R5 with a screenshot. Never retaliate before reporting and getting approval.",
     long:
       "ALL OUT is live. What changes and what does not:\n" +
       "OPEN — resource tiles of NAP members, for this window only. They go back to being a violation the moment it closes.\n" +
       "STILL BANNED — attacking a NAP member's Town Centre. All Out changes nothing here.\n" +
       "UNCHANGED — non-NAP players stay capped at 2 Town Centre hits each.\n" +
-      "Hit by someone? Screenshot it and send it to your R5. Never hit back — retaliating is its own violation.",
+      "Hit by someone? Screenshot it and send it to your R5. Never retaliate before reporting and getting approval — hitting back on your own is its own violation.",
   },
   {
     title: "Blacklist",
