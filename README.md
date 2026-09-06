@@ -243,8 +243,13 @@ fixes it for one person.
 
 ## Hosting
 
-The site is served by GitHub Pages from the `main` branch, root folder. Push to `main` and the
-live site updates within a minute or two.
+Live at **https://kingdom1886.com**, served by GitHub Pages from the `main` branch, root
+folder. Push to `main` and the live site updates within a minute or two.
+
+The custom domain is recorded in the `CNAME` file at the repo root — **do not delete it**, or
+the site falls back to `difnicolas.github.io/nap-website`. DNS is hosted at Network Solutions
+with four A records and four AAAA records on the apex pointing at GitHub's Pages IPs. HTTPS is
+enforced with a Let's Encrypt certificate that GitHub renews automatically.
 
 ### It is deliberately hidden from search
 
