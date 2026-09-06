@@ -706,15 +706,17 @@ var NAP = (function () {
 
   var LIMITS = { short: 300, long: 500 };
 
+  // Each alliance family joined by "-", families separated by ", ":
+  //   A86-86a, D86-D8F-86D, W86-86W, ...
   function allTags() {
     if (typeof ALLIANCES === "undefined") return "";
-    var out = [];
-    ALLIANCES.forEach(function (a) {
-      if (a.tag) out.push(a.tag);
-      if (a.farm && a.farm.tag) out.push(a.farm.tag);
-      if (a.academy && a.academy.tag) out.push(a.academy.tag);
-    });
-    return out.join(", ");
+    return ALLIANCES.map(function (a) {
+      var family = [];
+      if (a.tag) family.push(a.tag);
+      if (a.farm && a.farm.tag) family.push(a.farm.tag);
+      if (a.academy && a.academy.tag) family.push(a.academy.tag);
+      return family.join("-");
+    }).filter(Boolean).join(", ");
   }
 
   function mainTags() {
