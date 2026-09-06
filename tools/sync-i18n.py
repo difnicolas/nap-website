@@ -70,20 +70,45 @@ def main():
 
         print("%s: %d keys | missing %d | orphaned %d | stale English %d | needs a translator %d"
               % (lang, len(entries), len(missing), len(orphan), len(stale), len(human)))
-        for k in missing: print("    missing from the file:", k)
-        for k in orphan:  print("    no longer in any page:", k)
+        if not args.fix:
+            for k in missing: print("    missing from the file:", k)
+            for k in orphan:  print("    no longer in any page:", k)
         for k in human:   print("    English changed under a translation:", k)
         problems += len(missing) + len(orphan) + len(human)
 
-        if stale and args.fix:
-            for key, idx in stale:
-                lines[idx] = '  %s: %s,' % (json.dumps(key), json.dumps(english[key], ensure_ascii=False))
-            path.write_text("\n".join(lines))
-            print("    refreshed %d untranslated line(s)" % len(stale))
-        elif stale:
+        if not args.fix:
             for key, _ in stale[:25]:
                 print("    stale English:", key)
             problems += len(stale)
+            continue
+
+        # refresh lines nobody has translated
+        for key, idx in stale:
+            lines[idx] = '  %s: %s,' % (json.dumps(key), json.dumps(english[key], ensure_ascii=False))
+
+        # drop keys whose page text is gone, unless a person translated them
+        drop = {k for k in orphan if k not in snapshot or entries[k][0] == snapshot.get(k)}
+        kept_orphans = [k for k in orphan if k not in drop]
+        if drop:
+            lines = [l for i, l in enumerate(lines)
+                     if not any(entries[k][1] == i for k in drop)]
+
+        # append keys the pages have but this file does not
+        if missing:
+            closing = max(i for i, l in enumerate(lines) if l.strip() == "};")
+            block = ["  /* ---------- added by tools/sync-i18n.py ---------- */"]
+            for key in missing:
+                block.append('  %s: %s,' % (json.dumps(key), json.dumps(english[key], ensure_ascii=False)))
+            block.append("")
+            lines = lines[:closing] + block + lines[closing:]
+
+        path.write_text("\n".join(lines))
+        actions = []
+        if stale:   actions.append("refreshed %d" % len(stale))
+        if drop:    actions.append("removed %d dead" % len(drop))
+        if missing: actions.append("added %d new" % len(missing))
+        if actions: print("    " + ", ".join(actions) + " line(s)")
+        problems -= len(missing) + len(drop) - len(kept_orphans)
 
     if args.fix:
         SNAPSHOT.write_text(json.dumps(english, indent=1, ensure_ascii=False, sort_keys=True))

@@ -577,39 +577,6 @@ var NAP = (function () {
 })();
 
 
-/* ---- R5 contact list (transfer page) ------------------------------------ */
-(function () {
-  "use strict";
-
-  var host = document.getElementById("r5-contacts");
-  if (!host || typeof ALLIANCES === "undefined") return;
-
-  var esc = NAP.esc;
-  var dash = '<span class="muted">&mdash;</span>';
-
-  function sub(a) {
-    if (!a) return dash;
-    return '<span class="mono">[' + esc(a.tag) + "]</span>" + (a.name ? " " + esc(a.name) : "");
-  }
-
-  function render() {
-    host.innerHTML = ALLIANCES.map(function (a) {
-      return "<tr>" +
-        '<td><span class="tag">' + esc(a.tag) + "</span>" +
-          '<div class="sub">' + esc(a.name) + "</div></td>" +
-        '<td><div class="who">' + (a.r5 ? esc(a.r5) : dash) + "</div>" +
-          (a.note ? '<div class="sub">' + esc(a.note) + "</div>" : "") + "</td>" +
-        "<td>" + sub(a.farm) + "</td>" +
-        "<td>" + sub(a.academy) + "</td>" +
-      "</tr>";
-    }).join("");
-  }
-
-  render();
-  NAP.onLang(render);
-})();
-
-
 /* ---- Helpful resources -------------------------------------------------- */
 (function () {
   "use strict";
