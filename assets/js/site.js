@@ -196,9 +196,30 @@ var NAP = (function () {
       b.setAttribute("aria-expanded", String(open));
     });
   });
-  document.addEventListener("click", function () { closeGroups(null); });
+  /* mobile: the whole nav collapses behind a menu button */
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector("[data-nav-toggle]");
+  function closeNav() {
+    if (!header) return;
+    header.classList.remove("nav-open");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+  if (toggle && header) {
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = !header.classList.contains("nav-open");
+      header.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) closeGroups(null);
+    });
+    document.querySelectorAll(".site-nav a").forEach(function (a) {
+      a.addEventListener("click", closeNav);
+    });
+  }
+
+  document.addEventListener("click", function () { closeGroups(null); closeNav(); });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeGroups(null);
+    if (e.key === "Escape") { closeGroups(null); closeNav(); }
   });
 
   /* values from SITE — re-run after every language change, because
@@ -271,11 +292,7 @@ var NAP = (function () {
   function slot(labelKey, labelEn) {
     return function (a) {
       var label = labelKey ? t(labelKey, labelEn) : labelEn;
-      if (!a) {
-        return '<div class="slot"><div class="label">' + label + "</div>" +
-               '<div class="value"><span class="muted">&mdash; ' +
-               t("ui.none", "none") + ' &mdash;</span></div></div>';
-      }
+      if (!a) return "";   // an alliance without a farm or academy shows no empty slot
       var shown = a.tag
         ? "[" + esc(a.tag) + "]" + (a.name ? " " + esc(a.name) : "")
         : esc(a.name);
@@ -380,12 +397,6 @@ var NAP = (function () {
         : '<div class="sub muted">' + t("ui.served", "Served") + "</div>");
   }
 
-  function statusPill(st) {
-    if (st === "active")  return '<span class="pill pill-strike">' + t("ui.blacklisted", "Blacklisted") + "</span>";
-    if (st === "expired") return '<span class="pill pill-open">' + t("ui.expired", "Expired") + "</span>";
-    return '<span class="pill pill-ok">' + t("ui.lifted", "Lifted") + "</span>";
-  }
-
   // Columns with nothing in them anywhere are hidden entirely, rather than
   // rendering a table full of dashes. They come back on their own once the
   // council fills the field in for any entry.
@@ -394,7 +405,7 @@ var NAP = (function () {
     level:   BLACKLIST.some(function (e) { return e.level; }),
     listed:  BLACKLIST.some(function (e) { return e.listed; }),
   };
-  var visibleCols = 3;
+  var visibleCols = 2;   // player, until
   Object.keys(cols).forEach(function (k) {
     if (cols[k]) { visibleCols++; return; }
     var th = document.querySelector('[data-col="' + k + '"]');
@@ -424,7 +435,6 @@ var NAP = (function () {
                                           : '<span class="muted">&mdash;</span>') + "</td>"
         : "") +
       "<td>" + untilHtml(e) + "</td>" +
-      "<td>" + statusPill(state(e)) + "</td>" +
     "</tr>";
   }
 

@@ -17,11 +17,10 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <span class="crest">&#9876;</span>
       NAP <span class="kd">&middot; K1886</span>
     </a>
     <div class="clock" data-clock></div>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <div class="nav-group" data-nav-group>
         <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.information">Information</button>
@@ -54,6 +53,10 @@
         <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
       </div>
     </div>
+    <button class="icon-btn nav-toggle" type="button" data-nav-toggle
+            aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
 
@@ -102,7 +105,6 @@
             <th data-col="level" data-i18n="blacklist.12">Level</th>
             <th data-col="listed" data-i18n="blacklist.13">Listed</th>
             <th data-i18n="blacklist.14">Until</th>
-            <th data-i18n="blacklist.15">Status</th>
           </tr>
         </thead>
         <tbody id="blacklist-body"></tbody>
@@ -112,11 +114,6 @@
       <strong>Check the account ID, not the name.</strong> Blacklisted players rename themselves
       to hide — the ID under each name is the only identifier that cannot be changed. Known
       previous names are listed as <em>a.k.a.</em>
-    </p>
-    <p class="legend" data-i18n="blacklist.17">
-      <span class="pill pill-strike">Blacklisted</span> may not join a NAP alliance &middot;
-      <span class="pill pill-open">Expired</span> listing served, free to join again &middot;
-      <span class="pill pill-ok">Lifted</span> ended early by the council
     </p>
 
     <noscript><div class="empty">This tracker needs JavaScript enabled to display.</div></noscript>
