@@ -343,7 +343,7 @@ window.I18N.ko = {
   "transfer.302": "The map is shared out, not fought over",
   "transfer.303": "Sanctuaries and Fortresses are assigned between R5s rather than taken by whoever rallies fastest. Every alliance in the pact is assigned a Sanctuary, and the top four by power each hold a Fortress, so the buffs are spread across the kingdom instead of stacking on one alliance.",
   "transfer.304": "Everyone gets a turn at the throne",
-  "transfer.305": "Outside KvK, the Castle rotates. Battles for it are arranged so alliances take their turn holding it &mdash; members who would never come out on top of a free-for-all still get their chance at the throne.",
+  "transfer.305": "Outside KvK, the Castle rotates. Battles for it are arranged so alliances take their turn holding it &mdash; members who would never come out on top of a free-for-all still get their chance at the throne. See the <a href=\"castle.html\">castle battles page</a>.",
   "transfer.306": "Growth instead of attrition",
   "transfer.307": "Troops spent on your neighbours are troops missing from KvK. Supporting our members and avoiding unnecessary losses is what lets the whole kingdom show up strong &mdash; and there is still plenty of fighting to be had in events.",
 
@@ -396,4 +396,25 @@ window.I18N.ko = {
   "kvk.306": "Strong players and whole alliances look at how a kingdom performs before they spend a transfer on it. A record of winning brings us people worth having. A record of losing means watching the players we wanted go somewhere else &mdash; and every good alliance we fail to attract makes the next KvK harder to win. See the <a href=\"transfer.html\">transfer page</a>.",
 
   "ui.notice.chars": "characters",
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "castle.1": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 7h16M4 12h16M4 17h16\" /></svg>",
+  "castle.10": "Holding it",
+  "castle.11": "The alliance whose turn it is has one job: <strong>hold the Castle for 2.5 hours</strong> to secure the victory. Turn up in numbers, hold the timer out, and the win is yours. Fail to hold it and the turn is simply spent &mdash; the rotation moves on.",
+  "castle.12": "Rules during a NAP castle battle",
+  "castle.13": "<span class=\"rule-title\">No rallies on the Castle</span> <span class=\"rule-body\"> For the duration of the battle, nobody rallies the Castle. This is what keeps a turn from being ended in a single co-ordinated hit, and it is what makes the rotation worth having. </span>",
+  "castle.14": "<span class=\"rule-title\">Solo attacks are allowed</span> <span class=\"rule-body\"> On the turrets and on the Castle itself. The battle is meant to be fought &mdash; the holding alliance is expected to defend, not to be handed 2.5 hours of quiet. </span>",
+  "castle.15": "<span class=\"rule-title\">Everyone may take part</span> <span class=\"rule-body\"> Alliances outside the NAP are welcome to join in by taking turrets and fighting it out. You do not need to be in the pact to contest a castle battle. </span>",
+  "castle.16": "<strong>The rotation is an agreement, not a guarantee.</strong> Whose turn it is decides who is <em>expected</em> to take the Castle &mdash; it does not stop anyone from contesting it. Turn up and hold it.",
+  "castle.17": "If someone breaks the rules",
+  "castle.18": "Rallying the Castle during a NAP castle battle is handled like any other violation: screenshot it, send it to your own R4 or R5, and let them take it up. <strong>Never retaliate before reporting and getting approval.</strong> The process is on the <a href=\"rules.html\">rules page</a>.",
+  "castle.2": "Event &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
+  "castle.3": "Castle Battles",
+  "castle.4": "The throne rotates. Rather than letting one alliance sit on the Castle all season, NAP alliances take their turn holding it &mdash; and everyone else is welcome to come and make them work for it.",
+  "castle.5": "How the rotation works",
+  "castle.6": "KvK Castles",
+  "castle.7": "The <strong>top two NAP alliances</strong> rotate ownership of the Castle during KvK. These are the windows where the Castle matters most to the kingdom's result, so they go to the alliances best placed to hold it.",
+  "castle.8": "Non-KvK Castles",
+  "castle.9": "Every <strong>other NAP alliance</strong> rotates ownership of the Castle outside KvK. That is the point of the rotation: members who would never come out on top of an open free-for-all still get their turn at the throne.",
+  "nav.castle": "Castle",
+
 };

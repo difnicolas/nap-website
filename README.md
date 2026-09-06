@@ -13,6 +13,7 @@ Resources as top-level links.
 | Information | Notices | `notices.html` | Copy-paste in-game messages, sized to the 300/500 character limits |
 | Information | Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
 | Events | Sanctuary | `assignments.html` | Sanctuary and Fortress assignments |
+| Events | Castle | `castle.html` | Non-KvK castle battles: the rotation and the rules |
 | Events | All Out | `allout.html` | What changes and what does not during All Out |
 | Events | KvK | `kvk.html` | The current per-matchup ruling, and what the pact still covers |
 | — | Transfer | `transfer.html` | For alliances looking to move to K1886 |
