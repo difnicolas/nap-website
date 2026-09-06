@@ -391,4 +391,12 @@ window.I18N.es = {
   "kvk.8": "During the window",
   "kvk.9": "<strong>Council instructions are binding</strong> for the duration of the event &mdash; targets, timings, shield calls and rally coordination. Freelancing during KvK costs the whole kingdom, not just you.",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "kvk.301": "Why winning matters",
+  "kvk.302": "KvK is the one event where the whole kingdom's work is measured against another server. Winning compounds. Losing costs the kingdom more than the event itself, and it costs it twice.",
+  "kvk.303": "Growth we do not get back",
+  "kvk.304": "A won KvK is rewards, ranking and momentum for every alliance in the kingdom &mdash; the fastest growth most players will see all season. A lost one is not neutral: it is a window we spent troops and resources on and got nothing for, while the kingdoms that won pull further ahead. That gap does not close on its own.",
+  "kvk.305": "Reputation we recruit on",
+  "kvk.306": "Strong players and whole alliances look at how a kingdom performs before they spend a transfer on it. A record of winning brings us people worth having. A record of losing means watching the players we wanted go somewhere else &mdash; and every good alliance we fail to attract makes the next KvK harder to win. See the <a href=\"transfer.html\">transfer page</a>.",
+
 };
