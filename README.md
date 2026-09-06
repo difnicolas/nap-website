@@ -1,6 +1,6 @@
 # NAP — Kingshot Kingdom 1886
 
-A three-page static website:
+A static website for the Kingdom 1886 Non-Aggression Pact:
 
 The navbar has two dropdown groups, **Information** and **Events**, with Home, Transfer and
 Resources as top-level links.
