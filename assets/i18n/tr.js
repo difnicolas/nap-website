@@ -165,8 +165,6 @@ window.I18N.tr = {
   "alliances.2": "Alliance Directory",
   "alliances.4": "UTC",
   "alliances.5": "Local Time",
-  "alliances.6": "Corrections",
-  "alliances.7": "If something on this page is wrong or out of date &mdash; a tag, an R5, a bear trap time &mdash; your R5 should tell the <span data-site=\"maintainer\">NAP council</span> in kingdom chat. Changes are usually up within a day.",
   "alliances.8": "Alliances not listed here have not signed the pact and are not covered by it. See the <a href=\"rules.html\">rules page</a> before engaging with them.",
 
   /* ---------- assignments.html ---------- */
@@ -278,9 +276,6 @@ window.I18N.tr = {
   "ui.utc": "UTC",
   "ui.localTime": "Local Time",
   "ui.notSet": "Not set",
-  "ui.noAllianceMatch": "No alliance matches",
-  "ui.of": "of",
-  "ui.alliances": "alliances",
 
   /* ---------- Interface labels — Blacklist ---------- */
   "ui.blacklisted": "Blacklisted",

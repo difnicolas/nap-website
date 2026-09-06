@@ -6,7 +6,7 @@ A three-page static website:
 | --- | --- | --- |
 | Home | `index.html` | Welcome, what the NAP is, how to join |
 | Rules | `rules.html` | Violation list, current KvK ruling, what's still allowed, reporting, punishments, appeals |
-| Alliances | `alliances.html` | Searchable directory: alliance, farm + academy, R5s, bear trap times (UTC/Local toggle) |
+| Alliances | `alliances.html` | Directory: alliance, farm + academy, R5s, bear trap times (UTC/Local toggle) |
 | Assignments | `assignments.html` | This week's Sanctuary and Fortress holders |
 | Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
 | Transfer | `transfer.html` | For alliances looking to move to K1886; R5 contact list |

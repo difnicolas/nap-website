@@ -205,8 +205,6 @@ var NAP = (function () {
   if (!host || typeof ALLIANCES === "undefined") return;
 
   var esc = NAP.esc, t = NAP.t;
-  var countEl = document.getElementById("alliance-count");
-  var searchEl = document.getElementById("alliance-search");
 
   var tz = "utc";
   try { tz = localStorage.getItem("nap-tz") === "local" ? "local" : "utc"; } catch (err) {}
@@ -273,30 +271,8 @@ var NAP = (function () {
     "</article>";
   }
 
-  function haystack(a) {
-    return [
-      a.tag, a.name, a.r5, a.note,
-      a.farm && a.farm.tag, a.farm && a.farm.name, a.farm && a.farm.r5,
-      a.academy && a.academy.tag, a.academy && a.academy.name, a.academy && a.academy.r5,
-      (a.bear || []).join(" "),
-    ].join(" ").toLowerCase();
-  }
-
   function render() {
-    var term = (searchEl ? searchEl.value : "").trim().toLowerCase();
-    var rows = term
-      ? ALLIANCES.filter(function (a) { return haystack(a).indexOf(term) !== -1; })
-      : ALLIANCES.slice();
-
-    host.innerHTML = rows.length
-      ? rows.map(cardHtml).join("")
-      : '<div class="empty">' + t("ui.noAllianceMatch", "No alliance matches") +
-        " &ldquo;" + esc(term) + "&rdquo;.</div>";
-
-    if (countEl) {
-      countEl.textContent = rows.length + " " + t("ui.of", "of") + " " +
-                            ALLIANCES.length + " " + t("ui.alliances", "alliances");
-    }
+    host.innerHTML = ALLIANCES.map(cardHtml).join("");
   }
 
   var tzButtons = document.querySelectorAll("[data-tz]");
@@ -316,7 +292,6 @@ var NAP = (function () {
   syncTz();
 
   render();
-  if (searchEl) searchEl.addEventListener("input", render);
   NAP.onLang(render);
 })();
 
