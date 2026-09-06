@@ -240,3 +240,28 @@ sed -i '' 's/?v=1/?v=2/g' *.html assets/js/site.js
 That forces every visitor's browser to fetch the new files instead of a cached copy. You only
 need it when someone reports seeing stale content — a normal hard refresh (Cmd/Ctrl + Shift + R)
 fixes it for one person.
+
+## Hosting
+
+The site is served by GitHub Pages from the `main` branch, root folder. Push to `main` and the
+live site updates within a minute or two.
+
+### It is deliberately hidden from search
+
+While the site is pending NAP approval it is public (GitHub Pages needs a public repo on the
+free plan) but blocked from search engines by two things:
+
+- `robots.txt`, which disallows all crawlers
+- `<meta name="robots" content="noindex, nofollow">` in every page
+
+Anyone with the link can read the site; nobody will find it through Google. **At launch**,
+delete `robots.txt` and strip the meta tag:
+
+```
+rm robots.txt
+sed -i '' '/name="robots"/d' *.html
+```
+
+Note that this is obscurity, not security — the blacklist and every other page are readable by
+anyone who has the URL, and the repository itself is public. Do not put anything in here that
+would actually harm someone if it leaked.

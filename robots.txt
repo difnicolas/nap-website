@@ -1,0 +1,6 @@
+# Kingdom 1886 NAP — pre-launch.
+# The site is public so GitHub Pages can serve it, but it is not meant to be
+# found by search. Remove this file (and the noindex meta tag in each page)
+# once the NAP council approves the site for launch.
+User-agent: *
+Disallow: /
