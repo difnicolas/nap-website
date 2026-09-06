@@ -709,6 +709,9 @@ var NAP = (function () {
 
   var esc = NAP.esc, t = NAP.t;
 
+  var COPY_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>';
+  var TICK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
   var LIMITS = { short: 300, long: 500 };
 
   // A notice may override the limit for either size. 0 means "no limit" —
@@ -777,11 +780,12 @@ var NAP = (function () {
         '<span class="count-badge' + (over ? " over" : "") + '" data-count-for="' + i + "-" + kind + '">' +
           countText(body.length, limit) +
         "</span>" +
+        '<button class="icon-btn notice-copy" type="button" data-copy="' + i + "-" + kind + '"' +
+          ' title="' + t("ui.notice.copy", "Copy") + '"' +
+          ' aria-label="' + t("ui.notice.copy", "Copy") + '">' + COPY_ICON + "</button>" +
       "</div>" +
       '<textarea class="notice-text" spellcheck="false" rows="' + (rows || 6) + '" ' +
         'data-limit="' + limit + '" data-id="' + i + "-" + kind + '">' + esc(body) + "</textarea>" +
-      '<button class="btn notice-copy" type="button" data-copy="' + i + "-" + kind + '">' +
-        t("ui.notice.copy", "Copy") + "</button>" +
     "</div>";
   }
 
@@ -818,12 +822,13 @@ var NAP = (function () {
         var ta = host.querySelector('[data-id="' + btn.getAttribute("data-copy") + '"]');
         if (!ta) return;
         var done = function () {
-          var was = btn.textContent;
-          btn.textContent = t("ui.notice.copied", "Copied");
+          btn.innerHTML = TICK_ICON;
           btn.classList.add("copied");
+          btn.setAttribute("title", t("ui.notice.copied", "Copied"));
           setTimeout(function () {
-            btn.textContent = was;
+            btn.innerHTML = COPY_ICON;
             btn.classList.remove("copied");
+            btn.setAttribute("title", t("ui.notice.copy", "Copy"));
           }, 1600);
         };
         if (navigator.clipboard && navigator.clipboard.writeText) {

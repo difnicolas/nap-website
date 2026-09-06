@@ -320,7 +320,7 @@ window.I18N.tr = {
   /* ---------- notices.html ---------- */
   "notices.1": "For R5s and R4s &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
   "notices.2": "In-Game Notices",
-  "notices.3": "Messages ready to paste into the game. Each one comes in two sizes: a short version that fits the <strong>300-character alliance notice</strong>, and a longer one for the <strong>500-character group message</strong>.",
+  "notices.3": "Messages ready to paste into the game. Most come in two sizes: a short version that fits the <strong>300-character alliance notice</strong>, and a longer one for the <strong>500-character group message</strong>. The copy button is at the top of each box.",
   "notices.4": "Posting them",
   "notices.5": "The alliance notice is the one people actually read, so keep it current: repost the tag notice after any alliance joins or leaves, the All Out notice at the start of every All Out window, and the blacklist notice whenever a name is added or a listing ends.",
   "notices.6": "If you shorten one, keep the parts that stop arguments later: which tags are covered, that Town Centres are never open, and that being blacklisted is not permission to attack.",

@@ -180,6 +180,7 @@ hr.rule {
 
 .btn {
   display: inline-block;
+  background: none;
   padding: 11px 22px;
   border-radius: var(--radius-sm);
   font-weight: 600;
@@ -650,10 +651,10 @@ body.modal-open { overflow: hidden; }
 .notice-block-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   margin-bottom: 8px;
 }
+.notice-kind { margin-right: auto; }
 .notice-kind {
   font-size: 11px;
   letter-spacing: 0.14em;
@@ -691,8 +692,30 @@ textarea.notice-text {
 }
 textarea.notice-text:focus { outline: none; border-color: var(--gold); }
 
-.notice-copy { margin-top: 10px; width: 100%; text-align: center; cursor: pointer; font-size: 14px; }
-.notice-copy.copied { border-color: var(--green); color: var(--green); }
+/* small square icon button, used for copy-to-clipboard */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  padding: 0;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color .12s ease, border-color .12s ease, background .12s ease;
+}
+.icon-btn:hover { color: var(--text); border-color: var(--border-strong); background: var(--bg-sunken); }
+.icon-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.icon-btn svg { width: 15px; height: 15px; display: block; }
+.icon-btn.copied {
+  color: var(--green);
+  border-color: rgba(79,180,119,0.5);
+  background: rgba(79,180,119,0.12);
+}
 
 @media (max-width: 640px) {
   .notice-block { border-right: 0; border-bottom: 1px solid var(--border); }
