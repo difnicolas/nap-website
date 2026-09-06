@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In-Game Notices — NAP Kingdom 1886</title>
+<meta name="description" content="Ready-made alliance notices and group messages for the Kingdom 1886 NAP, sized to the in-game character limits.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%9B%A1%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="crest">&#9876;</span>
+      NAP <span class="kd">&middot; K1886</span>
+    </a>
+    <div class="clock" data-clock></div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="rules.html" data-i18n="nav.rules">Rules</a>
+      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+    <div class="lang" data-lang-switcher>
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+        <span aria-hidden="true">&#127760;</span><span class="lang-cur">EN</span>
+      </button>
+      <div class="lang-menu" hidden>
+        <button class="lang-opt" type="button" data-lang="en" lang="en">English</button>
+        <button class="lang-opt" type="button" data-lang="ko" lang="ko">&#54620;&#44397;&#50612;</button>
+        <button class="lang-opt" type="button" data-lang="es" lang="es">Espa&ntilde;ol</button>
+        <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow" data-i18n="notices.1">For R5s and R4s &middot; Kingdom <span data-site="kingdom">1886</span></p>
+      <h1 data-i18n="notices.2">In-Game Notices</h1>
+      <p class="lede" data-i18n="notices.3">
+        Messages ready to paste into the game. Each one comes in two sizes: a short version that
+        fits the <strong>300-character alliance notice</strong>, and a longer one for the
+        <strong>500-character group message</strong>.
+      </p>
+    </div>
+
+    <div class="callout">
+      <p data-i18n="notices.210"><strong>The tag list and the blacklist fill themselves in.</strong> They are pulled from the <a href="alliances.html">directory</a> and the <a href="blacklist.html">blacklist</a> every time this page loads, so a notice copied today is current today. The counter above each box is live &mdash; edit the text before copying if you go over the limit.</p>
+    </div>
+
+    <div id="notice-list"></div>
+
+    <noscript><div class="empty">These notices need JavaScript enabled to display.</div></noscript>
+
+    <hr class="rule">
+
+    <h2 data-i18n="notices.4">Posting them</h2>
+    <p data-i18n="notices.5">
+      The alliance notice is the one people actually read, so keep it current: repost the tag
+      notice after any alliance joins or leaves, the All Out notice at the start of every All Out
+      window, and the blacklist notice whenever a name is added or a listing ends.
+    </p>
+    <p data-i18n="notices.6">
+      If you shorten one, keep the parts that stop arguments later: which tags are covered, that
+      Town Centres are never open, and that being blacklisted is not permission to attack.
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.1">Kingshot &middot; Kingdom <span data-site="kingdom">1886</span> Non-Aggression Pact &middot; maintained by <span data-site="maintainer">the NAP council</span></span>
+    <span data-i18n="footer.2">Last updated <span data-site="lastUpdated">&mdash;</span><span data-discord> &middot; <a href="#">Discord</a></span></span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>

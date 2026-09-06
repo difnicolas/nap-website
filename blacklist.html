@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blacklist — NAP Kingdom 1886</title>
+<meta name="description" content="The official NAP blacklist for Kingshot Kingdom 1886: players barred from joining any NAP alliance, why, and for how long.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%9B%A1%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="crest">&#9876;</span>
+      NAP <span class="kd">&middot; K1886</span>
+    </a>
+    <div class="clock" data-clock></div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="rules.html" data-i18n="nav.rules">Rules</a>
+      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+    <div class="lang" data-lang-switcher>
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+        <span aria-hidden="true">&#127760;</span><span class="lang-cur">EN</span>
+      </button>
+      <div class="lang-menu" hidden>
+        <button class="lang-opt" type="button" data-lang="en" lang="en">English</button>
+        <button class="lang-opt" type="button" data-lang="ko" lang="ko">&#54620;&#44397;&#50612;</button>
+        <button class="lang-opt" type="button" data-lang="es" lang="es">Espa&ntilde;ol</button>
+        <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow" data-i18n="blacklist.1">Official tracker &middot; Kingdom <span data-site="kingdom">1886</span></p>
+      <h1 data-i18n="blacklist.2">NAP Blacklist</h1>
+      <p class="lede" data-i18n="blacklist.3">
+        Being blacklisted means one thing: <strong>you may not be accepted into any NAP
+        alliance.</strong> While a listing is active, no signatory alliance may take the player
+        in &mdash; not the main alliance, not a farm, not an academy. Nothing else changes.
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n danger" id="stat-active">0</div><div class="k" data-i18n="blacklist.4">Currently blacklisted</div></div>
+      <div class="stat"><div class="n danger" id="stat-openended">0</div><div class="k" data-i18n="blacklist.5">Open-ended listings</div></div>
+      <div class="stat"><div class="n neutral" id="stat-past">0</div><div class="k" data-i18n="blacklist.6">Expired or lifted</div></div>
+    </div>
+
+    <div class="banner">
+      <span class="icon">&#9888;</span>
+      <span>
+        <strong>A blacklisted player is not a target.</strong> They are treated as a non-NAP
+        member and keep exactly the same protections as any other non-NAP member &mdash;
+        including the limit of <strong>two Town Centre attacks</strong> under
+        <a href="rules.html">rule 3</a>. Going past that is a violation whether or not the player
+        is on this list. If a name is missing from the list, report it through your R5.
+      </span>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button class="chip" type="button" data-filter="active" aria-pressed="true" data-i18n="blacklist.7">Active</button>
+        <button class="chip" type="button" data-filter="past" aria-pressed="false" data-i18n="blacklist.8">Expired &amp; lifted</button>
+        <button class="chip" type="button" data-filter="all" aria-pressed="false" data-i18n="blacklist.9">All</button>
+      </div>
+      <input id="blacklist-search" class="search" type="search" autocomplete="off" placeholder="Search player, alliance or offence…" aria-label="Search the blacklist">
+      <span id="blacklist-count" class="count"></span>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="blacklist.10">Player</th>
+            <th data-col="offence" data-i18n="blacklist.11">Offence</th>
+            <th data-col="level" data-i18n="blacklist.12">Level</th>
+            <th data-col="listed" data-i18n="blacklist.13">Listed</th>
+            <th data-i18n="blacklist.14">Until</th>
+            <th data-i18n="blacklist.15">Status</th>
+          </tr>
+        </thead>
+        <tbody id="blacklist-body"></tbody>
+      </table>
+    </div>
+    <p class="legend" data-i18n="blacklist.16">
+      <strong>Check the account ID, not the name.</strong> Blacklisted players rename themselves
+      to hide — the ID under each name is the only identifier that cannot be changed. Known
+      previous names are listed as <em>a.k.a.</em>
+    </p>
+    <p class="legend" data-i18n="blacklist.17">
+      <span class="pill pill-strike">Blacklisted</span> may not join a NAP alliance &middot;
+      <span class="pill pill-open">Expired</span> listing served, free to join again &middot;
+      <span class="pill pill-ok">Lifted</span> ended early by the council
+    </p>
+
+    <noscript><div class="empty">This tracker needs JavaScript enabled to display.</div></noscript>
+
+    <hr class="rule">
+
+    <h2 data-i18n="blacklist.18">How a name gets here</h2>
+    <p data-i18n="blacklist.19">
+      Only the NAP council adds names, and only after a ruling. The process — evidence, R5 to R5,
+      then council vote — is set out on the <a href="rules.html">rules page</a>. Strike 2 listings
+      run for 14 days; severe listings are open-ended until the council votes to lift them.
+      Taking a listed player into your alliance is itself a violation (rule 9), which is why the
+      list is public.
+    </p>
+
+    <h2 data-i18n="blacklist.20">Getting removed</h2>
+    <p data-i18n="blacklist.21">
+      Timed listings drop off this page automatically on their end date; nobody needs to ask,
+      and the player is free to join a NAP alliance again. For an open-ended listing, settle
+      whatever the ruling asked for, then have an R5 bring it to the council for a vote. Appeals
+      against the ruling itself must be filed within 48 hours.
+    </p>
+
+    <div class="callout">
+      <p data-i18n="blacklist.210"><strong>Screenshots, not rumours.</strong> Names are added on evidence only. Accusing someone in world chat without a battle report helps nobody and can itself be treated as harassment.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.1">Kingshot &middot; Kingdom <span data-site="kingdom">1886</span> Non-Aggression Pact &middot; maintained by <span data-site="maintainer">the NAP council</span></span>
+    <span data-i18n="footer.2">Last updated <span data-site="lastUpdated">&mdash;</span><span data-discord> &middot; <a href="#">Discord</a></span></span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>

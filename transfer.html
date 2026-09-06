@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Server Transfer — NAP Kingdom 1886</title>
+<meta name="description" content="Thinking of transferring your alliance to Kingshot Kingdom 1886? How to reach out, visit, and join the NAP.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%9B%A1%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="crest">&#9876;</span>
+      NAP <span class="kd">&middot; K1886</span>
+    </a>
+    <div class="clock" data-clock></div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="rules.html" data-i18n="nav.rules">Rules</a>
+      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+    <div class="lang" data-lang-switcher>
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+        <span aria-hidden="true">&#127760;</span><span class="lang-cur">EN</span>
+      </button>
+      <div class="lang-menu" hidden>
+        <button class="lang-opt" type="button" data-lang="en" lang="en">English</button>
+        <button class="lang-opt" type="button" data-lang="ko" lang="ko">&#54620;&#44397;&#50612;</button>
+        <button class="lang-opt" type="button" data-lang="es" lang="es">Espa&ntilde;ol</button>
+        <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow" data-i18n="transfer.1">For alliances outside the kingdom</p>
+      <h1 data-i18n="transfer.2">Transferring to Kingdom <span data-site="kingdom">1886</span></h1>
+      <p class="lede" data-i18n="transfer.3">
+        Looking to move your alliance here? You are welcome to come and have a look first.
+        Nothing is decided over one message &mdash; the point is to work out whether we are a
+        good fit for each other before anybody spends a transfer.
+      </p>
+    </div>
+
+    <h2 data-i18n="transfer.4">How it works</h2>
+    <ol class="rule-list">
+      <li data-i18n="transfer.5">
+        <span class="rule-title">Reach out to an R5 of any NAP alliance</span>
+        <span class="rule-body">
+          One of your members contacts an R5 from any of the alliances listed below and opens the
+          conversation. It does not matter which one you pick &mdash; they all have the same route
+          into the pact.
+        </span>
+      </li>
+      <li data-i18n="transfer.6">
+        <span class="rule-title">That R5 brings the conversation to NAP</span>
+        <span class="rule-body">
+          The R5 you spoke to takes it to the rest of the NAP leadership, so every alliance in the
+          kingdom knows who is asking and what you are looking for. You are not negotiating with
+          one alliance in private &mdash; you are talking to the kingdom.
+        </span>
+      </li>
+      <li data-i18n="transfer.7">
+        <span class="rule-title">Create accounts here and socialize</span>
+        <span class="rule-body">
+          You are free to make accounts in K<span data-site="kingdom">1886</span> and spend time
+          in the kingdom before committing anything. Get into chat, meet the alliances, watch how
+          the pact actually runs day to day, and see whether it suits how your alliance plays.
+          There is no obligation attached to visiting.
+        </span>
+      </li>
+      <li data-i18n="transfer.8">
+        <span class="rule-title">If everyone agrees, we help you move</span>
+        <span class="rule-body">
+          Once your side and the NAP alliances are both happy, you get help joining the pact and
+          help getting your people transferred onto the server &mdash; timings, teleport
+          logistics, and where your alliance and its farms will sit on the map.
+        </span>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <p data-i18n="transfer.210"><strong>Everyone has to agree.</strong> That includes you. If the fit is not right, saying so costs nothing and no bridges are burned &mdash; far better than finding out after your whole alliance has spent transfers.</p>
+    </div>
+
+    <h2 data-i18n="transfer.9">Who to contact</h2>
+    <p data-i18n="transfer.10">
+      Any of these R5s can start the conversation. Their bear trap times and alliance structure
+      are on the <a href="alliances.html">alliance directory</a>.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="transfer.11">Alliance</th>
+            <th data-i18n="transfer.12">R5</th>
+            <th data-i18n="transfer.13">Farm</th>
+            <th data-i18n="transfer.14">Academy</th>
+          </tr>
+        </thead>
+        <tbody id="r5-contacts"></tbody>
+      </table>
+    </div>
+    <noscript><div class="empty">The contact list needs JavaScript enabled. See the alliance directory.</div></noscript>
+
+    <h2 data-i18n="transfer.15">What we will ask of you</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 data-i18n="transfer.16">Sign the pact</h3>
+        <p data-i18n="transfer.17">Your R5 accepts the NAP on behalf of the alliance, and is responsible for their
+        members honouring it &mdash; including your farm and academy alliances.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="transfer.18">Know the rules</h3>
+        <p data-i18n="transfer.19">Read the <a href="rules.html">violation list</a> before you commit. It is short, and
+        it is enforced. Nothing on it should surprise an alliance that already plays clean.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="transfer.20">Show up</h3>
+        <p data-i18n="transfer.21">Fort and Sanctuary assignments and KvK coordination are the point of the
+        pact. Alliances that take the buffs and skip the work do not last here.</p>
+      </div>
+    </div>
+
+    <h2 data-i18n="transfer.22">What you get</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 data-i18n="transfer.23">A kingdom that isn't at war with itself</h3>
+        <p data-i18n="transfer.24">No revenge rallies, no farming your members while they sleep. Your troops go into KvK
+        instead of into your neighbours.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="transfer.25">A place in the rotation</h3>
+        <p data-i18n="transfer.26">Forts and Sanctuaries are assigned between R5s rather than fought over &mdash; see the
+        <a href="assignments.html">current board</a>. New alliances get worked into it.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="transfer.27">Room for your structure</h3>
+        <p data-i18n="transfer.28">Bring your farm and academy alliances. Most alliances here run one or both, and they
+        are covered by the pact exactly like the main.</p>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <h2 data-i18n="transfer.29">Common questions</h2>
+    <h3 data-i18n="transfer.30">Do we have to merge into an existing alliance?</h3>
+    <p data-i18n="transfer.31">
+      No. The NAP is an agreement between alliances, not a merger. You keep your own alliance,
+      your own tag and your own leadership &mdash; you just agree not to fight the other
+      signatories.
+    </p>
+    <h3 data-i18n="transfer.32">Can we visit without committing?</h3>
+    <p data-i18n="transfer.33">
+      Yes, and we would rather you did. Make accounts, get into kingdom chat, watch how a Fort
+      window plays out. Take as long as you need.
+    </p>
+    <h3 data-i18n="transfer.34">Can we bring our farm and academy alliances?</h3>
+    <p data-i18n="transfer.35">
+      Yes. List them when you talk to the R5 so they can be added to the
+      <a href="alliances.html">directory</a> with you. They are covered by the pact and held to
+      it in the same way.
+    </p>
+    <h3 data-i18n="transfer.36">What if one of our members is on the blacklist?</h3>
+    <p data-i18n="transfer.37">
+      Raise it early rather than letting it surface later. A listed player may not be accepted
+      into a NAP alliance while their listing is active &mdash; see the
+      <a href="blacklist.html">blacklist</a> &mdash; so it needs settling as part of the
+      conversation, not after you have moved.
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.1">Kingshot &middot; Kingdom <span data-site="kingdom">1886</span> Non-Aggression Pact &middot; maintained by <span data-site="maintainer">the NAP council</span></span>
+    <span data-i18n="footer.2">Last updated <span data-site="lastUpdated">&mdash;</span><span data-discord> &middot; <a href="#">Discord</a></span></span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>

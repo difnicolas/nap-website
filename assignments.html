@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanctuary &amp; Fortress Assignments — NAP Kingdom 1886</title>
+<meta name="description" content="This week's sanctuary and fortress assignments for Kingshot Kingdom 1886: who holds what, the buff, the window and the status.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%9B%A1%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="crest">&#9876;</span>
+      NAP <span class="kd">&middot; K1886</span>
+    </a>
+    <div class="clock" data-clock></div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="rules.html" data-i18n="nav.rules">Rules</a>
+      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+    <div class="lang" data-lang-switcher>
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+        <span aria-hidden="true">&#127760;</span><span class="lang-cur">EN</span>
+      </button>
+      <div class="lang-menu" hidden>
+        <button class="lang-opt" type="button" data-lang="en" lang="en">English</button>
+        <button class="lang-opt" type="button" data-lang="ko" lang="ko">&#54620;&#44397;&#50612;</button>
+        <button class="lang-opt" type="button" data-lang="es" lang="es">Espa&ntilde;ol</button>
+        <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow" data-i18n="assignments.1">Public tracker &middot; Kingdom <span data-site="kingdom">1886</span></p>
+      <h1 data-i18n="assignments.2">Sanctuary &amp; Fortress Assignments</h1>
+      <p class="lede" data-i18n="assignments.3">
+        There are <strong>4 Fortresses</strong> and <strong>10 Sanctuaries</strong> on the map.
+        Fortresses go to the top four NAP alliances by power; every NAP alliance is assigned a
+        Sanctuary, and whatever is left over is free-for-all. If an objective is assigned to an
+        alliance, no other signatory rallies it — that is rule 7.
+      </p>
+    </div>
+
+    <div class="banner" id="week-stale" hidden>
+      <span class="icon">&#9888;</span>
+      <span>
+        This board is past its rotation date and may be out of date. Check with your R5 before
+        acting on it.
+      </span>
+    </div>
+
+    <div class="week-head">
+      <span class="wk" id="week-label">This week</span>
+      <span class="rot" id="week-rotation"></span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n" id="stat-forts">0</div><div class="k" data-i18n="assignments.4">Fortresses</div></div>
+      <div class="stat"><div class="n" id="stat-sancs">0</div><div class="k" data-i18n="assignments.5">Sanctuaries</div></div>
+      <div class="stat"><div class="n neutral" id="stat-ffa">0</div><div class="k" data-i18n="assignments.6">Free for all</div></div>
+    </div>
+
+    <h2 data-i18n="assignments.7">Sanctuaries</h2>
+    <p data-i18n="assignments.8">
+      Ten in total. <strong>Every NAP alliance is assigned one</strong> — with
+      <span id="nap-count">6</span> alliances in the pact, the remaining Sanctuaries are a
+      <strong>free-for-all</strong>, open to any alliance on the server, NAP or not.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="assignments.9">Sanctuary</th>
+            <th data-i18n="assignments.10">Assigned to</th>
+            <th data-i18n="assignments.11">Status</th>
+          </tr>
+        </thead>
+        <tbody id="sanctuary-body"></tbody>
+      </table>
+    </div>
+
+    <h2 data-i18n="assignments.12">Fortresses</h2>
+    <p data-i18n="assignments.13">
+      Four in total, assigned to the <strong>top four NAP alliances by power</strong> to capture
+      and hold.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="assignments.14">Fortress</th>
+            <th data-i18n="assignments.15">Assigned to</th>
+            <th data-i18n="assignments.16">Status</th>
+          </tr>
+        </thead>
+        <tbody id="fortress-body"></tbody>
+      </table>
+    </div>
+
+    <p class="legend" data-i18n="assignments.17">
+      <span class="pill pill-ok">Assigned</span> allocated to a NAP alliance &middot;
+      <span class="pill pill-info">Free for all</span> open to any alliance on the server, NAP or not
+    </p>
+
+    <noscript><div class="empty">This tracker needs JavaScript enabled to display.</div></noscript>
+
+    <hr class="rule">
+
+    <h2 data-i18n="assignments.18">How assignments work</h2>
+    <ol class="rule-list">
+      <li data-i18n="assignments.19">
+        <span class="rule-title">Fortresses go to the top four NAP alliances by power</span>
+        <span class="rule-body">
+          The four highest-power alliances in the pact are each assigned a Fortress to capture and
+          hold. Fall out of the top four and the Fortress goes with the ranking.
+        </span>
+      </li>
+      <li data-i18n="assignments.20">
+        <span class="rule-title">Every NAP alliance is assigned a Sanctuary</span>
+        <span class="rule-body">
+          There are ten Sanctuaries and every alliance in the pact gets one, regardless of size.
+          Nobody in the NAP goes without.
+        </span>
+      </li>
+      <li data-i18n="assignments.21">
+        <span class="rule-title">The leftover Sanctuaries are free-for-all</span>
+        <span class="rule-body">
+          Whatever is not assigned to a NAP alliance is open to <em>anyone</em> on the server, in
+          the pact or not. Taking one is not a violation and defending one is on you &mdash; the
+          NAP does not adjudicate free-for-all objectives.
+        </span>
+      </li>
+      <li data-i18n="assignments.22">
+        <span class="rule-title">Picks are made in power order</span>
+        <span class="rule-body">
+          Alliances choose in order of power, highest first. That is deliberate: it rewards
+          alliances for growing, and keeps everyone competing to raise their power rather than
+          settling. A stronger alliance picks first, and a stronger kingdom wins KvK.
+        </span>
+      </li>
+      <li data-i18n="assignments.23">
+        <span class="rule-title">Assigned means assigned</span>
+        <span class="rule-body">
+          Once the board is set, no other signatory takes an assigned objective &mdash; that is
+          rule 7. Disputes go to the R5s, not to a rally. Anything marked free-for-all is outside
+          that: take it, hold it, and the NAP does not adjudicate it.
+        </span>
+      </li>
+    </ol>
+
+    <h2 data-i18n="assignments.24">Corrections</h2>
+    <p data-i18n="assignments.25">
+      If this board does not match the map, tell the <span data-site="maintainer">NAP council</span>
+      in kingdom chat rather than rallying to fix it yourself. Taking an objective off another
+      signatory because "the site was wrong" is still a pact violation and goes to the
+      <a href="blacklist.html">blacklist</a> like any other.
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.1">Kingshot &middot; Kingdom <span data-site="kingdom">1886</span> Non-Aggression Pact &middot; maintained by <span data-site="maintainer">the NAP council</span></span>
+    <span data-i18n="footer.2">Last updated <span data-site="lastUpdated">&mdash;</span><span data-discord> &middot; <a href="#">Discord</a></span></span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>
