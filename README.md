@@ -158,7 +158,8 @@ the FAQ are written into the HTML.
 ### In-game notices — the `NOTICES` array in `data.js`
 
 Each entry has a `title`, a `desc`, a `short` version for the 300-character alliance notice and
-a `long` version for the 500-character group message. These tokens are substituted when the
+a `long` version for the 500-character group message. Leave either as `""` and that box is not
+rendered at all — the blacklist notice uses only the alliance-notice size. These tokens are substituted when the
 page loads, so the tag list and the blacklist are always current:
 
 | Token | Becomes |
@@ -170,8 +171,8 @@ page loads, so the tag list and the blacklist are always current:
 | `{BL_COUNT}` | how many players are currently listed |
 
 The counter above each box is live and turns red past the limit, and the boxes are editable —
-so if the blacklist grows and a notice tips over 300, trim it in the browser before copying.
-The current blacklist notice sits at 280/300, which is roughly one more name of headroom.
+so if the blacklist grows and a notice tips over its limit, trim it in the browser before
+copying.
 
 ## Languages
 

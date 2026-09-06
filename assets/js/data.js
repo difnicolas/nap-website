@@ -356,13 +356,8 @@ const NOTICES = [
     desc: "Who may not be accepted into a NAP alliance. Post this after any change to the list, and before a recruitment push.",
     short:
       "NAP BLACKLIST ({BL_COUNT}) — may NOT join any NAP alliance, farm or academy:\n" +
-      "{BLACKLIST}\n" +
-      "Not permission to attack: they keep non-NAP protection, 2 TC hits max. Check the ID, names change.",
-    long:
-      "NAP BLACKLIST — {BL_COUNT} players listed:\n" +
-      "{BLACKLIST}\n" +
-      "They may not be accepted into any NAP alliance, farm or academy. Taking one in is a violation and the alliance answers for it.\n" +
-      "Being listed is NOT permission to attack. A listed player counts as non-NAP and keeps that protection: 2 TC hits max.\n" +
-      "Always check the account ID — listed players rename to hide.",
+      "{BLACKLIST}",
+    // No group message for this one — the alliance notice says enough.
+    long: "",
   },
 ];

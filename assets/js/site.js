@@ -776,8 +776,8 @@ var NAP = (function () {
           (n.desc ? "<p>" + esc(n.desc) + "</p>" : "") +
         "</div>" +
         '<div class="notice-blocks">' +
-          blockHtml(i, "short", t("ui.notice.alliance", "Alliance notice"), n.short) +
-          blockHtml(i, "long", t("ui.notice.group", "Group message"), n.long) +
+          (n.short ? blockHtml(i, "short", t("ui.notice.alliance", "Alliance notice"), n.short) : "") +
+          (n.long ? blockHtml(i, "long", t("ui.notice.group", "Group message"), n.long) : "") +
         "</div>" +
       "</article>";
     }).join("");
