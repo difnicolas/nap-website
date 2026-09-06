@@ -17,6 +17,11 @@
   --gold:          #d9a441;
   --gold-soft:     #f0c977;
   --gold-dim:      rgba(217, 164, 65, 0.14);
+  --gold-border:   rgba(217, 164, 65, 0.38);
+
+  /* One hover surface for every interactive control. Translucent, so it reads
+     the same whether it sits on the page, a card, or a dropdown panel. */
+  --hover-surface: rgba(255, 255, 255, 0.06);
 
   --green:         #4fb477;
   --amber:         #e0a136;
@@ -104,11 +109,11 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
   border: 1px solid transparent;
 }
-.site-nav a:hover { color: var(--text); background: var(--bg-raised); text-decoration: none; }
+.site-nav a:hover { color: var(--text); background: var(--hover-surface); text-decoration: none; }
 .site-nav a[aria-current="page"] {
   color: var(--gold-soft);
   background: var(--gold-dim);
-  border-color: rgba(217,164,65,0.35);
+  border-color: var(--gold-border);
 }
 
 .clock {
@@ -188,7 +193,7 @@ hr.rule {
   border: 1px solid var(--border-strong);
   color: var(--text);
 }
-.btn:hover { text-decoration: none; border-color: var(--gold); }
+.btn:hover { text-decoration: none; background: var(--hover-surface); border-color: var(--gold); }
 .btn-primary {
   background: var(--gold);
   color: #1a1408;
@@ -424,11 +429,11 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
   font-size: 14px;
   cursor: pointer;
 }
-.chip:hover { color: var(--text); border-color: var(--border-strong); }
+.chip:hover { color: var(--text); background: var(--hover-surface); border-color: var(--border-strong); }
 .chip[aria-pressed="true"] {
   color: var(--gold-soft);
   background: var(--gold-dim);
-  border-color: rgba(217,164,65,0.45);
+  border-color: var(--gold-border);
 }
 
 .banner {
@@ -533,8 +538,8 @@ a.res-card:hover .res-link { color: var(--gold-soft); }
   cursor: pointer;
   line-height: 1.4;
 }
-.lang-btn:hover { color: var(--text); border-color: var(--border-strong); }
-.lang-btn[aria-expanded="true"] { color: var(--gold-soft); border-color: rgba(217,164,65,0.45); }
+.lang-btn:hover { color: var(--text); background: var(--hover-surface); border-color: var(--border-strong); }
+.lang-btn[aria-expanded="true"] { color: var(--gold-soft); background: var(--gold-dim); border-color: var(--gold-border); }
 .lang-cur { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; }
 
 .lang-menu {
@@ -562,7 +567,7 @@ a.res-card:hover .res-link { color: var(--gold-soft); }
   padding: 8px 11px;
   cursor: pointer;
 }
-.lang-opt:hover { background: var(--bg-sunken); color: var(--text); }
+.lang-opt:hover { background: var(--hover-surface); color: var(--text); }
 .lang-opt[aria-current="true"] { color: var(--gold-soft); background: var(--gold-dim); }
 
 @media (max-width: 640px) {
@@ -708,7 +713,7 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   cursor: pointer;
   transition: color .12s ease, border-color .12s ease, background .12s ease;
 }
-.icon-btn:hover { color: var(--text); border-color: var(--border-strong); background: var(--bg-sunken); }
+.icon-btn:hover { color: var(--text); background: var(--hover-surface); border-color: var(--border-strong); }
 .icon-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .icon-btn svg { width: 15px; height: 15px; display: block; }
 .icon-btn.copied {
@@ -752,12 +757,12 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   border-top: 4px solid currentColor;
   opacity: 0.7;
 }
-.site-nav .nav-btn:hover { color: var(--text); background: var(--bg-raised); }
+.site-nav .nav-btn:hover { color: var(--text); background: var(--hover-surface); }
 .site-nav .nav-btn[aria-expanded="true"],
 .site-nav .nav-btn[data-active="true"] {
   color: var(--gold-soft);
   background: var(--gold-dim);
-  border-color: rgba(217,164,65,0.35);
+  border-color: var(--gold-border);
 }
 
 .nav-menu {
@@ -780,7 +785,7 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   color: var(--text-muted);
   border: 0;
 }
-.nav-menu a:hover { background: var(--bg-sunken); color: var(--text); text-decoration: none; }
+.nav-menu a:hover { background: var(--hover-surface); color: var(--text); text-decoration: none; }
 .nav-menu a[aria-current="page"] { color: var(--gold-soft); background: var(--gold-dim); }
 
 @media (max-width: 640px) {
@@ -817,32 +822,33 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   }
   .site-header.nav-open .site-nav { display: flex; }
 
-  /* group buttons become plain section labels; their menus sit open inline */
-  .site-nav .nav-btn {
-    pointer-events: none;
-    padding: 14px 10px 4px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    background: none;
-    border-color: transparent;
-  }
-  .site-nav .nav-btn::after { display: none; }
-  .site-nav .nav-btn[data-active="true"] { color: var(--gold); background: none; }
-
+  /* each group is an accordion: the button opens its own list in place */
   .nav-group { position: static; }
-  .site-nav .nav-menu,
-  .site-nav .nav-menu[hidden] {
-    display: block;
+  .site-nav .nav-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 11px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--text-muted);
+  }
+  .site-nav .nav-btn::after { transition: transform .15s ease; }
+  .site-nav .nav-btn[aria-expanded="true"]::after { transform: rotate(180deg); }
+
+  .site-nav .nav-menu {
     position: static;
     min-width: 0;
-    padding: 0;
+    margin: 2px 0 6px 10px;
+    padding: 0 0 0 10px;
     background: none;
     border: 0;
+    border-left: 1px solid var(--border);
+    border-radius: 0;
     box-shadow: none;
   }
+
   .site-nav .nav-menu a,
   .site-nav > a { padding: 11px 10px; font-size: 15px; border-radius: var(--radius-sm); }
 }

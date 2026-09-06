@@ -210,10 +210,23 @@ var NAP = (function () {
       var open = !header.classList.contains("nav-open");
       header.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", String(open));
-      if (open) closeGroups(null);
     });
     document.querySelectorAll(".site-nav a").forEach(function (a) {
       a.addEventListener("click", closeNav);
+    });
+    var panel = document.querySelector(".site-nav");
+    if (panel) panel.addEventListener("click", function (e) { e.stopPropagation(); });
+  }
+
+  // on mobile the groups are accordions; expand the one holding this page
+  if (window.matchMedia && window.matchMedia("(max-width: 820px)").matches) {
+    groups.forEach(function (g) {
+      var b = g.querySelector(".nav-btn");
+      var menu = g.querySelector(".nav-menu");
+      if (b && menu && b.getAttribute("data-active") === "true") {
+        menu.hidden = false;
+        b.setAttribute("aria-expanded", "true");
+      }
     });
   }
 
