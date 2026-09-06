@@ -23,11 +23,23 @@
     <div class="clock" data-clock></div>
     <nav class="site-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="rules.html" data-i18n="nav.rules">Rules</a>
-      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
-      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
-      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
-      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.information">Information</button>
+        <div class="nav-menu" hidden>
+          <a href="rules.html" data-i18n="nav.rules">Rules</a>
+          <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+          <a href="notices.html" data-i18n="nav.notices">Notices</a>
+          <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+        </div>
+      </div>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.events">Events</button>
+        <div class="nav-menu" hidden>
+          <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+          <a href="allout.html" data-i18n="nav.allout">All Out</a>
+          <a href="kvk.html" data-i18n="nav.kvk">KvK</a>
+        </div>
+      </div>
       <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
       <a href="resources.html" data-i18n="nav.resources">Resources</a>
     </nav>

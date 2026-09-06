@@ -117,6 +117,7 @@ var NAP = (function () {
   "use strict";
 
   var t = NAP.t;
+  var closeLang = null;
 
   /* language switcher */
   var box = document.querySelector("[data-lang-switcher]");
@@ -132,7 +133,7 @@ var NAP = (function () {
         o.setAttribute("aria-current", String(o.getAttribute("data-lang") === NAP.lang()));
       });
     };
-    var close = function () {
+    var close = closeLang = function () {
       if (menu) menu.hidden = true;
       if (btn) btn.setAttribute("aria-expanded", "false");
     };
@@ -141,6 +142,7 @@ var NAP = (function () {
       btn.addEventListener("click", function (e) {
         e.stopPropagation();
         var open = menu.hidden;
+        closeGroups(null);
         menu.hidden = !open;
         btn.setAttribute("aria-expanded", String(open));
       });
@@ -158,10 +160,45 @@ var NAP = (function () {
     NAP.onLang(sync);
   }
 
-  /* current page in the nav */
+  /* current page in the nav, and the group it sits in */
   var here = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".site-nav a").forEach(function (a) {
-    if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
+    if (a.getAttribute("href") !== here) return;
+    a.setAttribute("aria-current", "page");
+    var group = a.closest(".nav-group");
+    if (group) {
+      var b = group.querySelector(".nav-btn");
+      if (b) b.setAttribute("data-active", "true");
+    }
+  });
+
+  /* nav dropdowns */
+  var groups = document.querySelectorAll("[data-nav-group]");
+  function closeGroups(except) {
+    groups.forEach(function (g) {
+      if (g === except) return;
+      var menu = g.querySelector(".nav-menu");
+      var b = g.querySelector(".nav-btn");
+      if (menu) menu.hidden = true;
+      if (b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+  groups.forEach(function (g) {
+    var b = g.querySelector(".nav-btn");
+    var menu = g.querySelector(".nav-menu");
+    if (!b || !menu) return;
+    b.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = menu.hidden;
+      if (typeof closeLang === "function") closeLang();
+      closeGroups(g);
+      menu.hidden = !open;
+      b.setAttribute("aria-expanded", String(open));
+    });
+  });
+  document.addEventListener("click", function () { closeGroups(null); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeGroups(null);
   });
 
   /* values from SITE — re-run after every language change, because

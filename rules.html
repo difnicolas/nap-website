@@ -23,11 +23,23 @@
     <div class="clock" data-clock></div>
     <nav class="site-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="rules.html" data-i18n="nav.rules">Rules</a>
-      <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
-      <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
-      <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
-      <a href="notices.html" data-i18n="nav.notices">Notices</a>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.information">Information</button>
+        <div class="nav-menu" hidden>
+          <a href="rules.html" data-i18n="nav.rules">Rules</a>
+          <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+          <a href="notices.html" data-i18n="nav.notices">Notices</a>
+          <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+        </div>
+      </div>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.events">Events</button>
+        <div class="nav-menu" hidden>
+          <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+          <a href="allout.html" data-i18n="nav.allout">All Out</a>
+          <a href="kvk.html" data-i18n="nav.kvk">KvK</a>
+        </div>
+      </div>
       <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
       <a href="resources.html" data-i18n="nav.resources">Resources</a>
     </nav>
@@ -132,7 +144,7 @@
         <span class="rule-body">
           <strong>We negotiate a fresh agreement with each new server every KvK window</strong>,
           so the terms change every matchup — what was allowed last KvK may be a violation this
-          one. Check the <a href="#kvk">current KvK ruling</a> before the window opens and again
+          one. Check the <a href="kvk.html">current KvK ruling</a> before the window opens and again
           before you march. Council instructions on targets, timings, shield calls and rally
           coordination are binding for the duration of the event.
         </span>
@@ -155,13 +167,10 @@
     <h2 id="kvk" data-i18n="rules.16">Current KvK ruling</h2>
     <p data-i18n="rules.17">
       Kingdom <span data-site="kingdom">1886</span> negotiates a separate agreement with each new
-      server at the start of every KvK window. Those terms are posted below and override nothing
-      on this page — the NAP still applies inside our own kingdom throughout. <strong>Always look
-      for the current ruling before a KvK window; do not assume last matchup's terms carry
-      over.</strong>
+      server at the start of every KvK window, so the terms change every matchup. They are posted
+      on the <a href="kvk.html">KvK page</a> &mdash; <strong>always look there before a KvK
+      window; do not assume last matchup's terms carry over.</strong>
     </p>
-
-    <div id="kvk-panel"></div>
 
     <h2 data-i18n="rules.18">What is still allowed</h2>
     <p data-i18n="rules.19">The NAP is an internal truce, not a peace treaty with the world. All of the following are fair game:</p>
@@ -169,12 +178,12 @@
       <div class="card">
         <h3 data-i18n="rules.20">Kingdom vs Kingdom</h3>
         <p data-i18n="rules.21">Players from other kingdoms — but only within the terms agreed for that matchup. See
-        the <a href="#kvk">current KvK ruling</a>.</p>
+        the <a href="kvk.html">current KvK ruling</a>.</p>
       </div>
       <div class="card">
         <h3 data-i18n="rules.22">All Out</h3>
         <p data-i18n="rules.23">RSS tile hits on NAP members are permitted during All Out, and only then. Town Centres
-        stay protected throughout.</p>
+        stay protected throughout. See the <a href="allout.html">All Out page</a>.</p>
       </div>
       <div class="card">
         <h3 data-i18n="rules.24">Non-NAP players</h3>
