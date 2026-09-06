@@ -59,7 +59,7 @@ window.I18N.es = {
   "index.26": "3. Ask before you hit",
   "index.27": "If you are ever unsure whether an attack is allowed, it isn't. Ask in kingdom chat first. Nobody has ever been punished for asking.",
   "index.28": "<a href=\"transfer.html\">Thinking of transferring here? &rarr;</a>",
-  "index.29": "Alliances from other servers are welcome to come and look around before committing anything. The <a href=\"transfer.html\">server transfer page</a> explains who to talk to and how joining the pact works.",
+  "index.29": "Alliances from other servers are welcome to come and look around before committing anything. The <a href=\"transfer.html\">server transfer page</a> explains who to talk to and how a move to K<span data-site=\"kingdom\">1886</span> works.",
   "index.30": "Hold the line, and Kingdom <span data-site=\"kingdom\">1886</span> keeps its troops.",
 
   /* ---------- rules.html ---------- */
@@ -166,8 +166,8 @@ window.I18N.es = {
   "alliances.3": "Every alliance that has signed the NAP, with its farm and academy alliances, its R5, and its bear trap times. Trap times are set in <strong>UTC</strong> — use the toggle to read them in local time instead.",
   "alliances.4": "UTC",
   "alliances.5": "Local Time",
-  "alliances.6": "Getting listed",
-  "alliances.7": "To add or correct an entry, your R5 should contact the <span data-site=\"maintainer\">NAP council</span> in kingdom chat with the alliance tag and name, the R5's in-game name, the farm and academy alliance tags, and your bear trap times in UTC. Changes are usually up within a day.",
+  "alliances.6": "Corrections",
+  "alliances.7": "If something on this page is wrong or out of date &mdash; a tag, an R5, a bear trap time &mdash; your R5 should tell the <span data-site=\"maintainer\">NAP council</span> in kingdom chat. Changes are usually up within a day.",
   "alliances.8": "Alliances not listed here have not signed the pact and are not covered by it. See the <a href=\"rules.html\">rules page</a> before engaging with them.",
 
   /* ---------- assignments.html ---------- */
@@ -348,7 +348,6 @@ window.I18N.es = {
   "rules.202": "<strong>For anything involving chat, include the account ID.</strong> Open the player's profile, screenshot it, and send the profile and account ID with the report. Names get changed the moment someone is reported; account IDs do not.",
   /* ---------- callout paragraphs ---------- */
   "blacklist.210": "<strong>Screenshots, not rumours.</strong> Names are added on evidence only. Accusing someone in world chat without a battle report helps nobody and can itself be treated as harassment.",
-  "index.210": "<strong>Joining is simple.</strong> Your R5 confirms in kingdom chat that the alliance accepts the NAP, and gets the alliance added to the <a href=\"alliances.html\">directory</a>. That confirmation is your word, and everyone in the kingdom holds you to it.",
   "notices.210": "<strong>The tag list and the blacklist fill themselves in.</strong> They are pulled from the <a href=\"alliances.html\">directory</a> and the <a href=\"blacklist.html\">blacklist</a> every time this page loads, so a notice copied today is current today. The counter above each box is live &mdash; edit the text before copying if you go over the limit.",
   "rules.210": "<strong>When in doubt, don't.</strong> If you cannot tell whether a hit is allowed, ask in kingdom chat before you march. Nobody has ever been punished for asking.",
   "rules.211": "<strong>Report it while it is fresh.</strong> There is no deadline, but evidence goes stale fast — battle reports scroll away, chat gets buried, and people stop agreeing on what happened. A punishment handed down long after the event feels unfair to whoever receives it and does far less to stop the behaviour, so the sooner it is raised, the better it works for everyone.",
