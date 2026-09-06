@@ -163,7 +163,6 @@ window.I18N.es = {
   /* ---------- alliances.html ---------- */
   "alliances.1": "Kingdom <span data-site=\"kingdom\">1886</span>",
   "alliances.2": "Alliance Directory",
-  "alliances.3": "Every alliance that has signed the NAP, with its farm and academy alliances, its R5, and its bear trap times. Trap times are set in <strong>UTC</strong> — use the toggle to read them in local time instead.",
   "alliances.4": "UTC",
   "alliances.5": "Local Time",
   "alliances.6": "Corrections",
