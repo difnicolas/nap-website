@@ -2,16 +2,24 @@
 
 A three-page static website:
 
-| Page | File | What's on it |
-| --- | --- | --- |
-| Home | `index.html` | Welcome, what the NAP is, how to join |
-| Rules | `rules.html` | Violation list, current KvK ruling, what's still allowed, reporting, punishments, appeals |
-| Alliances | `alliances.html` | Directory: alliance, farm + academy, R5s, bear trap times (UTC/Local toggle) |
-| Assignments | `assignments.html` | This week's Sanctuary and Fortress holders |
-| Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
-| Transfer | `transfer.html` | For alliances looking to move to K1886; R5 contact list |
-| Notices | `notices.html` | Copy-paste in-game messages, sized to the 300/500 character limits |
-| Resources | `resources.html` | Community Kingshot tools |
+The navbar has two dropdown groups, **Information** and **Events**, with Home, Transfer and
+Resources as top-level links.
+
+| Nav | Page | File | What's on it |
+| --- | --- | --- | --- |
+| — | Home | `index.html` | What the NAP is and why the kingdom runs one |
+| Information | Rules | `rules.html` | Violation list, what's still allowed, reporting, punishments, appeals |
+| Information | Alliances | `alliances.html` | Directory: alliance, farm + academy + extra, R5s, bear trap times (UTC/Local toggle) |
+| Information | Notices | `notices.html` | Copy-paste in-game messages, sized to the 300/500 character limits |
+| Information | Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
+| Events | Sanctuary | `assignments.html` | Sanctuary and Fortress assignments |
+| Events | All Out | `allout.html` | What changes and what does not during All Out |
+| Events | KvK | `kvk.html` | The current per-matchup ruling, and what the pact still covers |
+| — | Transfer | `transfer.html` | For alliances looking to move to K1886 |
+| — | Resources | `resources.html` | Community Kingshot tools |
+
+The KvK ruling panel (`KVK` in `data.js`) renders on `kvk.html`; the rules page links to it
+rather than repeating it.
 
 No build step, no framework, no dependencies. Open `index.html` in a browser and it works.
 
@@ -109,7 +117,7 @@ until the pick is made.
 ### Current KvK ruling — the `KVK` block in `data.js`
 
 A new agreement is negotiated with each server every KvK window, so this block is rewritten
-every matchup. It renders into the "Current KvK ruling" section of `rules.html`.
+every matchup. It renders into `kvk.html`.
 
 ```js
 const KVK = {
