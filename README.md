@@ -217,6 +217,24 @@ If you add a new paragraph to a page, either give it a `data-i18n` key of its ow
 key to the three language files, or leave it without one — an element with no key is simply
 never translated.
 
+### Keeping the language files in step
+
+The language files hold English until someone translates them, so **editing English on a page
+leaves those files behind** and readers in that language keep seeing the old wording. After
+editing any page text, run:
+
+```
+python3 tools/sync-i18n.py          # report what is out of step
+python3 tools/sync-i18n.py --fix    # refresh the lines nobody has translated yet
+```
+
+`assets/i18n/.english.json` records the English the tool last wrote. A line still matching that
+snapshot has not been translated, so `--fix` refreshes it. A line that differs was written by a
+translator: it is only reported, never overwritten, so no one's work is lost — those are the
+lines a human needs to revisit. The tool also flags keys missing from a language file and keys
+left over from deleted page text. (It does not track the `ui.*` labels, which live as literals
+in `site.js`.)
+
 ## Pre-launch notice
 
 A modal appears on the first page a visitor opens, saying the site is under construction and
