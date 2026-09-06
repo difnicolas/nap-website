@@ -399,4 +399,5 @@ window.I18N.es = {
   "kvk.305": "Reputation we recruit on",
   "kvk.306": "Strong players and whole alliances look at how a kingdom performs before they spend a transfer on it. A record of winning brings us people worth having. A record of losing means watching the players we wanted go somewhere else &mdash; and every good alliance we fail to attract makes the next KvK harder to win. See the <a href=\"transfer.html\">transfer page</a>.",
 
+  "ui.notice.chars": "characters",
 };

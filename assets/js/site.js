@@ -711,6 +711,14 @@ var NAP = (function () {
 
   var LIMITS = { short: 300, long: 500 };
 
+  // A notice may override the limit for either size. 0 means "no limit" —
+  // the counter then just reports the length, for messages that go somewhere
+  // without a cap (a pinned post, Discord, an in-game mail).
+  function limitFor(notice, kind) {
+    var over = notice[kind === "short" ? "shortLimit" : "longLimit"];
+    return over === undefined || over === null ? LIMITS[kind] : over;
+  }
+
   // Each alliance family joined by "-", families separated by ", ":
   //   A86-86a, D86-D8F-86D, W86-86W, ...
   function allTags() {
@@ -756,18 +764,21 @@ var NAP = (function () {
       .replace(/\{BL_COUNT\}/g, String(activeListings().length));
   }
 
-  function blockHtml(i, kind, label, text) {
-    var limit = LIMITS[kind];
+  function countText(len, limit) {
+    return limit ? (len + " / " + limit) : (len + " " + t("ui.notice.chars", "characters"));
+  }
+
+  function blockHtml(i, kind, label, text, limit, rows) {
     var body = fill(text);
-    var over = body.length > limit;
+    var over = limit && body.length > limit;
     return '<div class="notice-block">' +
       '<div class="notice-block-head">' +
         '<span class="notice-kind">' + label + "</span>" +
         '<span class="count-badge' + (over ? " over" : "") + '" data-count-for="' + i + "-" + kind + '">' +
-          body.length + " / " + limit +
+          countText(body.length, limit) +
         "</span>" +
       "</div>" +
-      '<textarea class="notice-text" spellcheck="false" rows="6" ' +
+      '<textarea class="notice-text" spellcheck="false" rows="' + (rows || 6) + '" ' +
         'data-limit="' + limit + '" data-id="' + i + "-" + kind + '">' + esc(body) + "</textarea>" +
       '<button class="btn notice-copy" type="button" data-copy="' + i + "-" + kind + '">' +
         t("ui.notice.copy", "Copy") + "</button>" +
@@ -782,8 +793,10 @@ var NAP = (function () {
           (n.desc ? "<p>" + esc(n.desc) + "</p>" : "") +
         "</div>" +
         '<div class="notice-blocks">' +
-          (n.short ? blockHtml(i, "short", t("ui.notice.alliance", "Alliance notice"), n.short) : "") +
-          (n.long ? blockHtml(i, "long", t("ui.notice.group", "Group message"), n.long) : "") +
+          (n.short ? blockHtml(i, "short", n.shortLabel || t("ui.notice.alliance", "Alliance notice"),
+                                n.short, limitFor(n, "short"), n.rows) : "") +
+          (n.long ? blockHtml(i, "long", n.longLabel || t("ui.notice.group", "Group message"),
+                              n.long, limitFor(n, "long"), n.rows) : "") +
         "</div>" +
       "</article>";
     }).join("");
@@ -794,8 +807,8 @@ var NAP = (function () {
       var badge = host.querySelector('[data-count-for="' + ta.getAttribute("data-id") + '"]');
       ta.addEventListener("input", function () {
         if (!badge) return;
-        badge.textContent = ta.value.length + " / " + limit;
-        badge.classList.toggle("over", ta.value.length > limit);
+        badge.textContent = countText(ta.value.length, limit);
+        badge.classList.toggle("over", !!limit && ta.value.length > limit);
       });
     });
 

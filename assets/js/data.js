@@ -366,4 +366,14 @@ const NOTICES = [
     // No group message for this one — the alliance notice says enough.
     long: "",
   },
+  {
+    title: "KvK prep guide",
+    desc: "Which resources to spend on which day of the KvK week. Too long for the in-game notice — post it where people can keep it, such as a pinned message or an alliance mail.",
+    short: "",
+    long:
+      "👑 KvK Prep Guide 👑\n１｜２｜３｜４｜５\n✅｜🆗｜🚫｜🚫｜🆗｜ TG\n🆗｜✅｜🚫｜🚫｜🆗｜ Gold Dust\n🚫｜✅｜✅｜🚫｜🚫｜ Shards\n✅｜🆗｜🚫｜🚫｜🆗｜ Building\n🚫｜🚫｜🚫｜✅｜🆗｜ Troop\n🆗｜✅｜🚫｜🚫｜🆗｜ Research\n🚫｜✅｜✅｜🚫｜🚫｜ Roulette\n👍｜✅｜👍｜✅｜✅｜ Gather\n✅｜🚫｜✅｜🚫｜✅｜ Intel mission\n🚫｜🚫｜✅｜🚫｜✅｜ Pets Up\n✅｜🚫｜✅｜✅｜🚫｜ Gov Charm\n🚫｜🚫｜🚫｜🚫｜✅｜ 👔 Gov Gear\n🚫｜🚫｜🚫｜✅｜✅｜ Hero Widget\n🚫｜🚫｜🚫｜✅｜✅｜ Mithril\n🚫｜🚫｜🚫｜✅｜✅｜ Hammers\n🚫｜✅｜✅｜🚫｜🚫｜ Emblems\n🚫｜✅｜✅｜🚫｜🚫｜ Manuscripts\n✅｜✅｜🚫｜🚫｜✅｜ Learning\n\n✅ Best day　🆗 Okay　🚫 Do not use　👍 Daily",
+    longLabel: "Full guide",
+    longLimit: 0,          // no cap — this one does not go in a 500-character box
+    rows: 14,
+  },
 ];
