@@ -417,4 +417,12 @@ window.I18N.es = {
   "castle.9": "Every <strong>other NAP alliance</strong> rotates ownership of the Castle outside KvK. That is the point of the rotation: members who would never come out on top of an open free-for-all still get their turn at the throne.",
   "nav.castle": "Castle",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "kvk.401": "Our strategy",
+  "kvk.402": "Kingdom <span data-site=\"kingdom\">1886</span> fights KvK as one server rather than as six separate alliances. We congregate our strongest members into a single <strong>unified KvK alliance</strong>, so the kingdom's best troops march together and hit the same targets at the same time instead of being spread thin across separate rosters. That concentration is the whole advantage &mdash; it only works if people actually move.",
+  "kvk.403": "If you are joining the fight",
+  "kvk.404": "<strong>Join the KvK alliance on castle battle day</strong>, and <strong>stay in it until the reset that day</strong>. Leaving early costs you your rewards for the fight, so do not hop back the moment the battle looks decided &mdash; sit tight until reset.",
+  "kvk.405": "If you are R4 or R5",
+  "kvk.406": "NAP R4s and R5s are whitelisted in the KvK alliance and are expected to be there. You are not just another body in the roster: help coordinate the castle battle and lead it &mdash; calls on targets, timings and rallies come from you.",
+
 };
