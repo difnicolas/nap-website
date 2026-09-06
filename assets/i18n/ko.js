@@ -399,7 +399,7 @@ window.I18N.ko = {
   /* ---------- added by tools/sync-i18n.py ---------- */
   "castle.1": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 7h16M4 12h16M4 17h16\" /></svg>",
   "castle.10": "Holding it",
-  "castle.11": "The alliance whose turn it is has one job: <strong>hold the Castle for 2.5 hours</strong> to secure the victory. Turn up in numbers, hold the timer out, and the win is yours. Fail to hold it and the turn is simply spent &mdash; the rotation moves on.",
+  "castle.11": "The alliance whose turn it is has one job: <strong>hold the Castle for 2.5 hours</strong> to secure the victory. Turn up in numbers and hold the timer out.",
   "castle.12": "Rules during a NAP castle battle",
   "castle.13": "<span class=\"rule-title\">No rallies on the Castle</span> <span class=\"rule-body\"> For the duration of the battle, nobody rallies the Castle. This is what keeps a turn from being ended in a single co-ordinated hit, and it is what makes the rotation worth having. </span>",
   "castle.14": "<span class=\"rule-title\">Solo attacks are allowed</span> <span class=\"rule-body\"> On the turrets and on the Castle itself. The battle is meant to be fought &mdash; the holding alliance is expected to defend, not to be handed 2.5 hours of quiet. </span>",
@@ -424,5 +424,9 @@ window.I18N.ko = {
   "kvk.404": "<strong>Join the KvK alliance on castle battle day</strong>, and <strong>stay in it until the reset that day</strong>. Leaving early costs you your rewards for the fight, so do not hop back the moment the battle looks decided &mdash; sit tight until reset.",
   "kvk.405": "If you are R4 or R5",
   "kvk.406": "NAP R4s and R5s are whitelisted in the KvK alliance and are expected to be there. You are not just another body in the roster: help coordinate the castle battle and lead it &mdash; calls on targets, timings and rallies come from you.",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "castle.401": "<strong>If the hold breaks, the event can run for 5 hours instead of 2.5.</strong> That is the whole kingdom paying for it &mdash; troops, speedups and healing poured into a fight that should already have been over, and a day of everyone's resources gone. It is to be avoided at all costs. Do not take your turn unless you can field enough people to hold the full window.",
+  "castle.402": "Failing does not cost you your place. The rotation carries on and your turn comes round again &mdash; the cost falls on the server, not on your standing, which is exactly why it matters that you turn up prepared.",
 
 };
