@@ -421,8 +421,8 @@ window.I18N.tr = {
   "v1.t2": "Resources returned, an <strong>Avarice Trial</strong> of two to three days, and a <strong>Retaliatory Attack</strong> authorised by the council. Zeroing a member starts here.",
   "v1.title": "Attacking a NAP member's Town Centre",
   "v10.body": "<strong>We negotiate a fresh agreement with each new server every KvK window</strong>, so the terms change every matchup — what was allowed last KvK may be a violation this one. Check the <a href=\"kvk.html\">current KvK ruling</a> before the window opens and again before you march. Council instructions on targets, timings, shield calls and rally coordination are binding for the duration of the event.",
-  "v10.t0": "Exclusion from the rest of the KvK event, and repayment where the kingdom lost something by it.",
-  "v10.t1": "An <strong>Indolence Trial</strong> of two days, plus exclusion from kingdom rally coordination.",
+  "v10.t0": "Removal from the KvK alliance for the rest of the event, and repayment where the kingdom lost something by it.",
+  "v10.t1": "An <strong>Indolence Trial</strong> of two days, and no place in the KvK alliance for the next window.",
   "v10.t2": "An <strong>Avarice Trial</strong> of three days and <strong>Expulsion</strong>. Costing the kingdom a KvK on purpose is as serious as it gets short of the blacklist.",
   "v10.title": "Breaking the KvK rules we outline",
   "v11.body": "Leaving your alliance to make a hit and rejoining afterwards, or using a farm account to do what your main cannot, is treated as the original violation <em>plus</em> a deliberate attempt to evade it. Both accounts are held responsible, and so is the R5 who allowed it.",
@@ -461,7 +461,7 @@ window.I18N.tr = {
   "v8.title": "Poaching members of other alliances by direct message",
   "v9.body": "Anyone on the <a href=\"blacklist.html\">blacklist</a> may not be given a home in a NAP alliance — main, farm or academy — while their listing is active. Accepting them makes the alliance answerable for them.",
   "v9.t0": "The alliance has 24 hours to remove the listed player.",
-  "v9.t1": "The alliance is removed from the NAP directory and from kingdom event coordination. The kingdom is informed.",
+  "v9.t1": "The alliance is removed from the NAP directory. It is no longer a NAP member and is not covered by the pact. The kingdom is informed.",
   "v9.title": "Harboring a NAP blacklisted member",
 
 };
