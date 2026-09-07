@@ -450,7 +450,7 @@ window.I18N.ko = {
   "v13.body": "Leaving your alliance to make a hit and rejoining afterwards, or using a farm account to do what your main cannot, is treated as the original violation <em>plus</em> a deliberate attempt to evade it. Both accounts are held responsible, and so is the R5 who allowed it.",
   "v13.t0": "<strong>Expulsion</strong> and an open-ended <strong>NAP Blacklist</strong> for <em>both</em> accounts, main and farm. The underlying violation is answered at double, and the R5 who allowed it answers to the council.",
   "v13.title": "Abusing the system to get around the rules",
-  "v6.t1": "Take it down, plus <strong>Demotion to R1</strong> for one day.",
+  "v6.t1": "Take it down, <strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
   "v6.t2": "Take it down, <strong>Demotion to R1</strong> for one day, and an <strong>Indolence Trial</strong> of one day.",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
