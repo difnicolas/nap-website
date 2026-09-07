@@ -383,7 +383,7 @@ window.I18N.es = {
   "v1.body": "No solo hits and no rallies against the city of any player in a NAP alliance, at any time, regardless of power, alliance or how new they are. This includes players who are shieldless, offline or newly migrated in. Taking a member all the way to zero is <a href=\"#v2\">rule 2</a>, and is answered far more heavily.",
   "v1.t0": "Resources returned to the victim, an apology to the player you hit, and <strong>Demotion to R1</strong> for one day. <em>The demotion is waived where it was plainly a misclick or a genuine mistake and you go to your R4 or R5 about it straight away.</em>",
   "v1.t1": "Resources returned, <strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
-  "v1.t2": "Resources returned, <strong>Demotion to R1</strong> for one day, an <strong>Avarice Trial</strong> of two to three days, and a <strong>Retaliatory Attack</strong> authorised by the council. Repeated hits on the same city in one sitting land here, not on the first-time tier. Taking that member to zero is <a href=\"#v2\">rule 2</a>.",
+  "v1.t2": "Resources returned, <strong>Demotion to R1</strong> for one day, an <strong>Avarice Trial</strong> of two days, and a <strong>Retaliatory Attack</strong> authorised by the council. Repeated hits on the same city in one sitting land here, not on the first-time tier. Taking that member to zero is <a href=\"#v2\">rule 2</a>.",
   "v1.title": "Attacking a NAP member's Town Centre",
   "v10.body": "Do not DM another alliance's players to recruit them. Players are free to move on their own, and open recruitment in world chat is fine — going into someone else's roster is not.",
   "v10.t0": "The player who did the recruiting is <strong>demoted from R4 for a week</strong> if they hold R4, or <strong>demoted to R1 for three days</strong> if they do not.",
@@ -446,7 +446,7 @@ window.I18N.es = {
   /* ---------- added by tools/sync-i18n.py ---------- */
   "v10.t2": "<strong>Expulsion from the alliance</strong>, and the council may put a <strong>NAP Blacklist</strong> to a vote. Where the offender is the R5 themselves, their alliance's standing in the NAP goes to a council vote.",
   "v12.t1": "Repayment, <strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
-  "v12.t2": "Repayment, <strong>Demotion to R1</strong> for one day, an <strong>Avarice Trial</strong> of two to three days, and a <strong>Retaliatory Attack</strong> authorised by the council.",
+  "v12.t2": "Repayment, <strong>Demotion to R1</strong> for one day, an <strong>Avarice Trial</strong> of two days, and a <strong>Retaliatory Attack</strong> authorised by the council.",
   "v13.body": "Leaving your alliance to make a hit and rejoining afterwards, or using a farm account to do what your main cannot, is treated as the original violation <em>plus</em> a deliberate attempt to evade it. Both accounts are held responsible, and so is the R5 who allowed it.",
   "v13.t0": "<strong>Expulsion</strong> and an open-ended <strong>NAP Blacklist</strong> for <em>both</em> accounts, main and farm. The underlying violation is answered at double, and the R5 who allowed it answers to the council.",
   "v13.title": "Abusing the system to get around the rules",
