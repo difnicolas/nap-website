@@ -377,7 +377,7 @@ window.I18N.tr = {
   "rules.400": "Each violation carries what the council applies at each level. What the trials cost is set out underneath.",
   "tier.any": "Any occurrence",
   "tier.first": "First time",
-  "tier.malice": "Malicious or multiple",
+  "tier.malice": "Malicious or Multiple at Once",
   "tier.refuse": "Refusing to act",
   "tier.second": "Second time",
   "v1.body": "No solo hits and no rallies against the city of any player in a NAP alliance, at any time, regardless of power, alliance or how new they are. This includes players who are shieldless, offline or newly migrated in. Taking a member all the way to zero is <a href=\"#v2\">rule 2</a>, and is answered far more heavily.",
