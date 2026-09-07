@@ -928,3 +928,33 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
   .site-header { transition: none; }
 }
+
+/* ---------- Trial key ---------- */
+
+.trial-key {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.trial {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 18px;
+}
+.trial-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.trial-debuff {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.trial p { margin: 0; font-size: 14px; color: var(--text-muted); }

@@ -463,4 +463,16 @@ window.I18N.tr = {
   "v9.t1": "The alliance is removed from the NAP directory. It is no longer a NAP member and is not covered by the pact. The kingdom is informed.",
   "v9.title": "Harboring a NAP blacklisted member",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "rules.600": "What each trial does",
+  "rules.601": "Arrogance Trial",
+  "rules.602": "&minus;40% production speed",
+  "rules.603": "Everything you build and produce takes noticeably longer for the length of the trial.",
+  "rules.604": "Indolence Trial",
+  "rules.605": "&minus;25% training speed",
+  "rules.606": "Troops come out of the barracks slower, so rebuilding what you spent takes longer than it should.",
+  "rules.607": "Avarice Trial",
+  "rules.608": "&minus;10% / &minus;10% / &minus;10%",
+  "rules.609": "The heaviest of the three: three penalties at once rather than one, which is why it is kept for malicious cases.",
+
 };
