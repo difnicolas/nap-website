@@ -411,7 +411,7 @@ window.I18N.ko = {
   "v4.t2": "Repayment, <strong>Demotion to R1</strong> for one day, plus an <strong>Avarice Trial</strong> of two days.",
   "v4.title": "Attacking a non-NAP member's Town Centre more than twice",
   "v5.body": "Alliance banners, flags and built structures belonging to a NAP alliance are off limits. Do not attack them, and do not plant over them to force a fight.",
-  "v5.t0": "Rebuild costs returned to the alliance, plus <strong>Demotion to R1</strong> for one day. <em>The demotion is waived where it was plainly a misclick or a genuine mistake and you go to your R4 or R5 about it straight away.</em>",
+  "v5.t0": "An apology to the R5 of the alliance whose structure it was, and <strong>Demotion to R1</strong> for one day. <em>The demotion is waived where it was plainly a misclick or a genuine mistake and you go to your R4 or R5 about it straight away.</em>",
   "v5.title": "Attacking NAP alliance structures, banners or buildings",
   "v6.body": "In any channel — world, alliance or direct message — and against <em>any</em> player, including players from other kingdoms. There is no warning tier for this one.",
   "v6.t0": "<strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No first-time tier, no trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.",
@@ -447,8 +447,8 @@ window.I18N.ko = {
   "v12.body": "Leaving your alliance to make a hit and rejoining afterwards, or using a farm account to do what your main cannot, is treated as the original violation <em>plus</em> a deliberate attempt to evade it. Both accounts are held responsible, and so is the R5 who allowed it.",
   "v12.t0": "<strong>Expulsion</strong> and an open-ended <strong>NAP Blacklist</strong> for <em>both</em> accounts, main and farm. The underlying violation is answered at double, and the R5 who allowed it answers to the council.",
   "v12.title": "Abusing the system to get around the rules",
-  "v5.t1": "Rebuild costs returned, <strong>Demotion to R1</strong> for one day, plus an <strong>Indolence Trial</strong> of two days.",
-  "v5.t2": "Rebuild costs returned, <strong>Demotion to R1</strong> for one day, and an <strong>Avarice Trial</strong> of two days. The council may also put a <strong>NAP Blacklist</strong> to a vote.",
+  "v5.t1": "<strong>Demotion to R1</strong> for one day, plus an <strong>Indolence Trial</strong> of two days.",
+  "v5.t2": "<strong>Demotion to R1</strong> for one day and an <strong>Avarice Trial</strong> of two days. The council may also put a <strong>NAP Blacklist</strong> to a vote.",
   "v9.t2": "<strong>Expulsion from the alliance</strong>, and the council may put a <strong>NAP Blacklist</strong> to a vote. Where the offender is the R5 themselves, their alliance's standing in the NAP goes to a council vote.",
 
 };
