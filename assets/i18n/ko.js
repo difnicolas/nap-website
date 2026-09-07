@@ -394,7 +394,7 @@ window.I18N.ko = {
   "rules.514": "Full repayment of what the hit cost them, within 24 hours.",
   "rules.515": "Every case where someone lost something, at every tier.",
   "rules.516": "<strong>Demotion to R1</strong>",
-  "rules.517": "Loses rank and everything that comes with it.",
+  "rules.517": "Demoted to R1 for <strong>one day</strong>, losing rank and everything that comes with it.",
   "rules.518": "Repeat violations, and any misuse of rank or position.",
   "rules.519": "<strong>Arrogance Trial</strong>",
   "rules.520": "&minus;40% production speed for the length of the trial.",
