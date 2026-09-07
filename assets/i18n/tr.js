@@ -83,7 +83,7 @@ window.I18N.tr = {
   "rules.31": "Anything else the game itself puts kingdom members against each other in. Nothing that happens inside carries over onto the map.",
   "rules.38": "Reporting a violation",
   "rules.39": "<strong>For an attack, share the battle report</strong> with your R4 or R5. It must show the attacker's name, their alliance tag and the timestamp.",
-  "rules.40": "<strong>Send it all to your own R4 or R5.</strong> Do not post it in world chat.",
+  "rules.40": "<strong>Send it all to your own R4 or R5.</strong> Do not start drama in world chat around the issue. If you have complaints about how the NAP is handling things, ask your leadership to bring the topic to the NAP council.",
   "rules.41": "<strong>Your R5 contacts the other alliance's R5.</strong> Most cases end here, with the losses repaid.",
   "rules.42": "<strong>If unresolved, it goes to the council</strong> — the R5s of the NAP alliances, together with the Minister of Justice, who rule on it and set the punishment.",
   "rules.96": "Appeals",
