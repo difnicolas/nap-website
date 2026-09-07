@@ -427,6 +427,6 @@ window.I18N.es = {
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "castle.401": "<strong>If the hold breaks, the event can run for 5 hours instead of 2.5.</strong> That is the whole kingdom paying for it &mdash; troops, speedups and healing poured into a fight that should already have been over, and a day of everyone's resources gone. It is to be avoided at all costs. Do not take your turn unless you can field enough people to hold the full window.",
-  "castle.402": "Failing does not cost you your place. The rotation carries on and your turn comes round again &mdash; the cost falls on the server, not on your standing, which is exactly why it matters that you turn up prepared.",
+  "castle.402": "<strong>Short on the big hitters?</strong> If your alliance does not have a whale who can anchor the hold, reach out to NAP and ask for support &mdash; members from the other alliances will volunteer to come and help you hold it. Ask ahead of your turn rather than halfway through it, and the kingdom will make sure the window is covered.",
 
 };
