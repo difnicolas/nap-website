@@ -77,8 +77,6 @@ window.I18N.es = {
   "rules.23": "RSS tile hits on NAP members are permitted during All Out, and only then. Town Centres stay protected throughout. See the <a href=\"allout.html\">All Out page</a>.",
   "rules.24": "Non-NAP players",
   "rules.25": "Up to <strong>two</strong> Town Centre attacks each. Their tiles and marches are open, but the TC limit is firm.",
-  "rules.26": "Bandits and beasts",
-  "rules.27": "All PvE targets on the map. Rally them freely — just don't cut across someone else's rally.",
   "rules.28": "Arena",
   "rules.29": "Hitting a K<span data-site=\"kingdom\">1886</span> player in Arena is never a violation. You are <em>asked</em> to use your refreshes to find targets from other kingdoms first &mdash; but once your refreshes are gone, hit a K<span data-site=\"kingdom\">1886</span> player rather than spend gems on more.",
   "rules.30": "Event combat",
