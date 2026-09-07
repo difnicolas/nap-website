@@ -391,7 +391,7 @@ window.I18N.tr = {
   "rules.523": "&minus;25% training speed for the length of the trial.",
   "rules.524": "A step up: repeat violations, or a case where troops were the point of it.",
   "rules.525": "<strong>Avarice Trial</strong>",
-  "rules.526": "&minus;10% / &minus;10% / &minus;10% for the length of the trial.",
+  "rules.526": "&minus;10% training, research and construction speed for the length of the trial.",
   "rules.527": "The heaviest trial. Malicious cases, or several violations at once.",
   "rules.528": "<strong>Retaliatory Attack</strong>",
   "rules.529": "The council authorises a specific, limited attack in response.",
@@ -472,7 +472,7 @@ window.I18N.tr = {
   "rules.605": "&minus;25% training speed",
   "rules.606": "Troops come out of the barracks slower, so rebuilding what you spent takes longer than it should.",
   "rules.607": "Avarice Trial",
-  "rules.608": "&minus;10% / &minus;10% / &minus;10%",
-  "rules.609": "The heaviest of the three: three penalties at once rather than one, which is why it is kept for malicious cases.",
+  "rules.608": "&minus;10% training, research and construction speed",
+  "rules.609": "Three penalties at once rather than one: troops, research and building all slow down together, which is why it is kept for malicious cases.",
 
 };
