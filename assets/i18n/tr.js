@@ -83,11 +83,6 @@ window.I18N.tr = {
   "rules.29": "Hitting a K<span data-site=\"kingdom\">1886</span> player in Arena is never a violation. You are <em>asked</em> to use your refreshes to find targets from other kingdoms first &mdash; but once your refreshes are gone, hit a K<span data-site=\"kingdom\">1886</span> player rather than spend gems on more.",
   "rules.30": "Event combat",
   "rules.31": "Anything else the game itself puts kingdom members against each other in. Nothing that happens inside carries over onto the map.",
-  "rules.32": "Also expected of you",
-  "rules.33": "These are not on the violation list, but they are how the pact stays workable — ignore them often enough and you will end up committing a violation anyway.",
-  "rules.34": "<strong>Never retaliate before reporting and getting approval.</strong> If you are hit, screenshot it and send it up. Hitting back on your own is a violation of rule 1 in its own right — wait for the R5s to rule, and act only if they approve it.",
-  "rules.35": "<strong>Tiles are first come, first served.</strong> If a tile is already being gathered, take another one.",
-  "rules.37": "<strong>R5s answer for their alliance</strong>, including their farm and academy alliances.",
   "rules.38": "Reporting a violation",
   "rules.39": "<strong>For an attack, share the battle report</strong> with your R4 or R5. It must show the attacker's name, their alliance tag and the timestamp.",
   "rules.40": "<strong>Send it all to your own R4 or R5.</strong> Do not post it in world chat.",
@@ -457,5 +452,8 @@ window.I18N.tr = {
   "v13.title": "Abusing the system to get around the rules",
   "v6.t1": "Take it down, plus <strong>Demotion to R1</strong> for one day.",
   "v6.t2": "Take it down, <strong>Demotion to R1</strong> for one day, and an <strong>Indolence Trial</strong> of one day.",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "rules.700": "<strong>Never retaliate before reporting and getting approval.</strong> Hitting back on your own is a violation of rule 1 in its own right. Wait for the R5s to rule, and act only if they approve it.",
 
 };
