@@ -871,5 +871,27 @@ var NAP = (function () {
 })();
 
 
+/* ---- Violation cards: switch punishment tier ---------------------------- */
+(function () {
+  "use strict";
+
+  document.querySelectorAll("[data-violation]").forEach(function (card) {
+    var tabs = card.querySelectorAll(".tier-tab");
+    var panels = card.querySelectorAll("[data-tier-panel]");
+    if (tabs.length < 2) return;   // a single-tier violation has nothing to switch
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var want = tab.getAttribute("data-tier");
+        tabs.forEach(function (t) {
+          t.setAttribute("aria-pressed", String(t === tab));
+        });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute("data-tier-panel") !== want;
+        });
+      });
+    });
+  });
+})();
 /* ---- Boot: fetch the saved language, then apply it ---------------------- */
 NAP.boot();

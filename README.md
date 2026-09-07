@@ -8,7 +8,7 @@ Resources as top-level links.
 | Nav | Page | File | What's on it |
 | --- | --- | --- | --- |
 | — | Home | `index.html` | What the NAP is and why the kingdom runs one |
-| Information | Rules | `rules.html` | Violation list, what's still allowed, reporting, punishments, appeals |
+| Information | Rules | `rules.html` | Violation cards with the punishment at each level, what's still allowed, reporting, appeals |
 | Information | Alliances | `alliances.html` | Directory: alliance, farm + academy + extra, R5s, bear trap times (UTC/Local toggle) |
 | Information | Notices | `notices.html` | Copy-paste in-game messages, sized to the 300/500 character limits |
 | Information | Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
@@ -303,3 +303,20 @@ sed -i '' '/name="robots"/d' *.html
 Note that this is obscurity, not security — the blacklist and every other page are readable by
 anyone who has the URL, and the repository itself is public. Do not put anything in here that
 would actually harm someone if it leaked.
+
+## Violation cards
+
+Each violation on `rules.html` is a card carrying its own punishments, switchable by level:
+**First time / Second time / Malicious intent** for the violations that have a ladder, and a
+single **Any occurrence** tier — styled red and not clickable — for the ones severe enough that
+there is no working up to it (harassment, misuse of the Minister of Justice position, and
+system abuse).
+
+The markup lives in the page rather than in `data.js`, so every line stays inside the
+translation system. Card text uses `v<n>.title`, `v<n>.body` and `v<n>.t<tier>` keys; the tier
+labels are shared across all cards as `tier.first`, `tier.second`, `tier.malice`, `tier.any`
+and `tier.refuse`, so they are translated once.
+
+To change a punishment, edit the matching `<p data-i18n="v<n>.t<tier>">` in `rules.html`, then
+run `python3 tools/sync-i18n.py --fix`. To add or remove a tier, copy a `tier-tab` button and
+its `tier-panel`, keeping the `data-tier` and `data-tier-panel` numbers in step.

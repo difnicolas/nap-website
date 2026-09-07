@@ -862,3 +862,61 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   .site-nav .nav-menu a,
   .site-nav > a { padding: 11px 10px; font-size: 15px; border-radius: var(--radius-sm); }
 }
+
+/* ---------- Violation cards ---------- */
+
+.violations { display: grid; gap: 16px; }
+
+.violation {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px 16px;
+}
+
+.violation-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.violation-n {
+  flex: 0 0 30px;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: var(--bg-sunken);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold);
+}
+.violation-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--text);
+}
+.violation-body { margin: 0 0 14px; color: var(--text-muted); font-size: 15px; }
+
+.tiers { border-top: 1px solid var(--border); padding-top: 14px; }
+.tier-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.tier-tab { font-size: 13px; padding: 5px 12px; }
+
+.tiers.single .tier-tabs .tier-tab {
+  /* a violation with no ladder: the one tier is a statement, not a choice */
+  pointer-events: none;
+  color: var(--red);
+  border-color: rgba(216,96,79,0.45);
+  background: rgba(216,96,79,0.10);
+}
+
+.tier-panel {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 16px;
+}
+.tiers.single .tier-panel { border-left-color: var(--red); }
+.tier-panel p { margin: 0; font-size: 15px; }
+
+@media (max-width: 640px) {
+  .violation { padding: 16px 16px 14px; }
+  .violation-head h3 { font-size: 16px; }
+}
