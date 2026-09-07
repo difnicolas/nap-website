@@ -63,6 +63,7 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 20;
+  transition: transform .25s ease;
   background: rgba(11, 13, 18, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
@@ -919,4 +920,11 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
 @media (max-width: 640px) {
   .violation { padding: 16px 16px 14px; }
   .violation-head h3 { font-size: 16px; }
+}
+
+/* the header steps out of the way while reading down the page */
+.site-header.header-hidden { transform: translateY(-100%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header { transition: none; }
 }

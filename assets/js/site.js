@@ -893,5 +893,42 @@ var NAP = (function () {
     });
   });
 })();
+/* ---- Hide the header on the way down, bring it back on the way up ------- */
+(function () {
+  "use strict";
+
+  var header = document.querySelector(".site-header");
+  if (!header) return;
+
+  var last = 0, ticking = false;
+
+  function update() {
+    ticking = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (y < 0) y = 0;
+
+    // never hide the bar while its own menu is open
+    if (header.classList.contains("nav-open")) {
+      header.classList.remove("header-hidden");
+      last = y;
+      return;
+    }
+
+    if (y > last + 5 && y > 140) {
+      header.classList.add("header-hidden");
+    } else if (y < last - 5 || y <= 140) {
+      header.classList.remove("header-hidden");
+    }
+    last = y;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }, { passive: true });
+})();
+
+
 /* ---- Boot: fetch the saved language, then apply it ---------------------- */
 NAP.boot();
