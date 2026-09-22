@@ -416,8 +416,8 @@ window.I18N.ko = {
   "v8.t0": "Removal from the post and a formal request to the King for a replacement, and <strong>barred from holding the position for the rest of that King's reign</strong>. Where the position was used for personal gain, <strong>Expulsion</strong> as well. The NAP council and the King are informed.",
   "v8.title": "Misuse of the Minister of Justice position",
   "v9.body": "If an objective is assigned to an alliance on the <a href=\"assignments.html\">assignments board</a>, no other NAP alliance takes it. Claims go through the council before the rotation, not by rally.",
-  "v9.t0": "The objective is handed back at the next window, uncontested.",
-  "v9.t1": "Handed back, plus an <strong>Arrogance Trial</strong> of one day. The alliance loses its next assignment.",
+  "v9.t0": "The alliance forfeits its first capture reward at the next Sanctuary event to the alliance they took it from.",
+  "v9.t1": "An <strong>Arrogance Trial</strong> of one day, and the alliance loses its vote on the next assigned Sanctuary.",
   "v9.title": "Stealing a Fort or Sanctuary from the assigned list",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
@@ -439,7 +439,7 @@ window.I18N.ko = {
   "v12.title": "Breaking the KvK rules we outline",
   "v5.t1": "<strong>Demotion to R1</strong> for one day, plus an <strong>Indolence Trial</strong> of two days.",
   "v5.t2": "<strong>Demotion to R1</strong> for one day and an <strong>Avarice Trial</strong> of two days. The council may also put a <strong>NAP Blacklist</strong> to a vote.",
-  "v9.t2": "Handed back, an <strong>Avarice Trial</strong> of two days, and the alliance loses its next assignment. Best effort is made to give their assigned Sanctuary to the alliance they took from &mdash; not always possible, since some Sanctuaries are auto-assigned.",
+  "v9.t2": "An <strong>Avarice Trial</strong> of two days, and the alliance loses its next assignment.",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "v10.t2": "<strong>Expulsion from the alliance</strong>, and the council may put a <strong>NAP Blacklist</strong> to a vote. Where the offender is the R5 themselves, their alliance's standing in the NAP goes to a council vote.",
