@@ -221,13 +221,17 @@
           <span class="violation-n">7</span>
           <h3 data-i18n="v7.title">Verbal, sexual or racial harassment of any player</h3>
         </div>
-        <p class="violation-body" data-i18n="v7.body">In any channel — world, alliance or direct message — and against <em>any</em> player, including players from other kingdoms. There is no warning tier for this one.</p>
-        <div class="tiers single">
+        <p class="violation-body" data-i18n="v7.body">In any channel — world, alliance or direct message — and against <em>any</em> player, including players from other kingdoms. Severity decides the tier here, not repetition: a single crude or disrespectful remark is minor, while sexual or racial harassment, threats, or anything sustained or targeted is major.</p>
+        <div class="tiers">
           <div class="tier-tabs">
-          <button class="chip tier-tab" type="button" data-tier="0" aria-pressed="true" data-i18n="tier.any">Any occurrence</button>
+          <button class="chip tier-tab" type="button" data-tier="0" aria-pressed="true" data-i18n="tier.minor">Minor infraction</button>
+          <button class="chip tier-tab" type="button" data-tier="1" aria-pressed="false" data-i18n="tier.major">Major infraction</button>
           </div>
         <div class="tier-panel" data-tier-panel="0">
-          <p data-i18n="v7.t0"><strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No first-time tier, no trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.</p>
+          <p data-i18n="v7.t0">A <strong>No-Contact Order</strong>: the accused may not contact the accuser again, in any channel, for any reason. Breaking it is itself a major infraction.</p>
+        </div>
+        <div class="tier-panel" data-tier-panel="1" hidden>
+          <p data-i18n="v7.t1"><strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.</p>
         </div>
         </div>
       </article>
@@ -346,6 +350,29 @@
           </div>
         <div class="tier-panel" data-tier-panel="0">
           <p data-i18n="v13.t0"><strong>Expulsion</strong> and an open-ended <strong>NAP Blacklist</strong> for <em>both</em> accounts, main and farm. The underlying violation is answered at double, and the R5 who allowed it answers to the council.</p>
+        </div>
+        </div>
+      </article>
+      <article class="violation" id="v14" data-violation>
+        <div class="violation-head">
+          <span class="violation-n">14</span>
+          <h3 data-i18n="v14.title">Jumping between a main and academy alliance to fight over an Outpost</h3>
+        </div>
+        <p class="violation-body" data-i18n="v14.body">Race fairly for an Outpost with the alliance you are in &mdash; do not hop out of your main into your academy (or back) mid-contest to throw a second alliance's troops, timers or banner rights at the same Outpost. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.</p>
+        <div class="tiers">
+          <div class="tier-tabs">
+          <button class="chip tier-tab" type="button" data-tier="0" aria-pressed="true" data-i18n="tier.first">First time</button>
+          <button class="chip tier-tab" type="button" data-tier="1" aria-pressed="false" data-i18n="tier.second">Second time</button>
+          <button class="chip tier-tab" type="button" data-tier="2" aria-pressed="false" data-i18n="tier.malice">Malicious or Multiple at Once</button>
+          </div>
+        <div class="tier-panel" data-tier-panel="0">
+          <p data-i18n="v14.t0">The Outpost claim is voided and reopened, plus an apology to the R5s of the alliances contesting it.</p>
+        </div>
+        <div class="tier-panel" data-tier-panel="1" hidden>
+          <p data-i18n="v14.t1">Voided, <strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day. Any R4 or R5 who arranged the switch is demoted alongside them.</p>
+        </div>
+        <div class="tier-panel" data-tier-panel="2" hidden>
+          <p data-i18n="v14.t2">Voided, <strong>Expulsion</strong> for the player from both alliances, and an <strong>Avarice Trial</strong> of two days for whichever alliance benefited. Where an R5 arranged it, their alliance's NAP standing goes to a council vote.</p>
         </div>
         </div>
       </article>

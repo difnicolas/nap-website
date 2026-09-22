@@ -409,8 +409,8 @@ window.I18N.ko = {
   "v6.body": "Alliances build across the map to reach and contest the Outposts, and that building is fair competition. Cutting the route off is not: do not plant to block another alliance's path, box their build in, or take the ground they are plainly building towards. Race them to an Outpost all you like &mdash; just do not stand in the road.",
   "v6.t0": "Take the banner down and clear the path, plus an apology to the R5 of the alliance you blocked.",
   "v6.title": "Blocking an alliance's banner path",
-  "v7.body": "In any channel — world, alliance or direct message — and against <em>any</em> player, including players from other kingdoms. There is no warning tier for this one.",
-  "v7.t0": "<strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No first-time tier, no trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.",
+  "v7.body": "In any channel — world, alliance or direct message — and against <em>any</em> player, including players from other kingdoms. Severity decides the tier here, not repetition: a single crude or disrespectful remark is minor, while sexual or racial harassment, threats, or anything sustained or targeted is major.",
+  "v7.t0": "A <strong>No-Contact Order</strong>: the accused may not contact the accuser again, in any channel, for any reason. Breaking it is itself a major infraction.",
   "v7.title": "Verbal, sexual or racial harassment of any player",
   "v8.body": "The position exists to serve the kingdom, not the holder's alliance or friends. Using it to shield rule-breakers, to punish rivals, or to hand out favours is a violation by the holder and by whoever appointed them to do it.",
   "v8.t0": "Removal from the post and a formal request to the King for a replacement, and <strong>barred from holding the position for the rest of that King's reign</strong>. Where the position was used for personal gain, <strong>Expulsion</strong> as well. The NAP council and the King are informed.",
@@ -453,5 +453,17 @@ window.I18N.ko = {
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "rules.700": "<strong>Never retaliate before reporting and getting approval.</strong> Hitting back on your own is a violation of rule 1 in its own right. Wait for the R5s to rule, and act only if they approve it.",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "v14.body": "Race fairly for an Outpost with the alliance you are in &mdash; do not hop out of your main into your academy (or back) mid-contest to throw a second alliance's troops, timers or banner rights at the same Outpost. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.",
+  "v14.t0": "The Outpost claim is voided and reopened, plus an apology to the R5s of the alliances contesting it.",
+  "v14.t1": "Voided, <strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day. Any R4 or R5 who arranged the switch is demoted alongside them.",
+  "v14.t2": "Voided, <strong>Expulsion</strong> for the player from both alliances, and an <strong>Avarice Trial</strong> of two days for whichever alliance benefited. Where an R5 arranged it, their alliance's NAP standing goes to a council vote.",
+  "v14.title": "Jumping between a main and academy alliance to fight over an Outpost",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "tier.major": "Major infraction",
+  "tier.minor": "Minor infraction",
+  "v7.t1": "<strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.",
 
 };
