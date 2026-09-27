@@ -431,6 +431,9 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
   cursor: pointer;
 }
 .chip:hover { color: var(--text); background: var(--hover-surface); border-color: var(--border-strong); }
+.page-toc { margin-top: 20px; }
+.page-toc .chip { text-decoration: none; }
+h2[id], .violation[id] { scroll-margin-top: 84px; }
 .chip[aria-pressed="true"] {
   color: var(--gold-soft);
   background: var(--gold-dim);
@@ -524,6 +527,9 @@ a.res-card:hover .res-link { color: var(--gold-soft); }
 /* ---------- Language switcher ---------- */
 
 .lang { position: relative; }
+/* Hidden until real translations exist; delete these two lines to bring the switcher back. */
+.lang { display: none; }
+.nav-toggle { margin-left: auto; }
 
 .lang-btn {
   display: flex;

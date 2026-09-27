@@ -12,7 +12,7 @@ const SITE = {
   // Who maintains this page.
   maintainer: "Kingdom 1886 NAP Council",
   // Change this whenever you update the alliance list below.
-  lastUpdated: "6 September 2026",
+  lastUpdated: "26 September 2026",
 };
 
 /* --------------------------------------------------------------------------
@@ -46,7 +46,6 @@ const ALLIANCES = [
     bear: ["00:10", "15:00"],
     farm:    { tag: "86a", name: "", r5: "" },
     academy: null,
-    extra:   { tag: "KVK", name: "", r5: "", label: "KvK alliance" },
     note: "",
   },
   {
@@ -70,7 +69,7 @@ const ALLIANCES = [
   {
     tag: "KTA",
     name: "KillThemAll",
-    r5: "Yeager",
+    r5: "Whiteout",
     bear: ["14:00", "23:00"],
     farm:    { tag: "KTa", name: "", r5: "" },
     academy: null,
@@ -93,6 +92,24 @@ const ALLIANCES = [
     farm:    null,
     academy: null,
     note: "",
+  },
+  {
+    tag: "T86",
+    name: "Gemstone Tavern",
+    r5: "BearQueen Lace, JustFio & jayjewel",
+    bear: [],
+    farm:    null,
+    academy: null,
+    note: "",
+  },
+  {
+    tag: "KVK",
+    name: "",
+    r5: "",
+    bear: [],
+    farm:    null,
+    academy: null,
+    note: "KvK alliance",
   },
 ];
 
@@ -215,8 +232,8 @@ const BLACKLIST = [
 
    There are 4 Fortresses and 10 Sanctuaries.
      - Fortresses go to the top 4 NAP alliances by power.
-     - Every NAP alliance is assigned a Sanctuary; with 6 alliances in the pact
-       that leaves 4 Sanctuaries as free-for-all.
+     - Every NAP alliance is assigned a Sanctuary; with 8 alliances in the pact
+       that leaves 2 Sanctuaries as free-for-all.
    Rename these slots to the objective names as they appear on the map.
    -------------------------------------------------------------------------- */
 
