@@ -454,12 +454,22 @@ window.I18N.ko = {
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "rules.700": "<strong>Never retaliate before reporting and getting approval.</strong> Hitting back on your own is a violation of rule 1 in its own right. Wait for the R5s to rule, and act only if they approve it.",
+  "rules.800": "Changing the rules",
+  "rules.801": "Any NAP alliance can propose amending a rule, changing a punishment, or adding a new rule. Every change goes through the same steps.",
+  "rules.802": "<strong>Bring it to the NAP for discussion.</strong> Raise the topic with the NAP council first, so every alliance has a chance to weigh in before anything is voted on.",
+  "rules.803": "<strong>A second alliance seconds the motion.</strong> After the discussion, another alliance must second the proposal to start a vote. Without a second, it does not go to a vote.",
+  "rules.804": "<strong>A two-thirds majority approves it.</strong> Amending a rule, amending a punishment, or adding a new rule all need a 2/3 majority of NAP alliances to pass.",
+  "rules.805": "<strong>Rules and punishments are voted on separately.</strong> A proposal that changes both &mdash; or a new rule together with its punishments &mdash; goes to two votes: one on the rule, and one on the punishment.",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
-  "v14.body": "Race fairly for an Outpost with the alliance you are in &mdash; do not hop out of your main into your academy (or back) mid-contest to throw a second alliance's troops, timers or banner rights at the same Outpost. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.",
-  "v14.t0": "<strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day. Any R4 or R5 who arranged the switch is demoted alongside them.",
-  "v14.t1": "<strong>Expulsion</strong> for the player from both alliances, and an <strong>Avarice Trial</strong> of two days for whichever alliance benefited. Where an R5 arranged it, their alliance's NAP standing goes to a council vote.",
-  "v14.title": "Jumping between a main and academy alliance to fight over an Outpost",
+  "v14.body": "LVL 4 Outposts are to be taken by the Top 4 alliances, and conflict over them is to be avoided at all costs.",
+  "v14.t0": "<strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
+  "v14.t1": "An <strong>Avarice Trial</strong> of five days for the member responsible.",
+  "v14.title": "Fighting over a LVL 4 Outpost",
+  "v15.body": "Race fairly for a LVL 3 Outpost with the alliance you are in &mdash; do not hop between your main, academy or farm alliance mid-contest to throw a second alliance's troops, timers or banner rights at the same Outpost. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.",
+  "v15.t0": "<strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day. Any R4 or R5 who arranged the switch is demoted alongside them.",
+  "v15.t1": "An <strong>Avarice Trial</strong> of five days for the member who jumped.",
+  "v15.title": "Jumping between Main, Academy or Farm alliances to capture a LVL 3 Outpost",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "tier.major": "Major infraction",
