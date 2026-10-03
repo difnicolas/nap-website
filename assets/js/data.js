@@ -345,12 +345,12 @@ const NOTICES = [
     short:
       "K{KINGDOM} NAP — do NOT attack these tags:\n" +
       "{ALL_TAGS}\n" +
-      "Every tag above is covered. Never hit a NAP Town Centre. NAP tiles only during All Out. Non-NAP: 2 TC hits max. Unsure? Ask your R5.",
+      "Every tag above is covered. Never hit a NAP Town Center. NAP tiles only during All Out. Non-NAP: 2 TC hits max. Unsure? Ask your R5.",
     long:
       "K{KINGDOM} NAP alliances — these tags are off limits:\n" +
       "{ALL_TAGS}\n" +
       "Farms, academies and KvK alliances included.\n" +
-      "• NAP Town Centres: never attack.\n" +
+      "• NAP Town Centers: never attack.\n" +
       "• NAP resource tiles: only during All Out.\n" +
       "• Non-NAP players: 2 TC hits each, max.\n" +
       "• Never hit a march going to bear, a beast or a rally.\n" +
@@ -361,14 +361,14 @@ const NOTICES = [
     short:
       "ALL OUT — what is allowed:\n" +
       "• NAP resource tiles: OPEN, this window only.\n" +
-      "• NAP Town Centres: STILL OFF LIMITS. All Out changes nothing here.\n" +
+      "• NAP Town Centers: STILL OFF LIMITS. All Out changes nothing here.\n" +
       "• Non-NAP: 2 TC hits max, as always.\n" +
       "Report violations to your R5 with a screenshot. Never retaliate before reporting and getting approval.",
     long:
       "ALL OUT is live. What changes and what does not:\n" +
       "OPEN — resource tiles of NAP members, for this window only. They go back to being a violation the moment it closes.\n" +
-      "STILL BANNED — attacking a NAP member's Town Centre. All Out changes nothing here.\n" +
-      "UNCHANGED — non-NAP players stay capped at 2 Town Centre hits each.\n" +
+      "STILL BANNED — attacking a NAP member's Town Center. All Out changes nothing here.\n" +
+      "UNCHANGED — non-NAP players stay capped at 2 Town Center hits each.\n" +
       "Hit by someone? Screenshot it and send it to your R5. Never retaliate before reporting and getting approval — hitting back on your own is its own violation.",
   },
   {
