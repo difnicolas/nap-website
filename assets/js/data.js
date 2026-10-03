@@ -12,7 +12,7 @@ const SITE = {
   // Who maintains this page.
   maintainer: "Kingdom 1886 NAP Council",
   // Change this whenever you update the alliance list below.
-  lastUpdated: "26 September 2026",
+  lastUpdated: "3 October 2026",
 };
 
 /* --------------------------------------------------------------------------
@@ -51,7 +51,7 @@ const ALLIANCES = [
   {
     tag: "D86",
     name: "Dragons",
-    r5: "Sanceline",
+    r5: "VaLiBeY",
     bear: ["14:00", "18:00", "22:00"],
     farm:    { tag: "D8F", name: "", r5: "" },
     academy: { tag: "86D", name: "", r5: "" },
@@ -105,7 +105,7 @@ const ALLIANCES = [
   {
     tag: "KVK",
     name: "",
-    r5: "",
+    r5: "Reliant (Defiant)",
     bear: [],
     farm:    null,
     academy: null,
