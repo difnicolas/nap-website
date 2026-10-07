@@ -893,6 +893,114 @@ var NAP = (function () {
     });
   });
 })();
+
+
+/* ---- Violation cards: copy one rule for the game chat ------------------- */
+(function () {
+  "use strict";
+
+  var cards = document.querySelectorAll("[data-violation]");
+  if (!cards.length) return;
+
+  var t = NAP.t;
+
+  var COPY_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>';
+  var TICK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  var CHAT_LIMIT = 512;   // the game rejects longer chat messages
+
+  // Side notes (<em>) and anything marked .chat-skip are explanation, not
+  // punishment, and are left out so every rule fits in one chat message.
+  function plain(el) {
+    if (!el) return "";
+    var copy = el.cloneNode(true);
+    copy.querySelectorAll("em, .chat-skip").forEach(function (n) { n.remove(); });
+    return copy.textContent.replace(/\s+/g, " ").trim();
+  }
+
+  // Plain text, no markup — chat shows it as-is. Read from the page at click
+  // time, so it is always the wording (and language) the reader is looking at:
+  //   NAP Rule 3: Attacking a NAP member's RSS tile outside of All Out
+  //   • First time: Resources returned to the victim, ...
+  //   • Second time: ...
+  // A translation that runs long is cut at the limit rather than refused.
+  function chatText(card) {
+    var text = fullText(card);
+    return text.length > CHAT_LIMIT ? text.slice(0, CHAT_LIMIT - 1) + "…" : text;
+  }
+
+  function fullText(card) {
+    var lines = [t("ui.rule.copyHead", "NAP Rule") + " " +
+                 plain(card.querySelector(".violation-n")) + ": " +
+                 plain(card.querySelector(".violation-head h3"))];
+    card.querySelectorAll(".tier-tab").forEach(function (tab) {
+      var panel = card.querySelector('[data-tier-panel="' + tab.getAttribute("data-tier") + '"]');
+      lines.push("• " + plain(tab) + ": " + plain(panel));
+    });
+    return lines.join("\n");
+  }
+
+  function label(btn, copied) {
+    var text = copied ? t("ui.notice.copied", "Copied")
+                      : t("ui.rule.copy", "Copy rule for chat");
+    btn.setAttribute("title", text);
+    btn.setAttribute("aria-label", text);
+  }
+
+  // copy to clipboard, with a fallback for browsers that block the API
+  function copy(text, done) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+    } else {
+      fallback(text, done);
+    }
+  }
+
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (err) {}
+    document.body.removeChild(ta);
+    done();
+  }
+
+  var buttons = [];
+  cards.forEach(function (card) {
+    var head = card.querySelector(".violation-head");
+    if (!head) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "icon-btn rule-copy";
+    btn.innerHTML = COPY_ICON;
+    label(btn, false);
+    head.appendChild(btn);
+    buttons.push(btn);
+
+    var timer;
+    btn.addEventListener("click", function () {
+      copy(chatText(card), function () {
+        btn.innerHTML = TICK_ICON;
+        btn.classList.add("copied");
+        label(btn, true);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          btn.innerHTML = COPY_ICON;
+          btn.classList.remove("copied");
+          label(btn, false);
+        }, 1600);
+      });
+    });
+  });
+
+  NAP.onLang(function () {
+    buttons.forEach(function (b) { label(b, b.classList.contains("copied")); });
+  });
+})();
 /* ---- Hide the header on the way down, bring it back on the way up ------- */
 (function () {
   "use strict";

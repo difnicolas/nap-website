@@ -899,6 +899,7 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
   font-size: 17px;
   color: var(--text);
 }
+.violation-head .rule-copy { margin-left: auto; }
 .violation-body { margin: 0 0 14px; color: var(--text-muted); font-size: 15px; }
 
 .tiers { border-top: 1px solid var(--border); padding-top: 14px; }
