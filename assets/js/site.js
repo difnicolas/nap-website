@@ -102,9 +102,31 @@ var NAP = (function () {
 
   function onLang(fn) { renderers.push(fn); }
 
+  // copy to clipboard, with a fallback for browsers that block the API
+  function copyText(text, done) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { copyFallback(text, done); });
+    } else {
+      copyFallback(text, done);
+    }
+  }
+
+  function copyFallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (err) {}
+    document.body.removeChild(ta);
+    done();
+  }
+
   return {
     esc: esc, pad: pad, parseDay: parseDay, fmtDay: fmtDay, daysLeft: daysLeft,
-    t: t, applyI18n: applyI18n, setLang: setLang, onLang: onLang,
+    t: t, applyI18n: applyI18n, setLang: setLang, onLang: onLang, copyText: copyText,
     langs: LANGS,
     lang: function () { return lang; },
     boot: function () { loadLang(lang, refresh); },
@@ -376,17 +398,6 @@ var NAP = (function () {
   var countEl = document.getElementById("blacklist-count");
   var filter = "active";
 
-  function levelPill(level) {
-    var map = {
-      severe:  ["ui.level.severe", "Severe", "pill-strike"],
-      strike2: ["ui.level.strike2", "Strike 2", "pill-warn"],
-      strike1: ["ui.level.strike1", "Strike 1", "pill-warn"],
-    };
-    var m = map[level];
-    if (!m) return '<span class="pill">' + esc(level) + "</span>";
-    return '<span class="pill ' + m[2] + '">' + t(m[0], m[1]) + "</span>";
-  }
-
   // A listing is only "active" until its `until` date passes (null = open-ended).
   function state(e) {
     if (e.status === "lifted") return "lifted";
@@ -410,15 +421,37 @@ var NAP = (function () {
         : '<div class="sub muted">' + t("ui.served", "Served") + "</div>");
   }
 
+  // A listing can be appealed two months after it was added. One with no
+  // listed date predates that rule and is open to appeal now.
+  var APPEAL_MONTHS = 2;
+
+  function appealDate(e) {
+    var d = NAP.parseDay(e.listed);
+    if (!d) return null;
+    d.setUTCMonth(d.getUTCMonth() + APPEAL_MONTHS);   // rolls over into next year
+    return d.toISOString().slice(0, 10);
+  }
+
+  function appealHtml(e) {
+    if (state(e) !== "active") return '<span class="muted">&mdash;</span>';
+    var from = appealDate(e);
+    var wait = from ? NAP.daysLeft(from) - 1 : 0;   // days until that date begins
+    if (wait <= 0) {
+      return '<span class="pill pill-ok">' + t("ui.appeal.open", "Open To Appeal") + "</span>";
+    }
+    return NAP.fmtDay(from) +
+      '<div class="sub">' + t("ui.appeal.in", "Opens in") + " " + wait + " " +
+      (wait === 1 ? t("ui.day", "day") : t("ui.days", "days")) + "</div>";
+  }
+
   // Columns with nothing in them anywhere are hidden entirely, rather than
   // rendering a table full of dashes. They come back on their own once the
   // council fills the field in for any entry.
   var cols = {
     offence: BLACKLIST.some(function (e) { return e.offence; }),
-    level:   BLACKLIST.some(function (e) { return e.level; }),
     listed:  BLACKLIST.some(function (e) { return e.listed; }),
   };
-  var visibleCols = 2;   // player, until
+  var visibleCols = 3;   // player, until, appeal
   Object.keys(cols).forEach(function (k) {
     if (cols[k]) { visibleCols++; return; }
     var th = document.querySelector('[data-col="' + k + '"]');
@@ -440,14 +473,12 @@ var NAP = (function () {
         ? "<td>" + (e.offence ? esc(e.offence) : '<span class="muted">&mdash;</span>') +
           (e.ruling ? '<div class="sub">' + esc(e.ruling) + "</div>" : "") + "</td>"
         : "") +
-      (cols.level
-        ? "<td>" + (e.level ? levelPill(e.level) : '<span class="muted">&mdash;</span>') + "</td>"
-        : "") +
       (cols.listed
         ? '<td class="mono">' + (e.listed ? NAP.fmtDay(e.listed)
                                           : '<span class="muted">&mdash;</span>') + "</td>"
         : "") +
       "<td>" + untilHtml(e) + "</td>" +
+      "<td>" + appealHtml(e) + "</td>" +
     "</tr>";
   }
 
@@ -493,8 +524,39 @@ var NAP = (function () {
   });
   if (searchEl) searchEl.addEventListener("input", render);
 
+  // Copy every active listing for the game chat, ignoring the filter and search:
+  //   NAP Blacklist
+  //
+  //   292721357 REVENGE (erenoar)
+  //   289608604 Murti
+  var copyBtn = document.getElementById("blacklist-copy");
+  function copyLabel(copied) {
+    if (copyBtn) copyBtn.textContent = copied ? t("ui.notice.copied", "Copied")
+                                              : t("blacklist.23", "Copy for chat");
+  }
+  if (copyBtn) {
+    var copyTimer;
+    copyBtn.addEventListener("click", function () {
+      var lines = active.map(function (e) {
+        return [e.id, e.name].filter(Boolean).join(" ") +
+               (e.aka && e.aka.length ? " (" + e.aka.join(", ") + ")" : "");
+      });
+      var text = t("ui.blacklist.copyHead", "NAP Blacklist") + "\n\n" + lines.join("\n");
+      NAP.copyText(text, function () {
+        copyBtn.classList.add("copied");
+        copyLabel(true);
+        clearTimeout(copyTimer);
+        copyTimer = setTimeout(function () {
+          copyBtn.classList.remove("copied");
+          copyLabel(false);
+        }, 1600);
+      });
+    });
+  }
+
   render();
   NAP.onLang(render);
+  NAP.onLang(function () { copyLabel(copyBtn && copyBtn.classList.contains("copied")); });
 })();
 
 
@@ -947,28 +1009,6 @@ var NAP = (function () {
     btn.setAttribute("aria-label", text);
   }
 
-  // copy to clipboard, with a fallback for browsers that block the API
-  function copy(text, done) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
-    } else {
-      fallback(text, done);
-    }
-  }
-
-  function fallback(text, done) {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand("copy"); } catch (err) {}
-    document.body.removeChild(ta);
-    done();
-  }
-
   var buttons = [];
   cards.forEach(function (card) {
     var head = card.querySelector(".violation-head");
@@ -983,7 +1023,7 @@ var NAP = (function () {
 
     var timer;
     btn.addEventListener("click", function () {
-      copy(chatText(card), function () {
+      NAP.copyText(chatText(card), function () {
         btn.innerHTML = TICK_ICON;
         btn.classList.add("copied");
         label(btn, true);

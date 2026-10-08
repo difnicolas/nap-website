@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=1">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body>
 
@@ -95,6 +95,7 @@
       </div>
       <input id="blacklist-search" class="search" type="search" autocomplete="off" placeholder="Search player, alliance or offence…" aria-label="Search the blacklist">
       <span id="blacklist-count" class="count"></span>
+      <button id="blacklist-copy" class="chip copy-chip" type="button" data-i18n="blacklist.23">Copy for chat</button>
     </div>
 
     <div class="table-scroll">
@@ -103,9 +104,9 @@
           <tr>
             <th data-i18n="blacklist.10">Player</th>
             <th data-col="offence" data-i18n="blacklist.11">Offence</th>
-            <th data-col="level" data-i18n="blacklist.12">Level</th>
             <th data-col="listed" data-i18n="blacklist.13">Listed</th>
             <th data-i18n="blacklist.14">Until</th>
+            <th data-i18n="blacklist.22">Appeal</th>
           </tr>
         </thead>
         <tbody id="blacklist-body"></tbody>
@@ -134,7 +135,8 @@
     <p data-i18n="blacklist.21">
       Timed listings drop off this page automatically on their end date; nobody needs to ask,
       and the player is free to join a NAP alliance again. For an open-ended listing, settle
-      whatever the ruling asked for, then have an R5 bring it to the council for a vote. Appeals
+      whatever the ruling asked for, then have an R5 bring it to the council for a vote &mdash; no sooner than two months after
+      the player was listed. Appeals
       against the ruling itself must be filed within 48 hours.
     </p>
 
@@ -152,7 +154,7 @@
   </div>
 </footer>
 
-<script src="assets/js/data.js?v=1"></script>
-<script src="assets/js/site.js?v=1"></script>
+<script src="assets/js/data.js?v=2"></script>
+<script src="assets/js/site.js?v=2"></script>
 </body>
 </html>

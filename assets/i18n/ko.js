@@ -135,14 +135,13 @@ window.I18N.ko = {
   "blacklist.9": "All",
   "blacklist.10": "Player",
   "blacklist.11": "Offence",
-  "blacklist.12": "Level",
   "blacklist.13": "Listed",
   "blacklist.14": "Until",
   "blacklist.16": "<strong>Check the account ID, not the name.</strong> Blacklisted players rename themselves to hide — the ID under each name is the only identifier that cannot be changed. Known previous names are listed as <em>a.k.a.</em>",
   "blacklist.18": "How a name gets here",
   "blacklist.19": "Only the NAP council adds names, and only after a ruling. The process — evidence, R5 to R5, then council vote — is set out on the <a href=\"rules.html\">rules page</a>, along with the full list of punishments the council can apply. Listings run for a set number of days, or open-ended until the council votes to lift them. Taking a listed player into your alliance is itself a violation (rule 11), which is why the list is public.",
   "blacklist.20": "Getting removed",
-  "blacklist.21": "Timed listings drop off this page automatically on their end date; nobody needs to ask, and the player is free to join a NAP alliance again. For an open-ended listing, settle whatever the ruling asked for, then have an R5 bring it to the council for a vote. Appeals against the ruling itself must be filed within 48 hours.",
+  "blacklist.21": "Timed listings drop off this page automatically on their end date; nobody needs to ask, and the player is free to join a NAP alliance again. For an open-ended listing, settle whatever the ruling asked for, then have an R5 bring it to the council for a vote &mdash; no sooner than two months after the player was listed. Appeals against the ruling itself must be filed within 48 hours.",
 
   /* ---------- transfer.html ---------- */
   "transfer.1": "For alliances outside the kingdom",
@@ -207,14 +206,14 @@ window.I18N.ko = {
   "ui.openEnded": "Open-ended",
   "ui.untilCouncil": "Until the council votes to lift",
   "ui.served": "Served",
+  "ui.appeal.open": "Open To Appeal",
+  "ui.appeal.in": "Opens in",
+  "ui.blacklist.copyHead": "NAP Blacklist",
   "ui.day": "day",
   "ui.days": "days",
   "ui.remaining": "remaining",
   "ui.aka": "a.k.a.",
   "ui.id": "ID",
-  "ui.level.severe": "Severe",
-  "ui.level.strike2": "Strike 2",
-  "ui.level.strike1": "Strike 1",
   "ui.nothingToShow": "Nothing to show here.",
   "ui.shown": "shown",
 
@@ -477,5 +476,11 @@ window.I18N.ko = {
   "tier.major": "Major infraction",
   "tier.minor": "Minor infraction",
   "v7.t1": "<strong>Expulsion from the alliance</strong> and an open-ended <strong>NAP Blacklist</strong>. No trial, no warning. Report it in game as well &mdash; it breaks the game's own rules.",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "blacklist.22": "Appeal",
+
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "blacklist.23": "Copy for chat",
 
 };

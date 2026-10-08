@@ -310,6 +310,12 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 .search:focus { outline: none; border-color: var(--gold); }
 .search::placeholder { color: var(--text-faint); }
 .count { color: var(--text-faint); font-size: 14px; font-family: var(--font-mono); }
+.copy-chip { margin-left: auto; }
+.copy-chip.copied {
+  color: var(--green);
+  border-color: rgba(79,180,119,0.5);
+  background: rgba(79,180,119,0.12);
+}
 
 .alliance-card {
   background: var(--bg-raised);

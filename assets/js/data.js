@@ -124,9 +124,6 @@ const ALLIANCES = [
      aka:      ["OldName"],        // other names they have used. [] if none.
      alliance: "",                 // tag at the time of the ruling, "" if none
      offence:  "",                 // "" shows as "not published" — fill in when known
-     level:    "severe" | "strike2" | "strike1" | "",   // optional; see the
-                                                        // rules page for the
-                                                        // punishment the council set
      listed:   "2026-09-01",       // YYYY-MM-DD, or "" if unknown
      until:    "2026-09-15",       // YYYY-MM-DD, or null for open-ended
      status:   "active" | "lifted",// "lifted" = council ended it early
@@ -144,7 +141,6 @@ const BLACKLIST = [
     aka: ["erenoar"],
     alliance: "",
     offence: "",
-    level: "",
     listed: "",
     until: null,
     status: "active",
@@ -155,8 +151,7 @@ const BLACKLIST = [
     name: "Murti",
     aka: [],
     alliance: "",
-    offence: "",
-    level: "",
+    offence: "Harassment",
     listed: "",
     until: null,
     status: "active",
@@ -168,7 +163,6 @@ const BLACKLIST = [
     aka: ["Fantoo"],
     alliance: "",
     offence: "",
-    level: "",
     listed: "",
     until: null,
     status: "active",
@@ -179,8 +173,7 @@ const BLACKLIST = [
     name: "Kato!",
     aka: [],
     alliance: "",
-    offence: "",
-    level: "",
+    offence: "Harassment",
     listed: "",
     until: null,
     status: "active",
@@ -192,7 +185,6 @@ const BLACKLIST = [
     aka: ["Ruler of the Sun"],
     alliance: "",
     offence: "",
-    level: "",
     listed: "",
     until: null,
     status: "active",
@@ -203,9 +195,30 @@ const BLACKLIST = [
     name: "T\u00fcrkbeyi",
     aka: [],
     alliance: "",
+    offence: "Aggression",
+    listed: "2026-09-01",
+    until: null,
+    status: "active",
+    ruling: "",
+  },
+  {
+    id: "308298844",
+    name: "leave me",
+    aka: ["Quarterstaff", "Let Me Go"],
+    alliance: "",
+    offence: "Harassment",
+    listed: "2026-09-24",
+    until: null,
+    status: "active",
+    ruling: "Jumped into KvK to hide.",
+  },
+  {
+    id: "367528939",
+    name: "OjOnara_오조",
+    aka: [],
+    alliance: "",
     offence: "",
-    level: "",
-    listed: "",
+    listed: "2026-09-24",
     until: null,
     status: "active",
     ruling: "",
