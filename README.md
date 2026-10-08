@@ -225,7 +225,7 @@ nothing extra.
 - `index.*`, `rules.*`, `alliances.*`, `assignments.*`, `blacklist.*`, `transfer.*`,
   `resources.*` — page prose, numbered in document order.
 - `ui.*` — labels inside the tables and cards that JavaScript builds (column labels, status
-  pills, the pre-launch notice).
+  pills).
 
 If you add a new paragraph to a page, either give it a `data-i18n` key of its own and add that
 key to the three language files, or leave it without one — an element with no key is simply
@@ -248,17 +248,6 @@ translator: it is only reported, never overwritten, so no one's work is lost —
 lines a human needs to revisit. The tool also flags keys missing from a language file and keys
 left over from deleted page text. (It does not track the `ui.*` labels, which live as literals
 in `site.js`.)
-
-## Pre-launch notice
-
-A modal appears on the first page a visitor opens, saying the site is under construction and
-pending NAP approval, and asking them not to share the link outside R5/R4 circles. It is
-dismissed with the button, Escape, or a click outside, and it uses `sessionStorage`, so it
-reappears the next time the browser is opened but not on every page navigation.
-
-It is injected by `assets/js/site.js` (search for "Pre-launch notice") rather than pasted into
-each page. **Delete that block when the site goes live** — or set the `nap-notice-seen` key —
-and remove the `ui.notice.*` lines from the language files.
 
 ## If the browser shows an old version
 

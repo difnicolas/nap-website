@@ -128,7 +128,6 @@ window.I18N.es = {
   "blacklist.2": "NAP Blacklist",
   "blacklist.3": "Being blacklisted means one thing: <strong>you may not be accepted into any NAP alliance.</strong> While a listing is active, no NAP alliance may take the player in &mdash; not the main alliance, not a farm, not an academy. Nothing else changes.",
   "blacklist.4": "Currently blacklisted",
-  "blacklist.5": "Open-ended listings",
   "blacklist.6": "Expired or lifted",
   "blacklist.7": "Active",
   "blacklist.8": "Expired &amp; lifted",
@@ -236,12 +235,6 @@ window.I18N.es = {
   "ui.kvk.blankNone": "No KvK window is running. Terms are posted here as soon as the next matchup is agreed.",
   "ui.kvk.stale": "This window has closed. The terms below are last matchup's and no longer apply — wait for the new ruling before acting on anything here.",
 
-  /* ---------- Interface labels — Pre-launch notice ---------- */
-  "ui.notice.flag": "Pre-launch",
-  "ui.notice.title": "This site is under construction",
-  "ui.notice.body1": "It is still undergoing NAP approval before launch. If you have this link, it is only to review it and give feedback to Gio.",
-  "ui.notice.body2": "Please do not share it outside the R5 and R4 circles of NAP alliances.",
-  "ui.notice.button": "Understood",
   /* ---------- notices.html ---------- */
   "notices.1": "For R5s and R4s &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
   "notices.2": "In-Game Notices",

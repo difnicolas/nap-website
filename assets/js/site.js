@@ -510,7 +510,6 @@ var NAP = (function () {
     if (el) el.textContent = value;
   }
   setStat("stat-active", active.length);
-  setStat("stat-openended", active.filter(function (e) { return !e.until; }).length);
   setStat("stat-past", BLACKLIST.length - active.length);
 
   document.querySelectorAll("[data-filter]").forEach(function (btn) {
@@ -723,65 +722,6 @@ var NAP = (function () {
       '<div class="res-link">' + esc(domain(r.url)) + " &nearr;</div>" +
     "</a>";
   }).join("");
-})();
-
-
-/* ---- Pre-launch notice --------------------------------------------------
-   Shown once per browser session (sessionStorage), on whichever page the
-   visitor opens first. Injected from here so it stays on one page of markup
-   rather than being pasted into all seven HTML files.
-   ------------------------------------------------------------------------ */
-(function () {
-  "use strict";
-
-  var KEY = "nap-notice-seen";
-  try {
-    if (sessionStorage.getItem(KEY)) return;
-  } catch (err) { /* no sessionStorage — show it anyway */ }
-
-  var t = NAP.t;
-
-  var overlay = document.createElement("div");
-  overlay.className = "modal-overlay";
-  overlay.setAttribute("role", "dialog");
-  overlay.setAttribute("aria-modal", "true");
-  overlay.setAttribute("aria-labelledby", "notice-title");
-
-  function paint() {
-    overlay.innerHTML =
-      '<div class="modal">' +
-        '<div class="modal-flag">' + t("ui.notice.flag", "Pre-launch") + "</div>" +
-        '<h2 id="notice-title">' + t("ui.notice.title", "This site is under construction") + "</h2>" +
-        "<p>" + t("ui.notice.body1",
-          "It is still undergoing NAP approval before launch. If you have this link, it is only to review it and give feedback to Gio.") + "</p>" +
-        '<p class="modal-warn">' + t("ui.notice.body2",
-          "Please do not share it outside the R5 and R4 circles of NAP alliances.") + "</p>" +
-        '<button class="btn btn-primary modal-close" type="button">' +
-          t("ui.notice.button", "Understood") + "</button>" +
-      "</div>";
-    var btn = overlay.querySelector(".modal-close");
-    if (btn) btn.addEventListener("click", dismiss);
-  }
-
-  function dismiss() {
-    try { sessionStorage.setItem(KEY, "1"); } catch (err) {}
-    overlay.remove();
-    document.body.classList.remove("modal-open");
-    document.removeEventListener("keydown", onKey);
-  }
-
-  function onKey(e) { if (e.key === "Escape") dismiss(); }
-
-  paint();
-  overlay.addEventListener("click", function (e) { if (e.target === overlay) dismiss(); });
-  document.addEventListener("keydown", onKey);
-  document.body.appendChild(overlay);
-  document.body.classList.add("modal-open");
-
-  var btn = overlay.querySelector(".modal-close");
-  if (btn && btn.focus) btn.focus();
-
-  NAP.onLang(paint);
 })();
 
 
