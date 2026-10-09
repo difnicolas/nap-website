@@ -732,6 +732,12 @@ var NAP = (function () {
   var host = document.getElementById("notice-list");
   if (!host || typeof NOTICES === "undefined") return;
 
+  // data-only="tags" shows just the notice with that key (the Alliances page
+  // uses it); without it every notice is shown. Index stays the NOTICES index.
+  var only = host.getAttribute("data-only");
+  var shown = NOTICES.map(function (n, i) { return { n: n, i: i }; })
+    .filter(function (x) { return !only || x.n.key === only; });
+
   var esc = NAP.esc, t = NAP.t;
 
   var COPY_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>';
@@ -815,7 +821,8 @@ var NAP = (function () {
   }
 
   function render() {
-    host.innerHTML = NOTICES.map(function (n, i) {
+    host.innerHTML = shown.map(function (x) {
+      var n = x.n, i = x.i;
       return '<article class="notice-card">' +
         '<div class="notice-head">' +
           "<h3>" + esc(n.title) + "</h3>" +

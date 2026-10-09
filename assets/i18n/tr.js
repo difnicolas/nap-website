@@ -476,4 +476,8 @@ window.I18N.tr = {
   /* ---------- added by tools/sync-i18n.py ---------- */
   "blacklist.23": "Copy for chat",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "alliances.10": "The NAP tags above, ready to paste into the game. Repost it after any alliance joins or leaves.",
+  "alliances.9": "Tag notice for the game",
+
 };

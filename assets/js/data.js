@@ -80,8 +80,8 @@ const ALLIANCES = [
     name: "Notorious",
     r5: "NavyVet",
     bear: ["01:00", "18:00"],
-    farm:    { tag: "N8F", name: "", r5: "" },
-    academy: { tag: "n86", name: "", r5: "" },
+    farm:    null,
+    academy: null,
     note: "",
   },
   {
@@ -354,6 +354,7 @@ const RESOURCES = [
 
 const NOTICES = [
   {
+    key: "tags",           // also shown on the Alliances page
     title: "NAP alliance tags",
     short:
       "K{KINGDOM} NAP — do NOT attack these tags:\n" +

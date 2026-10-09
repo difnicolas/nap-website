@@ -1,9 +1,11 @@
 {
  "alliances.1": "Kingdom <span data-site=\"kingdom\">1886</span>",
+ "alliances.10": "The NAP tags above, ready to paste into the game. Repost it after any alliance joins or leaves.",
  "alliances.2": "Alliance Directory",
  "alliances.4": "UTC",
  "alliances.5": "Local Time",
  "alliances.8": "Alliances not listed here are not members of the NAP and are not covered by it. See the <a href=\"rules.html\">rules page</a> before engaging with them.",
+ "alliances.9": "Tag notice for the game",
  "allout.1": "Event &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
  "allout.10": "Still capped at two Town Center attacks each. All Out does not lift the limit, and going past it during the event is the same violation it always was.",
  "allout.11": "<strong>The one-line version.</strong> Tiles open, cities closed. If you are unsure whether a target is fair game, it isn't &mdash; ask in kingdom chat before you march.",
