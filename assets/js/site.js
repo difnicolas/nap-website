@@ -79,7 +79,7 @@ var NAP = (function () {
   function loadLang(l, done) {
     if (l === "en" || window.I18N[l]) return done();
     var s = document.createElement("script");
-    s.src = "assets/i18n/" + l + ".js?v=1";
+    s.src = "assets/i18n/" + l + ".js?v=3";
     s.onload = done;
     s.onerror = function () {
       if (window.console) console.warn("NAP: no translation file for " + l);
@@ -338,6 +338,50 @@ var NAP = (function () {
     };
   }
 
+  // Decrees the visitor has opened, by tag, so a re-render keeps them open.
+  var openDecrees = {};
+
+  // The in-game Alliance Decree, line for line, on a full-width row of its own.
+  // Shows three lines until clicked; the toggle only appears if there is more.
+  function decreeRow(a) {
+    var text = (a.decree || []).join("\n").trim();
+    if (!text) return "";
+    var open = !!openDecrees[a.tag];
+    return '<div class="alliance-decree" data-decree="' + esc(a.tag) + '"><div class="label">' +
+      t("ui.decree", "Alliance decree") + "</div>" +
+      '<div class="decree-text' + (open ? "" : " clamped") + '">' + esc(text) + "</div>" +
+      '<button type="button" class="decree-toggle" aria-expanded="' + open + '" hidden>' +
+        (open ? t("ui.showLess", "Show less") : t("ui.showMore", "Show more")) +
+      "</button></div>";
+  }
+
+  // Offer the toggle only where three lines do not already show everything.
+  function markLongDecrees() {
+    host.querySelectorAll(".alliance-decree").forEach(function (row) {
+      var text = row.querySelector(".decree-text");
+      var btn = row.querySelector(".decree-toggle");
+      var long = !!openDecrees[row.getAttribute("data-decree")] ||
+                 text.scrollHeight > text.clientHeight + 1;
+      btn.hidden = !long;
+      row.classList.toggle("collapsible", long);
+    });
+  }
+
+  host.addEventListener("click", function (e) {
+    var row = e.target.closest(".alliance-decree.collapsible");
+    if (!row) return;
+    // Selecting text to copy it should not fold the decree away.
+    if (e.target !== row.querySelector(".decree-toggle") &&
+        String(window.getSelection ? window.getSelection() : "")) return;
+    var tag = row.getAttribute("data-decree");
+    var open = !openDecrees[tag];
+    if (open) openDecrees[tag] = true; else delete openDecrees[tag];
+    row.querySelector(".decree-text").classList.toggle("clamped", !open);
+    var btn = row.querySelector(".decree-toggle");
+    btn.setAttribute("aria-expanded", String(open));
+    btn.innerHTML = open ? t("ui.showLess", "Show less") : t("ui.showMore", "Show more");
+  });
+
   function cardHtml(a) {
     var farmSlot = slot("ui.farm", "Farm alliance");
     var acadSlot = slot("ui.academy", "Academy alliance");
@@ -358,11 +402,13 @@ var NAP = (function () {
         (a.extra ? slot(null, (a.extra.label || "Also"))(a.extra) : "") +
         bearSlot(a.bear) +
       "</div>" +
+      decreeRow(a) +
     "</article>";
   }
 
   function render() {
     host.innerHTML = ALLIANCES.map(cardHtml).join("");
+    markLongDecrees();
   }
 
   var tzButtons = document.querySelectorAll("[data-tz]");
@@ -383,6 +429,9 @@ var NAP = (function () {
 
   render();
   NAP.onLang(render);
+  // Card width changes how many lines a decree wraps to.
+  window.addEventListener("resize", markLongDecrees);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(markLongDecrees);
 })();
 
 

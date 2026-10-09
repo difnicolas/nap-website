@@ -365,6 +365,35 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 .slot .value { font-size: 15px; }
 .slot .value .muted { color: var(--text-faint); }
 .slot .sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.alliance-decree { padding: 16px 20px; border-top: 1px solid var(--border); }
+.alliance-decree .label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+.decree-text { font-size: 14px; color: var(--text-muted); white-space: pre-line; overflow-wrap: anywhere; }
+.decree-text.clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.alliance-decree.collapsible { cursor: pointer; }
+.decree-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 8px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--gold-soft);
+  cursor: pointer;
+}
+.decree-toggle:hover { text-decoration: underline; }
+.decree-toggle[hidden] { display: none; }
 
 .empty {
   text-align: center;

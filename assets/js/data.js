@@ -12,7 +12,7 @@ const SITE = {
   // Who maintains this page.
   maintainer: "Kingdom 1886 NAP Council",
   // Change this whenever you update the alliance list below.
-  lastUpdated: "3 October 2026",
+  lastUpdated: "9 October 2026",
 };
 
 /* --------------------------------------------------------------------------
@@ -30,6 +30,11 @@ const SITE = {
      extra:    { tag: "ABK", name: "...", r5: "...",     // or null — any further
                  label: "KvK alliance" },                //   alliance in the family
      note:     "",                 // optional short line shown under the name
+     decree:   [                   // optional — the in-game Alliance Decree, one
+       "First line",               //   string per line; "" leaves a blank line.
+       "",                         //   Shown as a full-width row on the card.
+       "Second paragraph",         //   [] or leave it out to hide the row.
+     ],
    }
 
    Every tag listed in an entry — main, farm, academy and extra — counts as
@@ -47,6 +52,17 @@ const ALLIANCES = [
     farm:    { tag: "86a", name: "", r5: "" },
     academy: null,
     note: "",
+    decree: [
+      "Together we Grow, Share and Fight. APX/A86 is our alliance but 1886 is our home.",
+      "",
+      "To join, must be active and selfless. Tc30 and 50M power minimums. Send a private message to any R4.",
+      "",
+      "Bear 1 - 15:00 UTC",
+      "Bear 2 - 00:00 UTC",
+      "Very organized",
+      "",
+      "Always top Vikings",
+    ],
   },
   {
     tag: "D86",
@@ -56,6 +72,20 @@ const ALLIANCES = [
     farm:    { tag: "D8F", name: "", r5: "" },
     academy: { tag: "86D", name: "", r5: "" },
     note: "",
+    decree: [
+      "Welcome to the Dragon Family",
+      "",
+      "Join a loyal and battle-ready community",
+      "",
+      "Contact R5/R4 to join.",
+      "",
+      "BT: 15:00 & 18:00 & 22:00 UTC",
+      "",
+      "D86 - Main Alliance",
+      "86D - Academy Alliance",
+      "D8F - Farm Alliance",
+      "Together we grow, fight, and win.",
+    ],
   },
   {
     tag: "W86",
@@ -65,6 +95,14 @@ const ALLIANCES = [
     farm:    { tag: "86W", name: "", r5: "" },
     academy: null,
     note: "",
+    decree: [
+      "At WIN we grow and succeed together. Come join us to help us in learning and growing with the freedom to enjoy the game as you wish. We always show up strong to a fight and always WIN.",
+      "",
+      "Please message any R4 or R5 to learn more and ask about joining.",
+      "",
+      "Bear Trap 1: 23:00 UTC",
+      "Bear Trap 2: 13:00 UTC",
+    ],
   },
   {
     tag: "KTA",
@@ -74,6 +112,12 @@ const ALLIANCES = [
     farm:    { tag: "KTa", name: "", r5: "" },
     academy: null,
     note: "",
+    decree: [
+      "Bear Trap (1) 14:00 UTC",
+      "Bear Trap (2) 23:00 UTC",
+      "",
+      "Com and Join us!",
+    ],
   },
   {
     tag: "N86",
@@ -83,6 +127,15 @@ const ALLIANCES = [
     farm:    null,
     academy: null,
     note: "",
+    decree: [
+      "We\u2019re a family of active maniacs fueled by chaos and total loyalty.",
+      "We show up every day, play like monsters, and protect our own at all costs.",
+      "",
+      "If you\u2019re active, loyal, and enjoy mayhem\u2026contact R4 or R5",
+      "",
+      "BearTrap 1: 01:00 UTC",
+      "BearTrap 2: 18:00 UTC",
+    ],
   },
   {
     tag: "TCO",
@@ -92,6 +145,9 @@ const ALLIANCES = [
     farm:    null,
     academy: null,
     note: "",
+    decree: [
+      "One taco to rule them all, one taco to find them, one taco to bring them all and in the cheese bind them in the Land of Taco Bell where the stomachs ache.",
+    ],
   },
   {
     tag: "T86",
@@ -101,6 +157,11 @@ const ALLIANCES = [
     farm:    null,
     academy: null,
     note: "",
+    decree: [
+      "A mama bear and her cubs\u2026 but seriously, we are a group of friends who value loyalty, kindness, and helpfulness. Experience players and new players both are welcome to help each other and grow together <3",
+      "",
+      "We have 3 R5 leaders: JustFio, jayjewel, and Lace",
+    ],
   },
   {
     tag: "KVK",
@@ -110,6 +171,9 @@ const ALLIANCES = [
     farm:    null,
     academy: null,
     note: "KvK alliance",
+    decree: [
+      "1886 United KvK Alliance",
+    ],
   },
 ];
 

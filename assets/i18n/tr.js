@@ -192,6 +192,9 @@ window.I18N.tr = {
   "ui.farm": "Farm alliance",
   "ui.academy": "Academy alliance",
   "ui.notListed": "Not listed",
+  "ui.decree": "Alliance decree",
+  "ui.showMore": "Show more",
+  "ui.showLess": "Show less",
   "ui.bear": "Bear trap",
   "ui.utc": "UTC",
   "ui.localTime": "Local Time",
@@ -460,10 +463,10 @@ window.I18N.tr = {
   "v14.t0": "<strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
   "v14.t1": "An <strong>Avarice Trial</strong> of five days for the member responsible.",
   "v14.title": "Taking a LVL 4 Outpost when not Top 4",
-  "v15.body": "Race fairly for a LVL 3 Outpost with the alliance you are in &mdash; do not hop between your main, academy or farm alliance mid-contest. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.",
+  "v15.body": "Race fairly for a LVL 1-3 Outpost with the alliance you are in &mdash; do not hop between your main, academy or farm alliance mid-contest. One player gets one alliance in the fight at a time. This is a violation whether the player moved themselves or an R4/R5 arranged the switch for them.",
   "v15.t0": "<strong>Demotion to R1</strong> for one day, plus an <strong>Arrogance Trial</strong> of one day.",
   "v15.t1": "An <strong>Avarice Trial</strong> of five days for the member who jumped.",
-  "v15.title": "Jumping between Main, Academy or Farm alliances to capture a LVL 3 Outpost",
+  "v15.title": "Jumping between Main, Academy or Farm alliances to capture a LVL 1-3 Outpost",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "tier.major": "Major infraction",
