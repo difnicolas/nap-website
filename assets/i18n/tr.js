@@ -619,4 +619,7 @@ window.I18N.tr = {
   "king.135": "<strong>Election:</strong> the R5 elects the King as soon as possible, and the new King turns on automatic approval for positions straight away.",
   "king.136": "<strong>Transfer windows:</strong> the King must be active and in contact with NAP to manage transfers.",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "king.137": "Standard practice",
+
 };
