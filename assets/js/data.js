@@ -12,7 +12,7 @@ const SITE = {
   // Who maintains this page.
   maintainer: "Kingdom 1886 NAP Council",
   // Change this whenever you update the alliance list below.
-  lastUpdated: "9 October 2026",
+  lastUpdated: "18 October 2026",
 };
 
 /* --------------------------------------------------------------------------
@@ -91,9 +91,9 @@ const ALLIANCES = [
     tag: "W86",
     name: "WIN",
     r5: "Gio",
-    bear: ["13:00", "23:00"],
+    bear: ["13:00", "18:00", "23:00"],
     farm:    { tag: "86W", name: "", r5: "" },
-    academy: null,
+    academy: { tag: "W8F", name: "", r5: "" },
     note: "",
     decree: [
       "At WIN we grow and succeed together. Come join us to help us in learning and growing with the freedom to enjoy the game as you wish. We always show up strong to a fight and always WIN.",
@@ -120,24 +120,6 @@ const ALLIANCES = [
     ],
   },
   {
-    tag: "N86",
-    name: "Notorious",
-    r5: "NavyVet",
-    bear: ["01:00", "18:00"],
-    farm:    null,
-    academy: null,
-    note: "",
-    decree: [
-      "We\u2019re a family of active maniacs fueled by chaos and total loyalty.",
-      "We show up every day, play like monsters, and protect our own at all costs.",
-      "",
-      "If you\u2019re active, loyal, and enjoy mayhem\u2026contact R4 or R5",
-      "",
-      "BearTrap 1: 01:00 UTC",
-      "BearTrap 2: 18:00 UTC",
-    ],
-  },
-  {
     tag: "TCO",
     name: "Taco",
     r5: "Lord Taco",
@@ -161,6 +143,18 @@ const ALLIANCES = [
       "A mama bear and her cubs\u2026 but seriously, we are a group of friends who value loyalty, kindness, and helpfulness. Experience players and new players both are welcome to help each other and grow together <3",
       "",
       "We have 3 R5 leaders: JustFio, jayjewel, and Lace",
+    ],
+  },
+  {
+    tag: "C86",
+    name: "",
+    r5: "CristinaPc",
+    bear: ["02:00", "20:00"],
+    farm:    null,
+    academy: { tag: "c86", name: "", r5: "" },
+    note: "",
+    decree: [
+      "Peace and love",
     ],
   },
   {
