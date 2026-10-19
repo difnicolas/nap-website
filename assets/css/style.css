@@ -951,26 +951,18 @@ textarea.notice-text:focus { outline: none; border-color: var(--gold); }
 
 /* ---------- Screenshots (king.html) ---------- */
 
-.shot { margin: 18px 0 26px; }
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 230px));
+  gap: 18px;
+  margin: 18px 0 26px;
+}
+.shot { margin: 0; }
 .shot img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-}
-.shot-placeholder {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 9;
-  max-width: 560px;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-raised);
-  color: var(--text-faint);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 .shot figcaption { margin-top: 8px; font-size: 14px; color: var(--text-faint); }
