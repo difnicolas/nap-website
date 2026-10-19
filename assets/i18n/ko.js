@@ -483,4 +483,25 @@ window.I18N.ko = {
   "alliances.10": "The NAP tags above, ready to paste into the game. Repost it after any alliance joins or leaves.",
   "alliances.9": "Tag notice for the game",
 
+  /* ---------- added by tools/sync-i18n.py ---------- */
+  "king.1": "Information &middot; Kingdom <span data-site=\"kingdom\">1886</span>",
+  "king.10": "The positions screen, and how to assign a player to a post.",
+  "king.11": "Kingdom gifts",
+  "king.12": "The King has a set of gifts to hand out to players across the kingdom.",
+  "king.13": "Where the gifts are and how to send them.",
+  "king.14": "Other powers",
+  "king.15": "Anything else the position can do, such as kingdom-wide announcements.",
+  "king.16": "The rest of the King's controls.",
+  "king.17": "Standard practice in K<span data-site=\"kingdom\">1886</span>",
+  "king.18": "What the kingdom expects of every King: who gets which position, how gifts are shared, and how the Minister of Justice is appointed. To be added once agreed.",
+  "king.2": "The King",
+  "king.3": "Whoever wins the Castle wears the crown. This page explains what the King can do, how to use each part of the position, and what Kingdom <span data-site=\"kingdom\">1886</span> expects of whoever holds it.",
+  "king.4": "<strong>Draft.</strong> Screenshots and the kingdom's standard practices are still being added. Boxes marked &ldquo;Screenshot&rdquo; show where each image will go.",
+  "king.5": "Becoming King",
+  "king.6": "The crown goes to the alliance that holds the Castle at the end of a castle battle. In K<span data-site=\"kingdom\">1886</span> the NAP rotates the Castle between its alliances, so the King is usually chosen by the rotation on the <a href=\"castle.html\">Castle page</a>.",
+  "king.7": "The coronation screen after a castle win.",
+  "king.8": "Appointing positions",
+  "king.9": "The King hands out the kingdom's positions. Each one gives its holder a buff, or in some cases a penalty, for as long as they hold it.",
+  "nav.king": "King",
+
 };

@@ -12,6 +12,7 @@ Resources as top-level links.
 | Information | Alliances | `alliances.html` | Directory: alliance, farm + academy + extra, R5s, bear trap times (UTC/Local toggle) |
 | Information | Notices | `notices.html` | Copy-paste in-game messages, sized to the 300/500 character limits |
 | Information | Blacklist | `blacklist.html` | Players barred from joining a NAP alliance |
+| Information | King | `king.html` | How to use the King position, with screenshots, and the kingdom's standard practice |
 | Events | Sanctuary | `assignments.html` | Sanctuary and Fortress assignments |
 | Events | Castle | `castle.html` | Non-KvK castle battles: the rotation and the rules |
 | Events | All Out | `allout.html` | What changes and what does not during All Out |
@@ -222,7 +223,7 @@ nothing extra.
 ### Keys
 
 - `nav.*`, `footer.*` — shared across every page, translate once.
-- `index.*`, `rules.*`, `alliances.*`, `assignments.*`, `blacklist.*`, `transfer.*`,
+- `index.*`, `rules.*`, `king.*`, `alliances.*`, `assignments.*`, `blacklist.*`, `transfer.*`,
   `resources.*` — page prose, numbered in document order.
 - `ui.*` — labels inside the tables and cards that JavaScript builds (column labels, status
   pills).
