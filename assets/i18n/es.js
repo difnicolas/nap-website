@@ -502,7 +502,7 @@ window.I18N.es = {
   "king.7": "Everything the King does starts from the throne screen: <strong>Appointment</strong>, <strong>King Skill</strong> and <strong>Grant</strong> along the bottom, and the declaration scroll in the middle.",
   "king.8": "The throne screen. Appointment, King Skill and Grant sit along the bottom.",
   "king.9": "King's Declaration",
-  "nav.king": "King",
+  "nav.king": "King Guide",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "king.100": "The three grants and how many of each are left.",
