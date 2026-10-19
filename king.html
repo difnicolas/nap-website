@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>King — NAP Kingdom 1886</title>
+<meta name="description" content="How the King position works in Kingshot Kingdom 1886, and what the kingdom expects of whoever holds it.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%9B%A1%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      NAP <span class="kd">&middot; K1886</span>
+    </a>
+    <div class="clock" data-clock></div>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.information">Information</button>
+        <div class="nav-menu" hidden>
+          <a href="rules.html" data-i18n="nav.rules">Rules</a>
+          <a href="alliances.html" data-i18n="nav.alliances">Alliances</a>
+          <a href="notices.html" data-i18n="nav.notices">Notices</a>
+          <a href="blacklist.html" data-i18n="nav.blacklist">Blacklist</a>
+          <a href="king.html" data-i18n="nav.king">King Guide</a>
+        </div>
+      </div>
+      <div class="nav-group" data-nav-group>
+        <button class="nav-btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.events">Events</button>
+        <div class="nav-menu" hidden>
+          <a href="assignments.html" data-i18n="nav.sanctuary">Sanctuary</a>
+          <a href="castle.html" data-i18n="nav.castle">Castle</a>
+          <a href="allout.html" data-i18n="nav.allout">All Out</a>
+          <a href="kvk.html" data-i18n="nav.kvk">KvK</a>
+        </div>
+      </div>
+      <a href="transfer.html" data-i18n="nav.transfer">Transfer</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+    <div class="lang" data-lang-switcher>
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+        <span aria-hidden="true">&#127760;</span><span class="lang-cur">EN</span>
+      </button>
+      <div class="lang-menu" hidden>
+        <button class="lang-opt" type="button" data-lang="en" lang="en">English</button>
+        <button class="lang-opt" type="button" data-lang="ko" lang="ko">&#54620;&#44397;&#50612;</button>
+        <button class="lang-opt" type="button" data-lang="es" lang="es">Espa&ntilde;ol</button>
+        <button class="lang-opt" type="button" data-lang="tr" lang="tr">T&uuml;rk&ccedil;e</button>
+      </div>
+    </div>
+    <button class="icon-btn nav-toggle" type="button" data-nav-toggle
+            aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow" data-i18n="king.1">Information &middot; Kingdom <span data-site="kingdom">1886</span></p>
+      <h1 data-i18n="king.2">The King</h1>
+      <p class="lede" data-i18n="king.3">
+        The alliance that wins the Castle elects the King. This page explains how that works, walks
+        through every part of the position, and what Kingdom <span data-site="kingdom">1886</span> expects of whoever holds it.
+      </p>
+      <nav class="filters page-toc" aria-label="On this page">
+        <a class="chip" href="#king" data-i18n="king.4">King and High King</a>
+        <a class="chip" href="#declaration" data-i18n="king.9">King's Declaration</a>
+        <a class="chip" href="#skills" data-i18n="king.13">King Skills</a>
+        <a class="chip" href="#appointments" data-i18n="king.43">Appointments</a>
+        <a class="chip" href="#jails" data-i18n="king.71">Jails</a>
+        <a class="chip" href="#perks" data-i18n="king.94">The King's own perks</a>
+        <a class="chip" href="#grants" data-i18n="king.98">Grants</a>
+        <a class="chip" href="#skins" data-i18n="king.102">Skins and renaming</a>
+        <a class="chip" href="#transfers" data-i18n="king.132">Transfer windows</a>
+        <a class="chip" href="#practice" data-i18n="king.137">Standard practice</a>
+      </nav>
+    </div>
+
+    <h2 id="king" data-i18n="king.4">King and High King</h2>
+    <p data-i18n="king.5">After a castle battle, the <strong>R5 of the alliance that held the Castle for the longest time</strong> elects the King. <strong>Once a King is elected, the choice cannot be changed.</strong> A reign lasts two weeks.</p>
+    <p data-i18n="king.113">A <strong>High King</strong> comes out of a KvK castle battle and rules over <strong>both</strong> kingdoms in the matchup: their skills, appointments and grants can reach the defeated kingdom as well as our own.</p>
+    <div class="callout">
+      <p data-i18n="king.114"><strong>Move fast.</strong> The R5 should elect the King as soon as possible, and the new King should turn on <a href="#appointments">automatic approval</a> for positions straight away, so members can start booking slots.</p>
+    </div>
+    <h3 data-i18n="king.115">KvK castle battles</h3>
+    <p data-i18n="king.116">Who ends up King after KvK depends on who wins the Preparation phase, and then the castle battle.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th data-i18n="king.117">Preparation phase</th><th data-i18n="king.118">Castle battle</th><th data-i18n="king.119">Result</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="king.120">We win</td><td data-i18n="king.121">We attack the enemy castle and take it</td><td data-i18n="king.122">Our winning alliance elects the <strong>High King</strong></td></tr>
+          <tr><td data-i18n="king.123">We win</td><td data-i18n="king.124">We attack the enemy castle and fail</td><td data-i18n="king.125">Our previous alliance's King stays in place</td></tr>
+          <tr><td data-i18n="king.126">We lose</td><td data-i18n="king.127">The enemy takes our castle</td><td data-i18n="king.128">The enemy's King becomes <strong>High King</strong></td></tr>
+          <tr><td data-i18n="king.129">We lose</td><td data-i18n="king.130">We hold our castle on defense</td><td data-i18n="king.131">Our winning alliance elects the new King</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="king.6">The timing matters. A regular King's <strong>second week is KvK week</strong>. A High King has just won KvK, so their second week has no KvK in it.</p>
+    <p data-i18n="king.7">Everything the King does starts from the throne screen: <strong>Appointment</strong>, <strong>King Skill</strong> and <strong>Grant</strong> along the bottom, and the declaration scroll in the middle.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/throne.webp" target="_blank" rel="noopener"><img src="assets/img/king/throne.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.8">The throne screen. Appointment, King Skill and Grant sit along the bottom.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="declaration" data-i18n="king.9">King's Declaration</h2>
+    <p data-i18n="king.10">The declaration publishes a message to every governor in the kingdom, up to 150 characters. Tap the scroll on the throne screen to write one.</p>
+    <p data-i18n="king.11"><strong>How we use it:</strong> celebrations, and reminders to save up and prepare for KvK.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/declaration.webp" target="_blank" rel="noopener"><img src="assets/img/king/declaration.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.12">Writing a King's Declaration.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="skills" data-i18n="king.13">King Skills</h2>
+    <p data-i18n="king.14">King Skill opens the King's set of skills. Each one costs Authority or uses up one of a limited number of charges, and each has its own cooldown.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/skills.webp" target="_blank" rel="noopener"><img src="assets/img/king/skills.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.15">The kingdom-wide buffs, with their cooldowns.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/skills-more.webp" target="_blank" rel="noopener"><img src="assets/img/king/skills-more.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.16">Further down: Community Healing, Forced Ceasefire, Forced Exile and Kingdom Search.</figcaption>
+      </figure>
+    </div>
+    <h3 data-i18n="king.17">Kingdom-wide buffs</h3>
+    <p data-i18n="king.18">Ground Works, Fresh Ideas and Mobilize each give every governor a 10% or 30% speed boost for 24 hours. Every one of them can be <strong>used now</strong> or <strong>scheduled</strong> for a set date and time in UTC, and a scheduled skill can be adjusted until it starts. The range decides who gets it: only the victorious kingdom, or the defeated kingdom as well.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/skill-schedule.webp" target="_blank" rel="noopener"><img src="assets/img/king/skill-schedule.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.19">Scheduling a skill for a date and time in UTC.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/skill-use-now.webp" target="_blank" rel="noopener"><img src="assets/img/king/skill-use-now.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.20">Using a skill straight away.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/skill-adjust.webp" target="_blank" rel="noopener"><img src="assets/img/king/skill-adjust.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.21">Adjusting a skill that is already scheduled.</figcaption>
+      </figure>
+    </div>
+    <p data-i18n="king.22"><strong>We save these for KvK.</strong> Each one goes on the KvK day it helps most:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th data-i18n="king.23">KvK day</th><th data-i18n="king.24">Skill</th><th data-i18n="king.25">What it does</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="king.26">Day 1</td><td data-i18n="king.27">Ground Works</td><td data-i18n="king.28">+10% construction speed for 24 hours</td></tr>
+          <tr><td data-i18n="king.29">Day 2</td><td data-i18n="king.30">Fresh Ideas</td><td data-i18n="king.31">+10% research speed for 24 hours</td></tr>
+          <tr><td data-i18n="king.32">Day 4</td><td data-i18n="king.33">Mobilize</td><td data-i18n="king.34">+30% troop training speed for 24 hours</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p data-i18n="king.35"><strong>Watch the cooldown.</strong> These buffs have <strong>2 charges and a 7-day cooldown</strong>. A regular King's second week is KvK week, so if you use one in your first week, make sure it is off cooldown again in time for its KvK day. Using one less than seven days before that day means the kingdom goes into KvK without it.</p>
+    </div>
+    <h3 data-i18n="king.36">Other skills</h3>
+    <p data-i18n="king.37">The other skills each have their own charges and cooldown, shown on the skill as Term's Left.</p>
+    <ul>
+      <li data-i18n="king.38"><strong>Forced Exile</strong> teleports a governor's city to a random spot, with a shield. It has a 4-hour cooldown. We use it to move members who have quit or stopped responding.</li>
+      <li data-i18n="king.39"><strong>Forced Ceasefire</strong> stops one governor from attacking anyone for an hour.</li>
+      <li data-i18n="king.40"><strong>Kingdom Search</strong> finds the Town Center of any governor in the kingdom.</li>
+      <li data-i18n="king.41"><strong>Community Healing</strong> boosts every governor's healing speed for 24 hours.</li>
+      <li data-i18n="king.42"><strong>Tribute Levy</strong> exchanges Authority for gems.</li>
+    </ul>
+
+    <h2 id="appointments" data-i18n="king.43">Appointments</h2>
+    <p data-i18n="king.44">The King fills six kingdom-wide positions. Each gives its holder a buff for as long as they hold the slot. Governors apply for a slot, or the King appoints someone directly from their own alliance or anyone else in the kingdom.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/appointments.webp" target="_blank" rel="noopener"><img src="assets/img/king/appointments.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.45">The six positions, with who holds each one now.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/appointee-alliance.webp" target="_blank" rel="noopener"><img src="assets/img/king/appointee-alliance.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.46">Appointing from your own alliance.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/appointee-other.webp" target="_blank" rel="noopener"><img src="assets/img/king/appointee-other.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.47">Appointing any other governor. A High King can choose from both kingdoms.</figcaption>
+      </figure>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th data-i18n="king.48">Position</th><th data-i18n="king.49">Buff to the holder</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="king.50">Chief Minister</td><td data-i18n="king.51">Troop training, research and construction speed</td></tr>
+          <tr><td data-i18n="king.52">Minister of Justice</td><td data-i18n="king.53">Resources generated by Town Center buildings. Can also jail players and change who holds the other appointments.</td></tr>
+          <tr><td data-i18n="king.54">Minister of the Interior</td><td data-i18n="king.55">Healing speed and infirmary capacity</td></tr>
+          <tr><td data-i18n="king.56">Field Commander</td><td data-i18n="king.57">Squad lethality, for rally leaders</td></tr>
+          <tr><td data-i18n="king.58">Marshal</td><td data-i18n="king.59">Squad attack and deployment capacity</td></tr>
+          <tr><td data-i18n="king.60">Noble Advisor</td><td data-i18n="king.61">Training speed and training capacity</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 data-i18n="king.62">Time slots</h3>
+    <p data-i18n="king.63">When you are first crowned, you choose how appointment slots are booked. Either a <strong>fixed grid</strong>, where governors can book any 30-minute slot up to a day ahead, or a <strong>queue</strong>, where each applicant simply goes next in line.</p>
+    <p data-i18n="king.64"><strong>We always use the 30-minute grid.</strong> It lets members reserve the exact slot they want.</p>
+    <h3 data-i18n="king.65">Blocklist and auto-approval</h3>
+    <p data-i18n="king.66">The King can block specific governors from applying for any position, and decides whether applications are approved automatically. Auto-approval can cover only the victorious kingdom or the defeated kingdom too, with a minimum Town Center level.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/blocklist.webp" target="_blank" rel="noopener"><img src="assets/img/king/blocklist.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.67">The application blocklist.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/auto-approve-victorious.webp" target="_blank" rel="noopener"><img src="assets/img/king/auto-approve-victorious.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.68">Auto-approval for the victorious kingdom only.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/auto-approve-all.webp" target="_blank" rel="noopener"><img src="assets/img/king/auto-approve-all.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.69">Auto-approval including the defeated kingdom.</figcaption>
+      </figure>
+    </div>
+    <div class="callout">
+      <p data-i18n="king.70"><strong>Our practice:</strong> as King or High King, turn on auto-approval for <strong>both kingdoms</strong> on every position <strong>except Minister of Justice</strong>. That one stays manual, because it can jail players and add or remove people from every other appointment.</p>
+    </div>
+
+    <h2 id="jails" data-i18n="king.71">Jails</h2>
+    <p data-i18n="king.72">The Offender tab on the appointment screen holds six jails, each giving its prisoner a debuff. <strong>We use the jails to enforce NAP rules.</strong> Three of them are the trials handed out as punishments, explained on the <a href="rules.html#punishments">rules page</a>.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th data-i18n="king.73">Jail</th><th data-i18n="king.74">Debuff</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="king.76">Avarice Trial</td><td data-i18n="king.77">Troop training, research and construction speed</td></tr>
+          <tr><td data-i18n="king.79">Arrogance Trial</td><td data-i18n="king.80">Resource production</td></tr>
+          <tr><td data-i18n="king.82">Melancholy Trial</td><td data-i18n="king.83">Healing speed and infirmary capacity</td></tr>
+          <tr><td data-i18n="king.85">Timidity Trial</td><td data-i18n="king.86">Squad lethality</td></tr>
+          <tr><td data-i18n="king.88">Domination Trial</td><td data-i18n="king.89">Squad attack and deployment capacity</td></tr>
+          <tr><td data-i18n="king.91">Indolence Trial</td><td data-i18n="king.92">Training speed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="perks" data-i18n="king.94">The King's own perks</h2>
+    <p data-i18n="king.95">The King can give themselves the perks of any appointment at any time, from a button on the throne screen. Switching to a different perk has a <strong>5-minute cooldown</strong>.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/perk-current.webp" target="_blank" rel="noopener"><img src="assets/img/king/perk-current.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.96">The perk the King has applied right now.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/perk-switch.webp" target="_blank" rel="noopener"><img src="assets/img/king/perk-switch.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.97">Switching to a different position's perks.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="grants" data-i18n="king.98">Grants</h2>
+    <p data-i18n="king.99">Grants are one-off rewards the King hands to governors who fought especially well: 2 General's Commendations, 10 Knight's Awards and 50 Soldier's Commendations. Who gets them is the King's choice. They can go within the King's alliance, across the whole kingdom, or, for a High King, to the enemy kingdom as well.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/grants.webp" target="_blank" rel="noopener"><img src="assets/img/king/grants.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.100">The three grants and how many of each are left.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/grant-target.webp" target="_blank" rel="noopener"><img src="assets/img/king/grant-target.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.101">Choosing who receives a grant.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="skins" data-i18n="king.102">Skins and renaming</h2>
+    <p data-i18n="king.103">The King gets an exclusive Town Center skin and an exclusive march skin. Both last 14 days and only while the position is held. The King can also rename the kingdom.</p>
+    <div class="shots">
+      <figure class="shot">
+        <a href="assets/img/king/skins.webp" target="_blank" rel="noopener"><img src="assets/img/king/skins.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.104">The King's exclusive skins.</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="assets/img/king/rename.webp" target="_blank" rel="noopener"><img src="assets/img/king/rename.webp" width="540" height="1173" loading="lazy" alt=""></a>
+        <figcaption data-i18n="king.105">Renaming the kingdom.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="transfers" data-i18n="king.132">Transfer windows</h2>
+    <p data-i18n="king.133">When a server transfer window opens, <strong>the King is the kingdom's Transfer Manager</strong>. The King sets the power cap for players transferring in, and helps hand out invites to the members who will join. The full process is on the <a href="transfer.html">transfer page</a>.</p>
+    <div class="callout">
+      <p data-i18n="king.134"><strong>This is critical.</strong> The King elected during a transfer window must be active and in contact with NAP, so the council can help manage the transfers.</p>
+    </div>
+
+    <h2 id="practice" data-i18n="king.106">Standard practice in K<span data-site="kingdom">1886</span></h2>
+    <ul>
+      <li data-i18n="king.135"><strong>Election:</strong> the R5 elects the King as soon as possible, and the new King turns on automatic approval for positions straight away.</li>
+      <li data-i18n="king.136"><strong>Transfer windows:</strong> the King must be active and in contact with NAP to manage transfers.</li>
+      <li data-i18n="king.107"><strong>Declaration:</strong> for celebrations and KvK prep reminders.</li>
+      <li data-i18n="king.108"><strong>Kingdom-wide buffs:</strong> Ground Works on KvK day 1, Fresh Ideas on day 2, Mobilize on day 4. Mind the 7-day cooldown if you use one in your first week.</li>
+      <li data-i18n="king.109"><strong>Forced Exile:</strong> for moving members who have quit or stopped responding.</li>
+      <li data-i18n="king.110"><strong>Appointments:</strong> the 30-minute grid, with auto-approval for both kingdoms on every position except Minister of Justice.</li>
+      <li data-i18n="king.111"><strong>Jails:</strong> only to enforce NAP rules.</li>
+      <li data-i18n="king.112"><strong>High King:</strong> we normally apply every kingdom-wide buff to <strong>both</strong> kingdoms. The exception is an enemy kingdom that broke our KvK agreement or has been openly hateful as a server.</li>
+    </ul>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.1">Kingshot &middot; Kingdom <span data-site="kingdom">1886</span> Non-Aggression Pact &middot; maintained by <span data-site="maintainer">the NAP council</span></span>
+    <span data-i18n="footer.2">Last updated <span data-site="lastUpdated">&mdash;</span><span data-discord> &middot; <a href="#">Discord</a></span></span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=9"></script>
+<script src="assets/js/site.js?v=8"></script>
+</body>
+</html>

@@ -79,7 +79,7 @@ var NAP = (function () {
   function loadLang(l, done) {
     if (l === "en" || window.I18N[l]) return done();
     var s = document.createElement("script");
-    s.src = "assets/i18n/" + l + ".js?v=3";
+    s.src = "assets/i18n/" + l + ".js?v=4";
     s.onload = done;
     s.onerror = function () {
       if (window.console) console.warn("NAP: no translation file for " + l);
