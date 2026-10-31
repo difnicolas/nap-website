@@ -480,8 +480,8 @@ window.I18N.tr = {
   "blacklist.23": "Copy for chat",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
-  "alliances.10": "The NAP tags above, ready to paste into the game. Repost it after any alliance joins or leaves.",
-  "alliances.9": "Tag notice for the game",
+  "alliances.10": "The NAP tags and bear trap times above, ready to paste into the game. Repost them after any alliance joins or leaves, or a bear trap time changes.",
+  "alliances.9": "Notices for the game",
 
   /* ---------- added by tools/sync-i18n.py ---------- */
   "king.1": "Information &middot; Kingdom <span data-site=\"kingdom\">1886</span>",

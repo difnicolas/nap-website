@@ -430,6 +430,7 @@ const NOTICES = [
       "Hit someone by mistake? Repay it and tell your R5. Hit yourself? Report it — never retaliate before reporting and getting approval.",
   },
   {
+    key: "bears",          // also shown on the Alliances page
     title: "Bear trap times",
     // Built from each alliance's bear: times above, so it always matches the site.
     short:
