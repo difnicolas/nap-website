@@ -467,7 +467,7 @@ const NOTICES = [
       "🏆 KvK is over — amazing work!\nSave as much as you can before the next KvK:\nTrue Gold (most important)\nSpeedups (incl. Master)\nGems for hero roulette\nHero shards\nHero forges & Mithril\n👕 Governor Gear & charm materials\n💪 Hero widgets\n🐱 Pet upgrades\n💠 Master Emblem\n📖 Master Manuscripts",
     shortLabel: "Group Info",
     long:
-      "👑 KvK Prep Guide 👑\n１｜２｜３｜４｜５\n✅｜🆗｜🚫｜🚫｜🆗｜ TG\n🆗｜✅｜🚫｜🚫｜🆗｜ Gold Dust\n🚫｜✅｜✅｜🚫｜🚫｜ Shards\n✅｜🆗｜🚫｜🚫｜🆗｜ Building\n🚫｜🚫｜🚫｜✅｜🆗｜ Troop\n🆗｜✅｜🚫｜🚫｜🆗｜ Research\n🚫｜✅｜✅｜🚫｜🚫｜ Roulette\n👍｜✅｜👍｜✅｜✅｜ Gather\n✅｜🚫｜✅｜🚫｜✅｜ Intel mission\n🚫｜🚫｜✅｜🚫｜✅｜ Pets Up\n✅｜🚫｜✅｜✅｜🚫｜ Gov Charm\n🚫｜🚫｜🚫｜🚫｜✅｜ 👔 Gov Gear\n🚫｜🚫｜🚫｜✅｜✅｜ Hero Widget\n🚫｜🚫｜🚫｜✅｜✅｜ Mithril\n🚫｜🚫｜🚫｜✅｜✅｜ Hammers\n🚫｜✅｜✅｜🚫｜🚫｜ Emblems\n🚫｜✅｜✅｜🚫｜🚫｜ Manuscripts\n✅｜✅｜🚫｜🚫｜✅｜ Learning\n\n✅ Best day　🆗 Okay　🚫 Do not use　👍 Daily",
+      "👑 KvK Prep Guide 👑\n１｜２｜３｜４｜５\n✅｜⚠｜✅｜⚠｜✅｜ Intel\n✅｜🚫｜✅｜✅｜🚫｜ Gov Charms\n✅｜🆗｜🚫｜🚫｜🆗｜ Truegold\n🆗｜✅｜🚫｜🚫｜🆗｜ Truegold Dust\n✅｜🆗｜🚫｜🚫｜🆗｜ Builds\n✅｜✅｜🚫｜🚫｜✅｜ Master\n⚠｜✅｜⚠｜✅｜✅｜ Gather\n🚫｜✅｜🚫｜🚫｜🆗｜ Research\n🚫｜✅｜✅｜🚫｜🚫｜ Roulette\n🚫｜✅｜✅｜🚫｜🚫｜ Shards\n🚫｜✅｜✅｜🚫｜🚫｜ Mas. Emblem\n🚫｜✅｜✅｜🚫｜🚫｜ Manuscript\n🚫｜⚠｜⚠｜✅｜🆗｜ Troops\n🚫｜🚫｜✅｜🚫｜✅｜ Pet 🐾\n🚫｜🚫｜🚫｜✅｜✅｜ Widget\n🚫｜🚫｜🚫｜✅｜✅｜ Mithril\n🚫｜🚫｜🚫｜✅｜✅｜ Hammers\n🚫｜🚫｜🚫｜🚫｜✅｜ Gov Gear\n\n✅ Best day　🆗 Optional　⚠ Set-up for best day　🚫 Don't",
     longLabel: "Full guide",
     longLimit: 0,          // no cap — this one does not go in a 500-character box
     rows: 14,
