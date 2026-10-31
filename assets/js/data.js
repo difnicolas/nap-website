@@ -12,7 +12,7 @@ const SITE = {
   // Who maintains this page.
   maintainer: "Kingdom 1886 NAP Council",
   // Change this whenever you update the alliance list below.
-  lastUpdated: "18 October 2026",
+  lastUpdated: "31 October 2026",
 };
 
 /* --------------------------------------------------------------------------
@@ -91,7 +91,7 @@ const ALLIANCES = [
     tag: "W86",
     name: "WIN",
     r5: "Gio",
-    bear: ["13:00", "18:00", "23:00"],
+    bear: ["13:00", "19:00", "23:00"],
     farm:    { tag: "86W", name: "", r5: "" },
     academy: { tag: "W8F", name: "", r5: "" },
     note: "",
@@ -108,7 +108,7 @@ const ALLIANCES = [
     tag: "KTA",
     name: "KillThemAll",
     r5: "Whiteout",
-    bear: ["14:00", "23:00"],
+    bear: ["14:15", "23:00"],
     farm:    { tag: "KTa", name: "", r5: "" },
     academy: null,
     note: "",
@@ -135,7 +135,7 @@ const ALLIANCES = [
     tag: "T86",
     name: "Gemstone Tavern",
     r5: "BearQueen Lace, JustFio & jayjewel",
-    bear: [],
+    bear: ["01:00", "21:00"],
     farm:    null,
     academy: null,
     note: "",
@@ -405,6 +405,7 @@ const RESOURCES = [
      {ALL_TAGS}    each family joined by "-"     A86-86a, D86-D8F-86D, ...
      {BLACKLIST}   listed players with their account IDs
      {BL_COUNT}    how many players are currently listed
+     {BEAR_TIMES}  one line per alliance with bear traps  A86 00:10 UTC 15:00 UTC
 
    The character counters on the page are live — edit the text there before
    copying if a token has pushed a notice over the limit.
@@ -427,6 +428,14 @@ const NOTICES = [
       "• Non-NAP players: 2 TC hits each, max.\n" +
       "• Never hit a march going to bear, a beast or a rally.\n" +
       "Hit someone by mistake? Repay it and tell your R5. Hit yourself? Report it — never retaliate before reporting and getting approval.",
+  },
+  {
+    title: "Bear trap times",
+    // Built from each alliance's bear: times above, so it always matches the site.
+    short:
+      "🐻 {KINGDOM} Bear Trap Times:\n\n" +
+      "{BEAR_TIMES}",
+    long: "",
   },
   {
     title: "All Out rules",

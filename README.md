@@ -184,6 +184,7 @@ page loads, so the tag list and the blacklist are always current:
 | `{ALL_TAGS}` | mains + farms + academies |
 | `{BLACKLIST}` | active listings as `Name 123456789` |
 | `{BL_COUNT}` | how many players are currently listed |
+| `{BEAR_TIMES}` | one line per alliance with its bear traps, as `A86 00:10 UTC 15:00 UTC` |
 
 The counter above each box is live and turns red past the limit, and the boxes are editable —
 so if the blacklist grows and a notice tips over its limit, trim it in the browser before
