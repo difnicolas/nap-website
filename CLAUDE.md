@@ -44,7 +44,8 @@ Bear trap times that disagree with the alliance's own decree. The owner is askin
 alliance to confirm and wants **both sides left as they are** until then:
 
 - A86 Apex: decree says 15:00 & 00:00 UTC; listed 00:10, 15:00.
-- D86 Dragons: decree says 15:00 / 18:00 / 22:00 UTC; listed 14:00 / 18:00 / 22:00.
+- D86 Dragons: decree says 15:00 / 18:00 / 22:00 UTC; listed 14:00 / 18:00 / 20:00
+  (third trap moved from 22:00 to 20:00 on 31 Oct 2026).
 
 Missing details:
 
