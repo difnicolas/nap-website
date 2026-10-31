@@ -816,6 +816,16 @@ var NAP = (function () {
     }).filter(Boolean).join(", ");
   }
 
+  // One line per alliance with bear traps, times as listed on the site:
+  //   A86 00:10 UTC 15:00 UTC
+  function bearTimes() {
+    if (typeof ALLIANCES === "undefined") return "";
+    return ALLIANCES.filter(function (a) { return a.tag && a.bear && a.bear.length; })
+      .map(function (a) {
+        return a.tag + " " + a.bear.map(function (b) { return b + " UTC"; }).join(" ");
+      }).join("\n");
+  }
+
   function mainTags() {
     if (typeof ALLIANCES === "undefined") return "";
     return ALLIANCES.map(function (a) { return a.tag; }).filter(Boolean).join(", ");
@@ -843,6 +853,7 @@ var NAP = (function () {
       .replace(/\{KINGDOM\}/g, kingdom)
       .replace(/\{MAIN_TAGS\}/g, mainTags())
       .replace(/\{ALL_TAGS\}/g, allTags())
+      .replace(/\{BEAR_TIMES\}/g, bearTimes())
       .replace(/\{BLACKLIST\}/g, blacklistLine())
       .replace(/\{BL_COUNT\}/g, String(activeListings().length));
   }

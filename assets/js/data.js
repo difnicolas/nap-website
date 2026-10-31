@@ -405,6 +405,7 @@ const RESOURCES = [
      {ALL_TAGS}    each family joined by "-"     A86-86a, D86-D8F-86D, ...
      {BLACKLIST}   listed players with their account IDs
      {BL_COUNT}    how many players are currently listed
+     {BEAR_TIMES}  one line per alliance with bear traps  A86 00:10 UTC 15:00 UTC
 
    The character counters on the page are live — edit the text there before
    copying if a token has pushed a notice over the limit.
@@ -427,6 +428,14 @@ const NOTICES = [
       "• Non-NAP players: 2 TC hits each, max.\n" +
       "• Never hit a march going to bear, a beast or a rally.\n" +
       "Hit someone by mistake? Repay it and tell your R5. Hit yourself? Report it — never retaliate before reporting and getting approval.",
+  },
+  {
+    title: "Bear trap times",
+    // Built from each alliance's bear: times above, so it always matches the site.
+    short:
+      "🐻 {KINGDOM} Bear Trap Times:\n\n" +
+      "{BEAR_TIMES}",
+    long: "",
   },
   {
     title: "All Out rules",
