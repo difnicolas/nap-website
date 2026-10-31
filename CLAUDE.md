@@ -45,8 +45,6 @@ alliance to confirm and wants **both sides left as they are** until then:
 
 - A86 Apex: decree says 15:00 & 00:00 UTC; listed 00:10, 15:00.
 - D86 Dragons: decree says 15:00 / 18:00 / 22:00 UTC; listed 14:00 / 18:00 / 22:00.
-- W86 WIN: listed 13:00 / 18:00 / 23:00 (18:00 added 18 Oct 2026); decree only names 23:00
-  and 13:00.
 
 Missing details:
 
