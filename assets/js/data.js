@@ -135,7 +135,7 @@ const ALLIANCES = [
     tag: "T86",
     name: "Gemstone Tavern",
     r5: "BearQueen Lace, JustFio & jayjewel",
-    bear: ["01:00", "21:00"],
+    bear: ["02:00", "21:00"],
     farm:    null,
     academy: null,
     note: "",
