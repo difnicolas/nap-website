@@ -48,7 +48,7 @@ const ALLIANCES = [
     tag: "A86",
     name: "Apex Predators",
     r5: "Defiant",
-    bear: ["00:10", "15:00"],
+    bear: ["01:10", "15:00"],
     farm:    { tag: "86a", name: "", r5: "" },
     academy: null,
     note: "",
