@@ -58,7 +58,7 @@ const ALLIANCES = [
       "To join, must be active and selfless. Tc30 and 50M power minimums. Send a private message to any R4.",
       "",
       "Bear 1 - 15:00 UTC",
-      "Bear 2 - 00:00 UTC",
+      "Bear 2 - 01:10 UTC",
       "Very organized",
       "",
       "Always top Vikings",
